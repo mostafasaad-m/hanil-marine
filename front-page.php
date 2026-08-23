@@ -125,130 +125,7 @@
 </div>
 </div>
 </section>
-<!-- Quotation Form Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="port-coverage">
-<div class="max-w-[1280px] mx-auto">
-<div class="mb-12 text-center"><h2 class="font-headline-lg text-headline-lg text-primary mb-4">Strategic Port Presence</h2><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Operating across Egypt's vital maritime corridors, we ensure your vessel receives uncompromising support at every major gateway.</p><div class="h-1 w-20 bg-secondary-container mt-6 mx-auto"></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
-<div class="relative rounded-xl overflow-hidden border border-outline-variant shadow-lg bg-surface-container-lowest">
-<div class="relative w-full aspect-[4/3] bg-primary overflow-hidden">
-    <!-- Egypt Map SVG Background -->
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7pYiz-JCz7XIGAkm5J6WTppa7PSlGXnuvKrxARw7kWD21DTR4qpJSIL3DvGDfNY21tzU8Rr3a1RWpJ2uN-2P9w9dIgZwXm4PrMMRKTLqhMQlIGoO_EdciBAUazkaWpcqbYlI-__wT0pM1OeJBV7npM2-Z5t25Fyl4Wz3RA_3qQ9lU86U9co9nRAbXB-ZwCQtesS7WPMwD1Kq36-mm1CCoUq_LYicSOhoP2M5v3xIMui8D4ttkl06rbw" alt="High-quality 3D satellite map of Egypt showing the Nile Delta and Suez Canal" class="absolute inset-0 w-full h-full object-cover">
-    
-    <!-- Port Markers (Red Pins) -->
-    <!-- 1. Port Said -->
-    <div class="absolute top-[12%] left-[58%] group">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-        <span class="absolute bottom-full left-1/2 -translate-x-1/2 bg-surface px-2 py-1 rounded text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Port Said</span>
-    </div>
-    <!-- 2. Suez -->
-    <div class="absolute top-[25%] left-[58%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 3. Damietta -->
-    <div class="absolute top-[10%] left-[52%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 4. Alexandria -->
-    <div class="absolute top-[12%] left-[38%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 5. Ain Sokhna -->
-    <div class="absolute top-[32%] left-[60%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 6. Adabeyah -->
-    <div class="absolute top-[28%] left-[56%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 7. Safaga -->
-    <div class="absolute top-[55%] left-[72%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 8. Arish -->
-    <div class="absolute top-[10%] left-[68%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 9. Dekheila -->
-    <div class="absolute top-[14%] left-[35%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 10. Abu Qir -->
-    <div class="absolute top-[10%] left-[42%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 11. Sidi Kerir -->
-    <div class="absolute top-[15%] left-[30%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-    <!-- 12. Gargoub -->
-    <div class="absolute top-[18%] left-[15%]">
-        <span class="material-symbols-outlined text-secondary text-2xl drop-shadow-md">location_on</span>
-    </div>
-
-    <!-- Map Legend Overlay -->
-    <div class="absolute bottom-4 left-4 bg-primary/80 p-3 rounded border border-outline-variant/30 backdrop-blur-sm">
-        <p class="text-on-primary font-label-caps text-[10px] uppercase tracking-widest">Operational Map v2.4</p>
-        <p class="text-primary-fixed-dim text-[12px] font-bold">Egyptian Maritime Corridors</p>
-    </div>
-</div>
-</div>
-<div class="space-y-4">
-<h3 class="font-headline-md text-headline-md text-primary mb-6">Ports we serve</h3>
-<ul class="grid grid-cols-1 gap-4">
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">01.</span>
-<div><span class="font-bold text-primary">Port Said (East &amp; West)</span><span class="block text-body-md text-on-surface-variant">The Mediterranean Gateway</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">02.</span>
-<div><span class="font-bold text-primary">Suez Canal Zone</span><span class="block text-body-md text-on-surface-variant">Global Transit Support</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">03.</span>
-<div><span class="font-bold text-primary">Damietta Port</span><span class="block text-body-md text-on-surface-variant">Agricultural &amp; Industrial Hub</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">04.</span>
-<div><span class="font-bold text-primary">Alexandria Port</span><span class="block text-body-md text-on-surface-variant">The Commercial Powerhouse</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">05.</span>
-<div><span class="font-bold text-primary">Ain Sokhna</span><span class="block text-body-md text-on-surface-variant">Red Sea Industrial Center</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">06.</span>
-<div><span class="font-bold text-primary">Adabeyah Port</span><span class="block text-body-md text-on-surface-variant">Specialized Cargo Handling</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">07.</span>
-<div><span class="font-bold text-primary">Safaga Port</span><span class="block text-body-md text-on-surface-variant">Strategic Southern Access</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">08.</span>
-<div><span class="font-bold text-primary">Arish Port</span><span class="block text-body-md text-on-surface-variant">North Sinai Logistics</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">09.</span>
-<div><span class="font-bold text-primary">El Dekheila</span><span class="block text-body-md text-on-surface-variant">Alexandria Expansion Port</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">10.</span>
-<div><span class="font-bold text-primary">Abu Qir</span><span class="block text-body-md text-on-surface-variant">Emerging Maritime Hub</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">11.</span>
-<div><span class="font-bold text-primary">Sidi Kerir</span><span class="block text-body-md text-on-surface-variant">Energy &amp; Bulk Terminal</span></div>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-secondary font-bold">12.</span>
-<div><span class="font-bold text-primary">Gargoub Port</span><span class="block text-body-md text-on-surface-variant">The Western Frontier</span></div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section><section class="bg-tertiary text-on-tertiary py-section-gap px-margin-mobile md:px-margin-desktop" id="quote">
+<section class="bg-tertiary text-on-tertiary py-section-gap px-margin-mobile md:px-margin-desktop" id="quote">
 <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-section-gap">
 <div>
 <h2 class="font-headline-lg text-headline-lg mb-4 text-on-tertiary">Get your quotation now.</h2>
@@ -290,114 +167,132 @@
 </div>
 </div>
 </section>
-<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col lg:flex-row gap-gutter">
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col lg:flex-row gap-gutter" id="port-coverage">
 <!-- Sidebar: Port List -->
 <aside class="w-full lg:w-1/3 flex flex-col gap-base bg-surface-container rounded-xl p-gutter border border-outline-variant shadow-sm h-[896px] overflow-y-auto">
 <div class="mb-4">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Egyptian Port Network</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Select a port to view operational details and logistical support capabilities.</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Strategic Port Presence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Operating across Egypt's vital maritime corridors, we ensure your vessel receives support at every major gateway.</p>
 </div>
 <ul class="flex flex-col gap-2">
-<!-- Port List Items -->
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="alexandria">
+<!-- 01. Port Said -->
+<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="port-said">
 <div class="flex items-center justify-between">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary">Alexandria Port</h3>
+<h3 class="font-headline-md text-headline-md text-primary">Port Said (East & West)</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">The Mediterranean Gateway</span>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="anchor">anchor</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="dekhila">
+<!-- 02. Suez Canal Zone -->
+<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="suez">
 <div class="flex items-center justify-between">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary">Dekhila Port</h3>
+<h3 class="font-headline-md text-headline-md text-primary">Suez Canal Zone</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Global Transit Support</span>
 </div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 03. Damietta Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="damietta">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Damietta Port</h3>
-
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Agricultural & Industrial Hub</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="port-said">
+<!-- 04. Alexandria Port -->
+<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="alexandria">
 <div class="flex items-center justify-between">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary">Port Said</h3>
-
+<h3 class="font-headline-md text-headline-md text-primary">Alexandria Port</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">The Commercial Powerhouse</span>
 </div>
-
-</div>
-</li>
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="suez">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Suez Port</h3>
-
-</div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 05. Ain Sokhna -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="ain-sokhna">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Ain Sokhna</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Red Sea Industrial Center</span>
 </div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 06. Adabeyah Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="adabeyah">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Adabeyah Port</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Specialized Cargo Handling</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 07. Safaga Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="safaga">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Safaga Port</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Strategic Southern Access</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 08. Arish Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="arish">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Arish Port</h3>
-
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">North Sinai Logistics</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 09. El Dekheila -->
+<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="dekhila">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">El Dekheila</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Alexandria Expansion Port</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
+</div>
+</li>
+<!-- 10. Abu Qir -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="abu-qir">
 <div class="flex items-center justify-between">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary">Abu Qir Port</h3>
-
+<h3 class="font-headline-md text-headline-md text-primary">Abu Qir</h3>
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Emerging Maritime Hub</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 11. Sidi Kerir -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="sidi-kerir">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Sidi Kerir</h3>
-
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Energy & Bulk Terminal</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
+<!-- 12. Gargoub Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="gargoub">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Gargoub Port</h3>
-
+<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">The Western Frontier</span>
 </div>
-
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
 </div>
 </li>
 </ul>
