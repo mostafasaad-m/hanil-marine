@@ -134,6 +134,33 @@ function bayrak_submit_quotation_handler() {
 	update_post_meta( $post_id, 'etd', $etd );
 	update_post_meta( $post_id, 'notes', $notes );
 
+	// Process file upload if provided
+	if ( ! empty( $_FILES['quotation_file'] ) && ! empty( $_FILES['quotation_file']['name'] ) ) {
+		require_once( ABSPATH . 'wp-admin/includes/file.php' );
+		require_once( ABSPATH . 'wp-admin/includes/image.php' );
+		require_once( ABSPATH . 'wp-admin/includes/media.php' );
+
+		$uploaded = wp_handle_upload( $_FILES['quotation_file'], array( 'test_form' => false ) );
+		if ( isset( $uploaded['url'] ) && ! isset( $uploaded['error'] ) ) {
+			update_post_meta( $post_id, 'attached_file_url', $uploaded['url'] );
+
+			$attachment = array(
+				'guid'           => $uploaded['url'],
+				'post_mime_type' => $uploaded['type'],
+				'post_title'     => sanitize_file_name( $_FILES['quotation_file']['name'] ),
+				'post_content'   => '',
+				'post_status'    => 'inherit'
+			);
+
+			$attach_id = wp_insert_attachment( $attachment, $uploaded['file'], $post_id );
+			if ( ! is_wp_error( $attach_id ) ) {
+				$attach_data = wp_generate_attachment_metadata( $attach_id, $uploaded['file'] );
+				wp_update_attachment_metadata( $attach_id, $attach_data );
+				update_post_meta( $post_id, 'attached_file_id', $attach_id );
+			}
+		}
+	}
+
 	wp_send_json_success( array(
 		'ref_id'  => $ref_id,
 		'message' => 'Quotation request submitted successfully!',
@@ -141,4 +168,86 @@ function bayrak_submit_quotation_handler() {
 }
 add_action( 'wp_ajax_bayrak_submit_quotation', 'bayrak_submit_quotation_handler' );
 add_action( 'wp_ajax_nopriv_bayrak_submit_quotation', 'bayrak_submit_quotation_handler' );
+
+/**
+ * Add WordPress Admin Meta Box for Quotation Requests
+ */
+function bayrak_quotation_admin_meta_box() {
+	add_meta_box(
+		'bayrak_quotation_details',
+		__( 'Quotation Request Details & File Attachment', 'bayrak' ),
+		'bayrak_render_quotation_admin_meta_box',
+		'quotation_request',
+		'normal',
+		'high'
+	);
+}
+add_action( 'add_meta_boxes', 'bayrak_quotation_admin_meta_box' );
+
+function bayrak_render_quotation_admin_meta_box( $post ) {
+	$ref_id       = get_post_meta( $post->ID, 'ref_id', true );
+	$service_type = get_post_meta( $post->ID, 'service_type', true );
+	$full_name    = get_post_meta( $post->ID, 'full_name', true );
+	$email        = get_post_meta( $post->ID, 'email', true );
+	$company_name = get_post_meta( $post->ID, 'company_name', true );
+	$job_title    = get_post_meta( $post->ID, 'job_title', true );
+	$phone        = get_post_meta( $post->ID, 'phone', true );
+	$vessel_name  = get_post_meta( $post->ID, 'vessel_name', true );
+	$imo_number   = get_post_meta( $post->ID, 'imo_number', true );
+	$port_of_call = get_post_meta( $post->ID, 'port_of_call', true );
+	$eta          = get_post_meta( $post->ID, 'eta', true );
+	$etd          = get_post_meta( $post->ID, 'etd', true );
+	$notes        = get_post_meta( $post->ID, 'notes', true );
+	$file_url     = get_post_meta( $post->ID, 'attached_file_url', true );
+	?>
+	<style>
+		.bayrak-admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+		.bayrak-admin-card { background: #f8fafc; padding: 15px; border: 1px solid #e2e8f0; border-radius: 6px; }
+		.bayrak-admin-card h4 { margin: 0 0 10px 0; color: #004aad; font-size: 14px; text-transform: uppercase; }
+		.bayrak-file-btn { display: inline-block; background: #004aad; color: #fff !important; text-decoration: none; padding: 10px 18px; border-radius: 4px; font-weight: bold; margin-top: 10px; }
+		.bayrak-file-btn:hover { background: #002b66; }
+	</style>
+
+	<div class="bayrak-admin-grid">
+		<div class="bayrak-admin-card">
+			<h4>📋 General Details</h4>
+			<p><strong>Reference ID:</strong> <?php echo esc_html( $ref_id ? $ref_id : 'N/A' ); ?></p>
+			<p><strong>Service Category:</strong> <?php echo esc_html( $service_type ); ?></p>
+			<p><strong>Contact Name:</strong> <?php echo esc_html( $full_name ); ?> (<?php echo esc_html( $job_title ); ?>)</p>
+			<p><strong>Company:</strong> <?php echo esc_html( $company_name ); ?></p>
+			<p><strong>Email:</strong> <a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></p>
+			<p><strong>Phone:</strong> <?php echo esc_html( $phone ); ?></p>
+		</div>
+
+		<div class="bayrak-admin-card">
+			<h4>🚢 Vessel Logistics</h4>
+			<p><strong>Vessel Name:</strong> <?php echo esc_html( $vessel_name ); ?></p>
+			<p><strong>IMO Number:</strong> <?php echo esc_html( $imo_number ); ?></p>
+			<p><strong>Port of Call:</strong> <?php echo esc_html( $port_of_call ); ?></p>
+			<p><strong>ETA:</strong> <?php echo esc_html( $eta ); ?></p>
+			<p><strong>ETD:</strong> <?php echo esc_html( $etd ); ?></p>
+		</div>
+	</div>
+
+	<?php if ( $notes ) : ?>
+		<div class="bayrak-admin-card" style="margin-bottom:15px;">
+			<h4>📝 Additional Specifications / Notes</h4>
+			<p><?php echo nl2br( esc_html( $notes ) ); ?></p>
+		</div>
+	<?php endif; ?>
+
+	<div class="bayrak-admin-card" style="background:#eff6ff; border-color:#bfdbfe;">
+		<h4>📎 Attached Requisition File</h4>
+		<?php if ( $file_url ) : ?>
+			<p>A file attachment was uploaded with this quotation request:</p>
+			<a href="<?php echo esc_url( $file_url ); ?>" target="_blank" class="bayrak-file-btn">
+				📥 Download Attached Requisition File
+			</a>
+		<?php else : ?>
+			<p><em>No file attachment uploaded for this request.</em></p>
+		<?php endif; ?>
+	</div>
+	<?php
+}
+
 

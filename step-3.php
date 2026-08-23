@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Quotation Step 3 - Vessel Details
- * Description: Third step of the multi-step vessel quotation request form.
+ * Template Name: Quotation Step 3 - Vessel Details & Attachments
+ * Description: Third step of the multi-step vessel quotation request form with file upload support.
  */
 get_header();
 ?>
@@ -14,8 +14,8 @@ get_header();
 		<!-- Section Header -->
 		<div class="mb-8">
 			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Step 3 of 4</span>
-			<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Vessel Schedule & Port Logistics</h1>
-			<p class="font-body-md text-body-md text-on-surface-variant">Provide your vessel details and upcoming port call schedule in Egypt.</p>
+			<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Vessel Schedule & Specifications</h1>
+			<p class="font-body-md text-body-md text-on-surface-variant">Provide your vessel details and upload any requisition spreadsheets or specification documents.</p>
 		</div>
 
 		<!-- Form -->
@@ -66,10 +66,36 @@ get_header();
 				</div>
 			</div>
 
-			<!-- Additional Notes -->
+			<!-- Additional Requirements / Notes -->
 			<div>
-				<label class="block font-label-caps text-label-caps text-primary mb-2" for="notes">Additional Requirements / Specifications</label>
-				<textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="notes" name="notes" placeholder="Specify any food preferences, technical part codes, or urgent delivery notes..." rows="3"></textarea>
+				<label class="block font-label-caps text-label-caps text-primary mb-2" for="notes">Additional Requirements / Description</label>
+				<textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="notes" name="notes" placeholder="Specify food preferences, technical part codes, or urgent delivery instructions..." rows="3"></textarea>
+			</div>
+
+			<!-- File Upload Section -->
+			<div class="space-y-2 pt-2">
+				<label class="block font-label-caps text-label-caps text-primary mb-1">Upload Quotation Requisition File (PDF, XLSX, DOCX, Images)</label>
+				<p class="text-sm text-on-surface-variant mb-3">Attach any requisitions, store lists, spreadsheets, or technical drawings for instant processing by our port dispatcher.</p>
+				
+				<div id="drop-zone" class="border-2 border-dashed border-outline-variant rounded-lg p-6 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer text-center" onclick="document.getElementById('file-input').click()">
+					<span class="material-symbols-outlined text-primary text-4xl mb-2">upload_file</span>
+					<p class="font-body-md text-on-surface mb-1 font-bold">Click or drag & drop file here</p>
+					<p class="text-xs text-on-surface-variant">Supports PDF, XLSX, DOCX, PNG, JPG up to 15MB</p>
+					<input type="file" id="file-input" class="hidden" accept=".pdf,.xlsx,.xls,.doc,.docx,.png,.jpg,.jpeg">
+				</div>
+
+				<div id="file-preview-area" class="hidden mt-3 p-3 bg-surface border border-outline-variant rounded-lg flex items-center justify-between">
+					<div class="flex items-center gap-3 overflow-hidden">
+						<span class="material-symbols-outlined text-secondary text-2xl">description</span>
+						<div class="truncate">
+							<p id="file-preview-name" class="font-bold text-sm text-primary truncate">filename.pdf</p>
+							<p id="file-preview-size" class="text-xs text-on-surface-variant">0 KB</p>
+						</div>
+					</div>
+					<button type="button" onclick="removeUploadedFile(event)" class="text-error hover:text-red-700 p-1">
+						<span class="material-symbols-outlined text-xl">close</span>
+					</button>
+				</div>
 			</div>
 
 			<!-- Navigation Buttons -->
@@ -99,10 +125,75 @@ document.addEventListener('DOMContentLoaded', () => {
 	const fields = ['vesselName', 'imoNumber', 'portOfCall', 'eta', 'etd', 'notes'];
 	fields.forEach(field => {
 		const val = sessionStorage.getItem('quotation_' + field);
-		if (val) {
+		if (val && document.getElementById(field)) {
 			document.getElementById(field).value = val;
 		}
 	});
+
+	// File Upload Handling
+	const fileInput = document.getElementById('file-input');
+	const dropZone = document.getElementById('drop-zone');
+	const filePreviewArea = document.getElementById('file-preview-area');
+	const fileNameEl = document.getElementById('file-preview-name');
+	const fileSizeEl = document.getElementById('file-preview-size');
+
+	// Restore previously uploaded file info
+	const existingFileName = sessionStorage.getItem('quotation_file_name');
+	const existingFileSize = sessionStorage.getItem('quotation_file_size');
+	if (existingFileName) {
+		fileNameEl.textContent = existingFileName;
+		fileSizeEl.textContent = existingFileSize || '';
+		filePreviewArea.classList.remove('hidden');
+	}
+
+	fileInput.addEventListener('change', handleFileSelect);
+
+	dropZone.addEventListener('dragover', (e) => {
+		e.preventDefault();
+		dropZone.classList.add('border-primary', 'bg-surface-container');
+	});
+
+	dropZone.addEventListener('dragleave', (e) => {
+		e.preventDefault();
+		dropZone.classList.remove('border-primary', 'bg-surface-container');
+	});
+
+	dropZone.addEventListener('drop', (e) => {
+		e.preventDefault();
+		dropZone.classList.remove('border-primary', 'bg-surface-container');
+		if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+			fileInput.files = e.dataTransfer.files;
+			handleFileSelect();
+		}
+	});
+
+	function handleFileSelect() {
+		if (fileInput.files && fileInput.files[0]) {
+			const file = fileInput.files[0];
+			fileNameEl.textContent = file.name;
+			const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+			fileSizeEl.textContent = sizeMB + ' MB';
+			filePreviewArea.classList.remove('hidden');
+
+			// Read file as Base64 for session storage
+			const reader = new FileReader();
+			reader.onload = function(e) {
+				sessionStorage.setItem('quotation_file_base64', e.target.result);
+				sessionStorage.setItem('quotation_file_name', file.name);
+				sessionStorage.setItem('quotation_file_size', sizeMB + ' MB');
+			};
+			reader.readAsDataURL(file);
+		}
+	}
+
+	window.removeUploadedFile = function(e) {
+		e.stopPropagation();
+		fileInput.value = '';
+		sessionStorage.removeItem('quotation_file_base64');
+		sessionStorage.removeItem('quotation_file_name');
+		sessionStorage.removeItem('quotation_file_size');
+		filePreviewArea.classList.add('hidden');
+	};
 
 	document.getElementById('next-btn').addEventListener('click', () => {
 		const vesselName = document.getElementById('vesselName').value.trim();

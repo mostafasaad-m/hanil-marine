@@ -1,12 +1,22 @@
 <?php
 /**
  * Template Name: Quotation Step 1 - Service Type
- * Description: First step of the multi-step vessel quotation request form.
+ * Description: First step of the multi-step vessel quotation request form with automagical swiping transition.
  */
 get_header();
 ?>
 
-<main class="flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<style>
+.swipe-container {
+	transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease-in-out;
+}
+.swipe-out-left {
+	transform: translateX(-60px);
+	opacity: 0;
+}
+</style>
+
+<main id="swipe-wrapper" class="swipe-container flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
 	<!-- Progress Stepper -->
 	<?php get_template_part( 'template-parts/quotation-stepper', null, array( 'current_step' => 1 ) ); ?>
 
@@ -14,13 +24,13 @@ get_header();
 	<div class="text-center mb-12">
 		<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Step 1 of 4</span>
 		<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-primary mb-4">Select Primary Service Category</h1>
-		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Choose the primary service your vessel requires. You can specify exact items in subsequent steps.</p>
+		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Choose the primary service your vessel requires. Selecting a service will automatically advance to Step 2.</p>
 	</div>
 
 	<!-- Service Cards Grid -->
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter w-full mb-12">
 		<!-- Card 1: Provisions -->
-		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200" data-service="Provisions Supply" onclick="selectService('Provisions Supply', this)">
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Provisions Supply" onclick="selectServiceAuto('Provisions Supply', this)">
 			<div class="icon-container w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center mb-6 transition-colors duration-200">
 				<span class="material-symbols-outlined text-2xl">restaurant</span>
 			</div>
@@ -33,7 +43,7 @@ get_header();
 		</div>
 
 		<!-- Card 2: Bonded Stores -->
-		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200" data-service="Bonded Stores" onclick="selectService('Bonded Stores', this)">
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Bonded Stores" onclick="selectServiceAuto('Bonded Stores', this)">
 			<div class="icon-container w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center mb-6 transition-colors duration-200">
 				<span class="material-symbols-outlined text-2xl">inventory_2</span>
 			</div>
@@ -46,7 +56,7 @@ get_header();
 		</div>
 
 		<!-- Card 3: Technical Parts -->
-		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200" data-service="Technical Parts & Spares" onclick="selectService('Technical Parts & Spares', this)">
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Technical Parts & Spares" onclick="selectServiceAuto('Technical Parts & Spares', this)">
 			<div class="icon-container w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center mb-6 transition-colors duration-200">
 				<span class="material-symbols-outlined text-2xl">build</span>
 			</div>
@@ -59,7 +69,7 @@ get_header();
 		</div>
 
 		<!-- Card 4: Port Logistics -->
-		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200" data-service="Logistics & Port Handling" onclick="selectService('Logistics & Port Handling', this)">
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Logistics & Port Handling" onclick="selectServiceAuto('Logistics & Port Handling', this)">
 			<div class="icon-container w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center mb-6 transition-colors duration-200">
 				<span class="material-symbols-outlined text-2xl">local_shipping</span>
 			</div>
@@ -72,7 +82,7 @@ get_header();
 		</div>
 
 		<!-- Card 5: Safety Equipment -->
-		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-md transition-all duration-200" data-service="Safety & SOLAS Equipment" onclick="selectService('Safety & SOLAS Equipment', this)">
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Safety & SOLAS Equipment" onclick="selectServiceAuto('Safety & SOLAS Equipment', this)">
 			<div class="icon-container w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center mb-6 transition-colors duration-200">
 				<span class="material-symbols-outlined text-2xl">health_and_safety</span>
 			</div>
@@ -98,21 +108,26 @@ get_header();
 </main>
 
 <script>
-let selectedService = null;
+let isTransitioning = false;
 
-function selectService(serviceName, cardElement) {
+function selectServiceAuto(serviceName, cardElement) {
+	if (isTransitioning) return;
+	isTransitioning = true;
+
 	document.querySelectorAll('.service-card').forEach(card => {
 		card.classList.remove('ring-2', 'ring-secondary-container', 'border-secondary-container', 'bg-surface-container-low');
 	});
 
 	cardElement.classList.add('ring-2', 'ring-secondary-container', 'border-secondary-container', 'bg-surface-container-low');
-	selectedService = serviceName;
 	sessionStorage.setItem('quotation_service_type', serviceName);
 
-	const nextBtn = document.getElementById('next-btn');
-	nextBtn.disabled = false;
-	nextBtn.classList.remove('bg-outline-variant', 'text-outline', 'cursor-not-allowed');
-	nextBtn.classList.add('bg-secondary-container', 'text-on-secondary', 'hover:bg-secondary', 'shadow-md', 'cursor-pointer');
+	// Automagical swiping transition effect
+	const wrapper = document.getElementById('swipe-wrapper');
+	wrapper.classList.add('swipe-out-left');
+
+	setTimeout(() => {
+		window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
+	}, 280);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -120,13 +135,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (savedService) {
 		const targetCard = document.querySelector(`.service-card[data-service="${savedService}"]`);
 		if (targetCard) {
-			selectService(savedService, targetCard);
+			targetCard.classList.add('ring-2', 'ring-secondary-container', 'border-secondary-container', 'bg-surface-container-low');
+			const nextBtn = document.getElementById('next-btn');
+			nextBtn.disabled = false;
+			nextBtn.classList.remove('bg-outline-variant', 'text-outline', 'cursor-not-allowed');
+			nextBtn.classList.add('bg-secondary-container', 'text-on-secondary', 'hover:bg-secondary', 'shadow-md', 'cursor-pointer');
 		}
 	}
 
 	document.getElementById('next-btn').addEventListener('click', () => {
-		if (selectedService) {
-			window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
+		const selected = sessionStorage.getItem('quotation_service_type');
+		if (selected) {
+			const wrapper = document.getElementById('swipe-wrapper');
+			wrapper.classList.add('swipe-out-left');
+			setTimeout(() => {
+				window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
+			}, 280);
 		}
 	});
 });

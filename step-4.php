@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Quotation Step 4 - Review & Submit
- * Description: Fourth and final step of the multi-step vessel quotation request form.
+ * Description: Fourth and final step of the multi-step vessel quotation request form with attachment submission.
  */
 get_header();
 ?>
@@ -85,9 +85,20 @@ get_header();
 							<dd id="sum-eta" class="font-bold text-primary text-base">-</dd>
 						</div>
 					</div>
-					<div class="pt-3 border-t border-outline-variant/30">
-						<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Additional Notes</dt>
-						<dd id="sum-notes" class="font-body-md text-on-surface italic bg-surface p-3 rounded">No special instructions provided.</dd>
+					
+					<div class="pt-3 border-t border-outline-variant/30 space-y-3">
+						<div>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Additional Notes</dt>
+							<dd id="sum-notes" class="font-body-md text-on-surface italic bg-surface p-3 rounded">No special instructions provided.</dd>
+						</div>
+
+						<div id="sum-file-wrapper" class="hidden flex items-center justify-between bg-surface p-3 rounded border border-outline-variant/30">
+							<div class="flex items-center gap-2">
+								<span class="material-symbols-outlined text-secondary">attach_file</span>
+								<span id="sum-file-name" class="font-bold text-sm text-primary">filename.pdf</span>
+							</div>
+							<span class="text-xs text-secondary-container font-bold px-2 py-1 bg-surface-container rounded-full">Requisition File Attached</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -125,7 +136,7 @@ get_header();
 				<span class="material-symbols-outlined text-secondary-container text-4xl">check_circle</span>
 			</div>
 			<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Request Submitted Successfully!</h2>
-			<p class="font-body-md text-body-md text-on-surface-variant mb-6">Your quotation request has been logged into our system. Our port dispatch team will review your requirements and respond within 2 hours.</p>
+			<p class="font-body-md text-body-md text-on-surface-variant mb-6">Your quotation request and attachments have been logged in WordPress. Our dispatch team will respond within 2 hours.</p>
 			<div class="bg-surface-container p-4 rounded-lg mb-6 border border-outline-variant inline-block w-full">
 				<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block mb-1">Your Unique Reference ID</span>
 				<span id="res-ref-id" class="font-headline-md text-headline-md font-bold text-primary">HM-2026-XXXX</span>
@@ -138,6 +149,15 @@ get_header();
 </main>
 
 <script>
+function dataURLtoFile(dataurl, filename) {
+	let arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+		bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+	while(n--){
+		u8arr[n] = bstr.charCodeAt(n);
+	}
+	return new File([u8arr], filename, {type:mime});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	// Guard check
 	if (!sessionStorage.getItem('quotation_vesselName')) {
@@ -162,6 +182,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.getElementById('sum-notes').textContent = '"' + notes + '"';
 	}
 
+	const fileName = sessionStorage.getItem('quotation_file_name');
+	if (fileName) {
+		document.getElementById('sum-file-name').textContent = fileName;
+		document.getElementById('sum-file-wrapper').classList.remove('hidden');
+	}
+
 	// Submit handler
 	document.getElementById('submit-btn').addEventListener('click', () => {
 		const terms = document.getElementById('terms');
@@ -172,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const btn = document.getElementById('submit-btn');
 		btn.disabled = true;
-		btn.innerHTML = '<span>Transmitting Request...</span><span class="material-symbols-outlined text-sm animate-spin">sync</span>';
+		btn.innerHTML = '<span>Transmitting Request & File...</span><span class="material-symbols-outlined text-sm animate-spin">sync</span>';
 
 		const formData = new FormData();
 		formData.append('action', 'bayrak_submit_quotation');
@@ -188,6 +214,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		formData.append('eta', sessionStorage.getItem('quotation_eta') || '');
 		formData.append('etd', sessionStorage.getItem('quotation_etd') || '');
 		formData.append('notes', sessionStorage.getItem('quotation_notes') || '');
+
+		// Handle file if present
+		const fileBase64 = sessionStorage.getItem('quotation_file_base64');
+		if (fileBase64 && fileName) {
+			try {
+				const fileObj = dataURLtoFile(fileBase64, fileName);
+				formData.append('quotation_file', fileObj);
+			} catch (e) {
+				console.error("Error processing file:", e);
+			}
+		}
 
 		fetch("<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>", {
 			method: 'POST',
