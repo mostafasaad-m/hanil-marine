@@ -72,7 +72,7 @@ get_header();
 <p class="font-body-lg text-body-lg text-on-tertiary-container">Experience the assurance of partnering with Egypt's premier maritime logistics authority.</p>
 </div>
 <div class="flex space-x-4">
-<button class="bg-secondary-container text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary transition-colors uppercase tracking-wider shadow-[0_4px_12px_rgba(2,132,199,0.25)]">
+<button class="bg-secondary-container text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary transition-colors uppercase tracking-wider shadow-[0_4px_12px_rgba(229,169,60,0.25)]">
                         Get a Quotation
                     </button>
 <button class="bg-transparent border border-outline text-on-tertiary font-button-text text-button-text px-8 py-4 rounded hover:border-on-tertiary hover:bg-on-tertiary/10 transition-colors uppercase tracking-wider">
