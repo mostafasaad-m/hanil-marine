@@ -11,7 +11,7 @@
 <span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-6 uppercase tracking-wider">Trusted Maritime Partner</span>
 <h1 class="font-headline-xl text-headline-xl mb-4">All Your Captain Needs, Everything.</h1>
 <p class="font-body-lg text-body-lg mb-8 text-primary-fixed">Your trusted partner for maritime excellence in Egypt. Unwavering logistical precision for global fleets.</p>
-<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(255,94,0,0.25)]" href="#quote">
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(255,94,0,0.25)]" href="/get-quote">
                     Get Your Quotation Now
                 </a>
 </div>
