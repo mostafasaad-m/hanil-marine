@@ -135,7 +135,7 @@
 					<div>
 						<h4 class="font-label-caps text-xs text-primary uppercase tracking-wider mb-4 border-b border-outline-variant/30 pb-2">Maritime Categories</h4>
 						<ul class="space-y-3 text-sm">
-							<li><a href="<?php echo esc_url( home_url( '/services#provisions' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">restaurant</span> Provisions Supply</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/provisions' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">restaurant</span> Provisions Supply</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">inventory_2</span> Bonded Stores</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">build</span> Technical Spares</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">local_shipping</span> Port Logistics</a></li>
@@ -216,7 +216,7 @@
 		</button>
 		<span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-wider">All Maritime Services</span>
 		
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#provisions' ) ); ?>"><span class="material-symbols-outlined text-secondary">restaurant</span> Provisions Supply</a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/provisions' ) ); ?>"><span class="material-symbols-outlined text-secondary">restaurant</span> Provisions Supply</a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>"><span class="material-symbols-outlined text-secondary">inventory_2</span> Bonded Stores</a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>"><span class="material-symbols-outlined text-secondary">build</span> Technical Spares</a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>"><span class="material-symbols-outlined text-secondary">local_shipping</span> Port Logistics</a>
