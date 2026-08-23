@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?> class="scroll-smooth">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9ff",
+                        "surface-dim": "#cfdaf1",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d8e3fa",
+                        "on-tertiary-container": "#8d9193",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#434749",
+                        "surface-tint": "#406182",
+                        "secondary-fixed": "#ffdbce",
+                        "secondary": "#a63b00",
+                        "on-tertiary-fixed": "#181c1e",
+                        "on-primary-fixed": "#001d34",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#111517",
+                        "primary-fixed-dim": "#a8caef",
+                        "secondary-container": "#ff5e00",
+                        "tertiary-fixed": "#e0e3e5",
+                        "outline": "#73777e",
+                        "surface-container": "#e7eeff",
+                        "primary": "#001629",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ebf1ff",
+                        "primary-container": "#002b49",
+                        "inverse-primary": "#a8caef",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#263142",
+                        "outline-variant": "#c3c7ce",
+                        "secondary-fixed-dim": "#ffb599",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-fixed": "#370e00",
+                        "on-surface": "#111c2c",
+                        "surface-container-highest": "#d8e3fa",
+                        "on-secondary-container": "#531900",
+                        "on-background": "#111c2c",
+                        "on-primary-fixed-variant": "#274969",
+                        "surface-container-high": "#dee8ff",
+                        "primary-fixed": "#cfe5ff",
+                        "tertiary-container": "#262a2c",
+                        "on-primary-container": "#7293b6",
+                        "on-surface-variant": "#42474d",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#7f2b00",
+                        "surface-container-low": "#f0f3ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "button-text": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "button-text": ["14px", { "lineHeight": "1", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+	<style>
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+    </style>
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class( 'bg-surface text-on-surface font-body-md antialiased pt-20' ); ?>>
+<?php wp_body_open(); ?>
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface dark:bg-primary border-b border-outline-variant dark:border-outline flat no shadows">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<div class="flex items-center gap-4">
+			<?php
+			if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
+				the_custom_logo();
+			} else {
+				?>
+				<img alt="<?php bloginfo( 'name' ); ?>" class="h-[120px] w-auto" src="/wp-content/uploads/2026/08/AL-BAYRAK.png">
+				<?php
+			}
+			?>
+		</div>
+	</a>
+
+	<?php
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary',
+				'container'      => 'div',
+				'container_class' => 'hidden md:flex items-center gap-gutter',
+				'menu_class'     => 'flex items-center gap-gutter',
+				'fallback_cb'    => false,
+			)
+		);
+	} else {
+		?>
+		<div class="hidden md:flex items-center gap-gutter">
+			<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Services</a>
+			<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
+			<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
+		</div>
+		<?php
+	}
+	?>
+
+	<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
+		Get Quotation
+	</a>
+</nav>
