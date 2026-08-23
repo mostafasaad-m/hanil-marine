@@ -1,12 +1,32 @@
 <?php
 /**
  * Template Name: Quotation Step 4 - Review & Submit
- * Description: Fourth and final step of the multi-step vessel quotation request form with attachment submission.
+ * Description: Fourth and final step of the multi-step vessel quotation request form with swiping page transition.
  */
 get_header();
 ?>
 
-<main class="flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<style>
+.swipe-container {
+	opacity: 0;
+	transform: translateX(40px);
+	transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease-in-out;
+}
+.swipe-in {
+	opacity: 1 !important;
+	transform: translateX(0) !important;
+}
+.swipe-out-left {
+	transform: translateX(-60px) !important;
+	opacity: 0 !important;
+}
+.swipe-out-right {
+	transform: translateX(60px) !important;
+	opacity: 0 !important;
+}
+</style>
+
+<main id="swipe-wrapper" class="swipe-container flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
 	<!-- Progress Stepper -->
 	<?php get_template_part( 'template-parts/quotation-stepper', null, array( 'current_step' => 4 ) ); ?>
 
@@ -118,9 +138,9 @@ get_header();
 			</div>
 
 			<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
-				<a href="<?php echo esc_url( home_url( '/step-3' ) ); ?>" class="px-8 py-4 rounded border border-primary text-primary font-button-text text-button-text hover:bg-surface-container transition-colors text-center">
+				<button id="edit-btn" type="button" class="px-8 py-4 rounded border border-primary text-primary font-button-text text-button-text hover:bg-surface-container transition-colors text-center">
 					Edit Details
-				</a>
+				</button>
 				<button id="submit-btn" type="button" class="px-10 py-4 rounded bg-secondary-container text-on-secondary font-button-text text-button-text hover:bg-secondary transition-all shadow-lg flex items-center justify-center gap-2">
 					<span>Submit Quotation Request</span>
 					<span class="material-symbols-outlined text-sm">send</span>
@@ -159,6 +179,11 @@ function dataURLtoFile(dataurl, filename) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	const wrapper = document.getElementById('swipe-wrapper');
+	requestAnimationFrame(() => {
+		wrapper.classList.add('swipe-in');
+	});
+
 	// Guard check
 	if (!sessionStorage.getItem('quotation_vesselName')) {
 		window.location.href = "<?php echo esc_url( home_url( '/step-3' ) ); ?>";
@@ -187,6 +212,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.getElementById('sum-file-name').textContent = fileName;
 		document.getElementById('sum-file-wrapper').classList.remove('hidden');
 	}
+
+	document.getElementById('edit-btn').addEventListener('click', () => {
+		wrapper.classList.remove('swipe-in');
+		wrapper.classList.add('swipe-out-right');
+		setTimeout(() => {
+			window.location.href = "<?php echo esc_url( home_url( '/step-3' ) ); ?>";
+		}, 280);
+	});
 
 	// Submit handler
 	document.getElementById('submit-btn').addEventListener('click', () => {

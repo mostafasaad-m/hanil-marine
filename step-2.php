@@ -1,12 +1,32 @@
 <?php
 /**
  * Template Name: Quotation Step 2 - Contact Info
- * Description: Second step of the multi-step vessel quotation request form.
+ * Description: Second step of the multi-step vessel quotation request form with swiping page transition.
  */
 get_header();
 ?>
 
-<main class="flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<style>
+.swipe-container {
+	opacity: 0;
+	transform: translateX(40px);
+	transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease-in-out;
+}
+.swipe-in {
+	opacity: 1 !important;
+	transform: translateX(0) !important;
+}
+.swipe-out-left {
+	transform: translateX(-60px) !important;
+	opacity: 0 !important;
+}
+.swipe-out-right {
+	transform: translateX(60px) !important;
+	opacity: 0 !important;
+}
+</style>
+
+<main id="swipe-wrapper" class="swipe-container flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
 	<!-- Progress Stepper -->
 	<?php get_template_part( 'template-parts/quotation-stepper', null, array( 'current_step' => 2 ) ); ?>
 
@@ -54,10 +74,10 @@ get_header();
 
 			<!-- Navigation Buttons -->
 			<div class="mt-10 pt-6 border-t border-outline-variant flex justify-between items-center">
-				<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="px-6 py-3 border border-primary text-primary rounded font-button-text text-button-text hover:bg-surface-container transition-colors flex items-center gap-2">
+				<button id="back-btn" type="button" class="px-6 py-3 border border-primary text-primary rounded font-button-text text-button-text hover:bg-surface-container transition-colors flex items-center gap-2">
 					<span class="material-symbols-outlined text-sm">arrow_back</span>
 					<span>Back</span>
-				</a>
+				</button>
 				<button id="next-btn" type="button" class="px-8 py-3 bg-secondary-container text-on-secondary font-button-text text-button-text rounded shadow-md hover:bg-secondary transition-all flex items-center gap-2">
 					<span>Next: Vessel Logistics</span>
 					<span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -69,6 +89,11 @@ get_header();
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+	const wrapper = document.getElementById('swipe-wrapper');
+	requestAnimationFrame(() => {
+		wrapper.classList.add('swipe-in');
+	});
+
 	// Guard: check if step 1 service is selected
 	if (!sessionStorage.getItem('quotation_service_type')) {
 		window.location.href = "<?php echo esc_url( home_url( '/step-1' ) ); ?>";
@@ -82,6 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (val) {
 			document.getElementById(field).value = val;
 		}
+	});
+
+	document.getElementById('back-btn').addEventListener('click', () => {
+		wrapper.classList.remove('swipe-in');
+		wrapper.classList.add('swipe-out-right');
+		setTimeout(() => {
+			window.location.href = "<?php echo esc_url( home_url( '/step-1' ) ); ?>";
+		}, 280);
 	});
 
 	document.getElementById('next-btn').addEventListener('click', () => {
@@ -102,7 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		sessionStorage.setItem('quotation_jobTitle', jobTitle);
 		sessionStorage.setItem('quotation_phone', phone);
 
-		window.location.href = "<?php echo esc_url( home_url( '/step-3' ) ); ?>";
+		wrapper.classList.remove('swipe-in');
+		wrapper.classList.add('swipe-out-left');
+		setTimeout(() => {
+			window.location.href = "<?php echo esc_url( home_url( '/step-3' ) ); ?>";
+		}, 280);
 	});
 });
 </script>
