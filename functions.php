@@ -1,7 +1,7 @@
 <?php
 /**
  * Bayrak - Standalone WordPress Theme Functions
- * Author: Mostafa Saad (https://vitaldc.com)
+ * Author: VitalDC (https://vitaldc.com)
  * Text Domain: bayrak
  */
 

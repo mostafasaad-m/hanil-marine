@@ -3,7 +3,7 @@
  * Default Page Template
  *
  * @package Bayrak
- * @author Mostafa Saad (https://vitaldc.com)
+ * @author VitalDC (https://vitaldc.com)
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

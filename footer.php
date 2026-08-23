@@ -3,7 +3,7 @@
  * Bayrak Theme Footer
  *
  * @package Bayrak
- * @author Mostafa Saad (https://vitaldc.com)
+ * @author VitalDC (https://vitaldc.com)
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</ul>
 	</div>
 	<div class="col-span-1 md:col-span-3 mt-8 pt-8 border-t border-on-tertiary-fixed-variant text-tertiary-fixed-dim">
-		<p>© <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved. Standalone Theme by <a href="https://vitaldc.com" target="_blank" rel="noopener noreferrer" class="hover:underline">Mostafa Saad</a>.</p>
+		<p>© <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved. Standalone Theme by <a href="https://vitaldc.com" target="_blank" rel="noopener noreferrer" class="hover:underline">VitalDC</a>.</p>
 	</div>
 </footer>
 
