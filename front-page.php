@@ -11,7 +11,7 @@
 <span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-6 uppercase tracking-wider">Trusted Maritime Partner</span>
 <h1 class="font-headline-xl text-headline-xl mb-4">All Your Captain Needs, Everything..</h1>
 <p class="font-body-lg text-body-lg mb-8 text-primary-fixed">Your trusted partner for maritime excellence in Egypt. Unwavering logistical precision for global fleets.</p>
-<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(212,175,55,0.3)]" href="/get-quote">
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(2,132,199,0.3)]" href="/get-quote">
                     Get Your Quotation Now
                 </a>
 </div>
@@ -160,7 +160,7 @@
 <label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Additional Details</label>
 <textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="Briefly describe your requirements..." rows="4"></textarea>
 </div>
-<button class="w-full bg-secondary-container text-on-secondary py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(212,175,55,0.3)]" type="submit">
+<button class="w-full bg-secondary-container text-on-secondary py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(2,132,199,0.3)]" type="submit">
                         Submit Request
                     </button>
 </form>
@@ -250,7 +250,7 @@
                     data-target="alexandria"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(2,132,199,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Alexandria</span>
@@ -263,7 +263,7 @@
                     data-target="dekhila"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(2,132,199,0.8)]"></span>
                 </div>
 
                 <!-- Sidi Kerir -->
@@ -272,7 +272,7 @@
                     data-target="sidi-kerir"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(2,132,199,0.8)]"></span>
                 </div>
 
                 <!-- Abu Qir -->
@@ -281,7 +281,7 @@
                     data-target="abu-qir"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(2,132,199,0.8)]"></span>
                 </div>
 
                 <!-- Damietta -->
@@ -290,7 +290,7 @@
                     data-target="damietta"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(2,132,199,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Damietta</span>
@@ -303,7 +303,7 @@
                     data-target="port-said"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(2,132,199,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Port Said</span>
@@ -316,7 +316,7 @@
                     data-target="arish"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(2,132,199,0.8)]"></span>
                 </div>
 
                 <!-- Cairo -->
@@ -325,7 +325,7 @@
                     data-target="cairo"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_12px_rgba(212,175,55,0.9)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_12px_rgba(2,132,199,0.9)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Cairo</span>
@@ -338,7 +338,7 @@
                     data-target="suez"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(2,132,199,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Suez Canal</span>
@@ -351,7 +351,7 @@
                     data-target="adabeyah"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(2,132,199,0.8)]"></span>
                 </div>
 
                 <!-- Ain Sokhna -->
@@ -360,7 +360,7 @@
                     data-target="ain-sokhna"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(2,132,199,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Ain Sokhna</span>
@@ -373,7 +373,7 @@
                     data-target="safaga"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(2,132,199,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Safaga</span>
@@ -386,7 +386,7 @@
                     data-target="gargoub"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(2,132,199,0.8)]"></span>
                 </div>
 
             </div>
