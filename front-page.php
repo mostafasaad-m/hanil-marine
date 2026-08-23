@@ -11,7 +11,7 @@
 <span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-6 uppercase tracking-wider">Trusted Maritime Partner</span>
 <h1 class="font-headline-xl text-headline-xl mb-4">All Your Captain Needs, Everything..</h1>
 <p class="font-body-lg text-body-lg mb-8 text-primary-fixed">Your trusted partner for maritime excellence in Egypt. Unwavering logistical precision for global fleets.</p>
-<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(255,94,0,0.25)]" href="/get-quote">
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(212,175,55,0.3)]" href="/get-quote">
                     Get Your Quotation Now
                 </a>
 </div>
@@ -160,7 +160,7 @@
 <label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Additional Details</label>
 <textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="Briefly describe your requirements..." rows="4"></textarea>
 </div>
-<button class="w-full bg-secondary-container text-on-secondary py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(255,94,0,0.25)]" type="submit">
+<button class="w-full bg-secondary-container text-on-secondary py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(212,175,55,0.3)]" type="submit">
                         Submit Request
                     </button>
 </form>
@@ -177,123 +177,51 @@
 <ul class="flex flex-col gap-2">
 <!-- 01. Port Said -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="port-said">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Port Said (East & West)</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">The Mediterranean Gateway</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Port Said (East & West)</h3>
 </li>
 <!-- 02. Suez Canal Zone -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="suez">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Suez Canal Zone</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Global Transit Support</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Suez Canal Zone</h3>
 </li>
 <!-- 03. Damietta Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="damietta">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Damietta Port</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Agricultural & Industrial Hub</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Damietta Port</h3>
 </li>
 <!-- 04. Alexandria Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="alexandria">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Alexandria Port</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">The Commercial Powerhouse</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Alexandria Port</h3>
 </li>
 <!-- 05. Ain Sokhna -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="ain-sokhna">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Ain Sokhna</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Red Sea Industrial Center</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Ain Sokhna</h3>
 </li>
 <!-- 06. Adabeyah Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="adabeyah">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Adabeyah Port</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Specialized Cargo Handling</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Adabeyah Port</h3>
 </li>
 <!-- 07. Safaga Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="safaga">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Safaga Port</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Strategic Southern Access</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Safaga Port</h3>
 </li>
 <!-- 08. Arish Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="arish">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Arish Port</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">North Sinai Logistics</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Arish Port</h3>
 </li>
 <!-- 09. El Dekheila -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="dekhila">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">El Dekheila</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Alexandria Expansion Port</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">El Dekheila</h3>
 </li>
 <!-- 10. Abu Qir -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="abu-qir">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Abu Qir</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Emerging Maritime Hub</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Abu Qir</h3>
 </li>
 <!-- 11. Sidi Kerir -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="sidi-kerir">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Sidi Kerir</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">Energy & Bulk Terminal</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Sidi Kerir</h3>
 </li>
 <!-- 12. Gargoub Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="gargoub">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">Gargoub Port</h3>
-<span class="block text-body-md text-on-surface-variant text-sm mt-0.5">The Western Frontier</span>
-</div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">location_on</span>
-</div>
+	<h3 class="font-headline-md text-headline-md text-primary">Gargoub Port</h3>
 </li>
 </ul>
 </aside>
@@ -322,7 +250,7 @@
                     data-target="alexandria"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(255,94,0,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Alexandria</span>
@@ -335,7 +263,7 @@
                     data-target="dekhila"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(255,94,0,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
                 </div>
 
                 <!-- Sidi Kerir -->
@@ -344,7 +272,7 @@
                     data-target="sidi-kerir"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(255,94,0,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
                 </div>
 
                 <!-- Abu Qir -->
@@ -353,7 +281,7 @@
                     data-target="abu-qir"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(255,94,0,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
                 </div>
 
                 <!-- Damietta -->
@@ -362,7 +290,7 @@
                     data-target="damietta"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(255,94,0,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Damietta</span>
@@ -375,7 +303,7 @@
                     data-target="port-said"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(255,94,0,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Port Said</span>
@@ -388,7 +316,7 @@
                     data-target="arish"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(255,94,0,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
                 </div>
 
                 <!-- Cairo -->
@@ -397,7 +325,7 @@
                     data-target="cairo"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_12px_rgba(255,94,0,0.9)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_12px_rgba(212,175,55,0.9)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Cairo</span>
@@ -410,7 +338,7 @@
                     data-target="suez"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(255,94,0,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Suez Canal</span>
@@ -423,7 +351,7 @@
                     data-target="adabeyah"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(255,94,0,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
                 </div>
 
                 <!-- Ain Sokhna -->
@@ -432,7 +360,7 @@
                     data-target="ain-sokhna"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(255,94,0,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Ain Sokhna</span>
@@ -445,7 +373,7 @@
                     data-target="safaga"
                 >
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(255,94,0,0.85)]"></span>
+                    <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.85)]"></span>
 
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Safaga</span>
@@ -458,7 +386,7 @@
                     data-target="gargoub"
                 >
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
-                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(255,94,0,0.8)]"></span>
+                    <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
                 </div>
 
             </div>
