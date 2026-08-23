@@ -37,6 +37,12 @@ function bayrak_theme_setup() {
 			'script',
 		)
 	);
+	register_nav_menus(
+		array(
+			'primary' => __( 'Primary Mega Menu', 'bayrak' ),
+			'footer'  => __( 'Footer Navigation', 'bayrak' ),
+		)
+	);
 }
 add_action( 'after_setup_theme', 'bayrak_theme_setup' );
 

@@ -117,11 +117,62 @@
 		</div>
 	</a>
 
-	<!-- Desktop Navigation -->
-	<div class="hidden md:flex items-center gap-gutter">
-		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/services' ) ); ?>">Services</a>
-		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
-		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
+	<!-- Desktop Navigation with Mega Menu -->
+	<div class="hidden md:flex items-center gap-8 h-full">
+		<a class="text-on-surface-variant hover:text-secondary font-button-text transition-colors py-6" href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+
+		<!-- Mega Menu Item: Services -->
+		<div class="group relative py-6">
+			<a class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-button-text transition-colors cursor-pointer" href="<?php echo esc_url( home_url( '/services' ) ); ?>">
+				<span>Services</span>
+				<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+			</a>
+
+			<!-- Mega Menu Panel -->
+			<div class="absolute top-full left-1/2 -translate-x-1/2 w-[850px] bg-surface-container-lowest border border-outline-variant rounded-xl shadow-2xl p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+				<div class="grid grid-cols-3 gap-8">
+					<!-- Column 1: Maritime Categories -->
+					<div>
+						<h4 class="font-label-caps text-xs text-primary uppercase tracking-wider mb-4 border-b border-outline-variant/30 pb-2">Maritime Categories</h4>
+						<ul class="space-y-3 text-sm">
+							<li><a href="<?php echo esc_url( home_url( '/services#provisions' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">restaurant</span> Provisions Supply</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">inventory_2</span> Bonded Stores</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">build</span> Technical Spares</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">local_shipping</span> Port Logistics</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">health_and_safety</span> Safety & SOLAS</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 2: Ports -->
+					<div>
+						<h4 class="font-label-caps text-xs text-primary uppercase tracking-wider mb-4 border-b border-outline-variant/30 pb-2">Egyptian Gateways</h4>
+						<ul class="space-y-3 text-sm">
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> Port Said & Suez Canal</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> Alexandria & El Dekheila</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> Damietta Port</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> Ain Sokhna & Adabeyah</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> Safaga & Red Sea Ports</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3: Quick CTA Box -->
+					<div class="bg-surface-container p-6 rounded-lg flex flex-col justify-between border border-outline-variant/40">
+						<div>
+							<span class="bg-secondary-container text-on-secondary text-xs px-2.5 py-1 rounded font-bold uppercase tracking-wider inline-block mb-3">24/7 Operations</span>
+							<h5 class="font-headline-md text-base text-primary mb-2">Need Rapid Vessel Supply?</h5>
+							<p class="text-xs text-on-surface-variant mb-4">Request a complete vessel supply quotation in under 2 minutes.</p>
+						</div>
+						<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded text-xs font-bold hover:bg-primary-container transition-colors">
+							<span>Start Quotation</span>
+							<span class="material-symbols-outlined text-sm">arrow_forward</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a class="text-on-surface-variant hover:text-secondary font-button-text transition-colors py-6" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
+		<a class="text-on-surface-variant hover:text-secondary font-button-text transition-colors py-6" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
 	</div>
 
 	<!-- Desktop CTA -->
@@ -130,24 +181,65 @@
 	</a>
 
 	<!-- Mobile Hamburger Button -->
-	<button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" class="md:hidden text-primary dark:text-on-primary focus:outline-none p-2 flex items-center justify-center">
+	<button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" class="md:hidden text-primary focus:outline-none p-2 flex items-center justify-center">
 		<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
 	</button>
 </nav>
 
-<!-- Mobile Navigation Drawer -->
-<div id="mobile-menu-drawer" class="hidden md:hidden fixed top-20 left-0 w-full bg-surface dark:bg-primary border-b border-outline-variant shadow-2xl z-40 transition-all duration-300">
-	<div class="flex flex-col px-margin-mobile py-6 space-y-4">
-		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/services' ) ); ?>">Services</a>
-		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
-		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
-		<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text text-center text-button-text mt-4" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+<!-- Mobile Multi-Step Navigation Drawer -->
+<div id="mobile-menu-drawer" class="hidden md:hidden fixed top-20 left-0 w-full bg-surface-container-lowest border-b border-outline-variant shadow-2xl z-40 overflow-hidden transition-all duration-300 max-h-[85vh] overflow-y-auto">
+	<!-- Main Panel (Level 1) -->
+	<div id="mobile-panel-main" class="flex flex-col p-6 space-y-4">
+		<button onclick="openMobileSub('services')" class="flex justify-between items-center w-full text-left font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary">
+			<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">inventory_2</span> Services</span>
+			<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+		</button>
+
+		<button onclick="openMobileSub('ports')" class="flex justify-between items-center w-full text-left font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary">
+			<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">anchor</span> Egyptian Ports</span>
+			<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+		</button>
+
+		<a class="font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
+		<a class="font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
+
+		<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3.5 rounded font-button-text text-center text-button-text mt-4 shadow-md" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 			Get Quotation
 		</a>
 	</div>
+
+	<!-- Sub-Panel: Services (Level 2) -->
+	<div id="mobile-panel-services" class="hidden flex-col p-6 space-y-4">
+		<button onclick="closeMobileSub()" class="flex items-center gap-2 font-bold text-secondary text-sm pb-2 border-b border-outline-variant/30">
+			<span class="material-symbols-outlined text-base">arrow_back</span>
+			<span>Back to Main Menu</span>
+		</button>
+		<span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-wider">All Maritime Services</span>
+		
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#provisions' ) ); ?>"><span class="material-symbols-outlined text-secondary">restaurant</span> Provisions Supply</a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>"><span class="material-symbols-outlined text-secondary">inventory_2</span> Bonded Stores</a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>"><span class="material-symbols-outlined text-secondary">build</span> Technical Spares</a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>"><span class="material-symbols-outlined text-secondary">local_shipping</span> Port Logistics</a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>"><span class="material-symbols-outlined text-secondary">health_and_safety</span> Safety & SOLAS</a>
+	</div>
+
+	<!-- Sub-Panel: Ports (Level 2) -->
+	<div id="mobile-panel-ports" class="hidden flex-col p-6 space-y-4">
+		<button onclick="closeMobileSub()" class="flex items-center gap-2 font-bold text-secondary text-sm pb-2 border-b border-outline-variant/30">
+			<span class="material-symbols-outlined text-base">arrow_back</span>
+			<span>Back to Main Menu</span>
+		</button>
+		<span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-wider">Egyptian Port Locations</span>
+
+		<a class="py-2 text-primary font-body-md border-b border-outline-variant/20" href="<?php echo esc_url( home_url( '/#ports' ) ); ?>">Port Said & Suez Canal Zone</a>
+		<a class="py-2 text-primary font-body-md border-b border-outline-variant/20" href="<?php echo esc_url( home_url( '/#ports' ) ); ?>">Alexandria & El Dekheila</a>
+		<a class="py-2 text-primary font-body-md border-b border-outline-variant/20" href="<?php echo esc_url( home_url( '/#ports' ) ); ?>">Damietta Port</a>
+		<a class="py-2 text-primary font-body-md border-b border-outline-variant/20" href="<?php echo esc_url( home_url( '/#ports' ) ); ?>">Ain Sokhna & Adabeyah</a>
+		<a class="py-2 text-primary font-body-md border-b border-outline-variant/20" href="<?php echo esc_url( home_url( '/#ports' ) ); ?>">Safaga & Red Sea Ports</a>
+	</div>
 </div>
 
-<!-- Mobile Menu Toggle Script -->
+<!-- Mobile Multi-Step Script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 	const menuBtn = document.getElementById('mobile-menu-toggle');
@@ -159,18 +251,38 @@ document.addEventListener('DOMContentLoaded', function() {
 			menuDrawer.classList.toggle('hidden');
 			if (menuDrawer.classList.contains('hidden')) {
 				menuIcon.textContent = 'menu';
+				closeMobileSub();
 			} else {
 				menuIcon.textContent = 'close';
 			}
 		});
 
-		// Close menu when clicking any nav link inside drawer
 		menuDrawer.querySelectorAll('a').forEach(link => {
 			link.addEventListener('click', function() {
 				menuDrawer.classList.add('hidden');
 				menuIcon.textContent = 'menu';
+				closeMobileSub();
 			});
 		});
 	}
+
+	window.openMobileSub = function(panelName) {
+		document.getElementById('mobile-panel-main').classList.add('hidden');
+		if (panelName === 'services') {
+			document.getElementById('mobile-panel-services').classList.remove('hidden');
+			document.getElementById('mobile-panel-services').classList.add('flex');
+		} else if (panelName === 'ports') {
+			document.getElementById('mobile-panel-ports').classList.remove('hidden');
+			document.getElementById('mobile-panel-ports').classList.add('flex');
+		}
+	};
+
+	window.closeMobileSub = function() {
+		document.getElementById('mobile-panel-services').classList.add('hidden');
+		document.getElementById('mobile-panel-services').classList.remove('flex');
+		document.getElementById('mobile-panel-ports').classList.add('hidden');
+		document.getElementById('mobile-panel-ports').classList.remove('flex');
+		document.getElementById('mobile-panel-main').classList.remove('hidden');
+	};
 });
 </script>
