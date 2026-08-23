@@ -1,0 +1,25 @@
+name: Deploy Hanil Marine Theme
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy theme
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avzr --delete
+          path: ./
+          remote_path: /var/www/marine.vitaldc/wp-content/themes/bayrak/
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: deployer
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote_port: 22
