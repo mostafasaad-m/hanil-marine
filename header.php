@@ -125,7 +125,7 @@
 	</div>
 
 	<!-- Desktop CTA -->
-	<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
+	<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 		Get Quotation
 	</a>
 
@@ -141,7 +141,7 @@
 		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/services' ) ); ?>">Services</a>
 		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
 		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
-		<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text text-center text-button-text mt-4" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
+		<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text text-center text-button-text mt-4" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 			Get Quotation
 		</a>
 	</div>
