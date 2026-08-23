@@ -19,48 +19,92 @@
 </header>
 <!-- Services Section -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-[1280px] mx-auto" id="services">
-<div class="mb-12">
-<h2 class="font-headline-lg text-headline-lg text-primary">Core Services</h2>
-<div class="h-1 w-20 bg-secondary-container mt-4"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Bonded Stores -->
-<div class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary">
-<div class="flex justify-between items-start mb-6">
-<h3 class="font-headline-md text-headline-md text-primary">Bonded Stores</h3>
-<span class="material-symbols-outlined service-icon text-surface-tint text-3xl transition-transform duration-300" data-icon="inventory_2" data-weight="fill" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Premium duty-free goods and specialized maritime items. Efficiently stocked for international voyages.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">In Stock</span>
-<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Duty-Free</span>
-</div>
-</div>
-<!-- Provisions -->
-<div class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary">
-<div class="flex justify-between items-start mb-6">
-<h3 class="font-headline-md text-headline-md text-primary">Provisions</h3>
-<span class="material-symbols-outlined service-icon text-surface-tint text-3xl transition-transform duration-300" data-icon="restaurant" data-weight="fill" style="font-variation-settings: 'FILL' 1;">restaurant</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Fresh, frozen, and dry provisions sourced for quality and longevity. Sustain your crew with the best.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Fresh Supply</span>
-<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Global Delivery</span>
-</div>
-</div>
-<!-- Technical Parts -->
-<div class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary">
-<div class="flex justify-between items-start mb-6">
-<h3 class="font-headline-md text-headline-md text-primary">Technical Parts</h3>
-<span class="material-symbols-outlined service-icon text-surface-tint text-3xl transition-transform duration-300" data-icon="settings" data-weight="fill" style="font-variation-settings: 'FILL' 1;">settings</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Essential engine, deck, and electrical spare parts for any vessel. Keep your operations running smoothly.</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Available</span>
-<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">OEM Quality</span>
-</div>
-</div>
-</div>
+	<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+		<div>
+			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Maritime Excellence</span>
+			<h2 class="font-headline-lg text-headline-lg text-primary">Core Services & Supply Solutions</h2>
+			<div class="h-1 w-20 bg-secondary-container mt-4"></div>
+		</div>
+		<a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded font-button-text hover:bg-primary-container transition-colors shadow-sm self-start md:self-auto">
+			<span>Explore Full Services Page</span>
+			<span class="material-symbols-outlined text-sm">arrow_forward</span>
+		</a>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+		<!-- Ship Supply & Provisions -->
+		<a href="<?php echo esc_url( home_url( '/services#services-tabs' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
+			<div>
+				<div class="flex justify-between items-start mb-6">
+					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Ship Supply & Provisions</h3>
+					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">inventory_2</span>
+				</div>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Fresh, frozen, & dry food provisions alongside duty-free bonded stores and cabin items efficiently stocked for international voyages.</p>
+				<div class="flex flex-wrap gap-2 mb-6">
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Fresh Supply</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Duty-Free</span>
+				</div>
+			</div>
+			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
+				<span>View Details</span>
+				<span class="material-symbols-outlined text-sm">arrow_forward</span>
+			</div>
+		</a>
+
+		<!-- Logistics & Port Handling -->
+		<a href="<?php echo esc_url( home_url( '/services#services-tabs' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
+			<div>
+				<div class="flex justify-between items-start mb-6">
+					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Logistics & Port Transit</h3>
+					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">local_shipping</span>
+				</div>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Unwavering port logistics, customs clearance, bonded warehousing, and rapid vessel delivery across all major Egyptian gateways.</p>
+				<div class="flex flex-wrap gap-2 mb-6">
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">24/7 Delivery</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Customs Clearance</span>
+				</div>
+			</div>
+			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
+				<span>View Details</span>
+				<span class="material-symbols-outlined text-sm">arrow_forward</span>
+			</div>
+		</a>
+
+		<!-- Technical Parts & Repairs -->
+		<a href="<?php echo esc_url( home_url( '/services#services-tabs' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
+			<div>
+				<div class="flex justify-between items-start mb-6">
+					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Technical Support & Spares</h3>
+					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">build</span>
+				</div>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Essential engine, deck, and electrical spare parts plus qualified engineering teams for vessel maintenance and repairs.</p>
+				<div class="flex flex-wrap gap-2 mb-6">
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">OEM Spares</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Engineering</span>
+				</div>
+			</div>
+			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
+				<span>View Details</span>
+				<span class="material-symbols-outlined text-sm">arrow_forward</span>
+			</div>
+		</a>
+	</div>
+
+	<!-- Bottom Quotation Banner -->
+	<div class="mt-12 bg-primary text-on-primary rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg">
+		<div>
+			<h3 class="font-headline-md text-headline-md mb-2">Need a Fast Vessel Quotation?</h3>
+			<p class="font-body-md text-primary-fixed">Send us your vessel requirements for immediate 24/7 port processing.</p>
+		</div>
+		<div class="flex flex-wrap gap-4">
+			<a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="bg-surface-container-lowest text-primary px-6 py-3 rounded font-button-text hover:bg-surface transition-colors">
+				View All Services
+			</a>
+			<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text hover:bg-secondary transition-colors shadow-md">
+				Request Quotation Now
+			</a>
+		</div>
+	</div>
 </section>
 <!-- Trust Section -->
 <section class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop" id="about">
