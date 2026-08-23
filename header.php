@@ -111,17 +111,66 @@
 <?php wp_body_open(); ?>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface dark:bg-primary border-b border-outline-variant dark:border-outline flat no shadows">
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<div class="flex items-center gap-4">
-<img alt="Hanil Marine Logo" class="h-[120px] w-auto" src="/wp-content/uploads/2026/08/AL-BAYRAK.png">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<div class="flex items-center gap-4">
+			<img alt="Hanil Marine Logo" class="h-[120px] w-auto" src="/wp-content/uploads/2026/08/AL-BAYRAK.png">
+		</div>
+	</a>
 
-</div></a>
-<div class="hidden md:flex items-center gap-gutter">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Services</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
-</div>
-<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
-            Get Quotation
-        </a>
+	<!-- Desktop Navigation -->
+	<div class="hidden md:flex items-center gap-gutter">
+		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/services' ) ); ?>">Services</a>
+		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
+		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
+	</div>
+
+	<!-- Desktop CTA -->
+	<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
+		Get Quotation
+	</a>
+
+	<!-- Mobile Hamburger Button -->
+	<button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" class="md:hidden text-primary dark:text-on-primary focus:outline-none p-2 flex items-center justify-center">
+		<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+	</button>
 </nav>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu-drawer" class="hidden md:hidden fixed top-20 left-0 w-full bg-surface dark:bg-primary border-b border-outline-variant shadow-2xl z-40 transition-all duration-300">
+	<div class="flex flex-col px-margin-mobile py-6 space-y-4">
+		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/services' ) ); ?>">Services</a>
+		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
+		<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary font-button-text text-lg py-2 border-b border-outline-variant/30 transition-colors" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
+		<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text text-center text-button-text mt-4" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
+			Get Quotation
+		</a>
+	</div>
+</div>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const menuBtn = document.getElementById('mobile-menu-toggle');
+	const menuDrawer = document.getElementById('mobile-menu-drawer');
+	const menuIcon = document.getElementById('mobile-menu-icon');
+
+	if (menuBtn && menuDrawer && menuIcon) {
+		menuBtn.addEventListener('click', function() {
+			menuDrawer.classList.toggle('hidden');
+			if (menuDrawer.classList.contains('hidden')) {
+				menuIcon.textContent = 'menu';
+			} else {
+				menuIcon.textContent = 'close';
+			}
+		});
+
+		// Close menu when clicking any nav link inside drawer
+		menuDrawer.querySelectorAll('a').forEach(link => {
+			link.addEventListener('click', function() {
+				menuDrawer.classList.add('hidden');
+				menuIcon.textContent = 'menu';
+			});
+		});
+	}
+});
+</script>
