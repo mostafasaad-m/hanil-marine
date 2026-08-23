@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> class="scroll-smooth">
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-	<script id="tailwind-config">
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -100,55 +100,28 @@
             }
         }
     </script>
-	<style>
+<style>
         .service-card:hover .service-icon {
             transform: scale(1.1);
         }
     </style>
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
-<body <?php body_class( 'bg-surface text-on-surface font-body-md antialiased pt-20' ); ?>>
+<body class="bg-surface text-on-surface font-body-md antialiased pt-20">
 <?php wp_body_open(); ?>
-
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface dark:bg-primary border-b border-outline-variant dark:border-outline flat no shadows">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<div class="flex items-center gap-4">
-			<?php
-			if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
-				the_custom_logo();
-			} else {
-				?>
-				<img alt="<?php bloginfo( 'name' ); ?>" class="h-[120px] w-auto" src="/wp-content/uploads/2026/08/AL-BAYRAK.png">
-				<?php
-			}
-			?>
-		</div>
-	</a>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<div class="flex items-center gap-4">
+<img alt="Hanil Marine Logo" class="h-[120px] w-auto" src="/wp-content/uploads/2026/08/AL-BAYRAK.png">
 
-	<?php
-	if ( has_nav_menu( 'primary' ) ) {
-		wp_nav_menu(
-			array(
-				'theme_location' => 'primary',
-				'container'      => 'div',
-				'container_class' => 'hidden md:flex items-center gap-gutter',
-				'menu_class'     => 'flex items-center gap-gutter',
-				'fallback_cb'    => false,
-			)
-		);
-	} else {
-		?>
-		<div class="hidden md:flex items-center gap-gutter">
-			<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Services</a>
-			<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
-			<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
-		</div>
-		<?php
-	}
-	?>
-
-	<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
-		Get Quotation
-	</a>
+</div></a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center bg-secondary-container text-on-secondary px-6 py-3 rounded hover:bg-secondary transition-colors duration-200 font-button-text text-button-text scale-95 active:opacity-80" href="<?php echo esc_url( home_url( '/#quote' ) ); ?>">
+            Get Quotation
+        </a>
 </nav>
