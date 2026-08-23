@@ -303,7 +303,6 @@
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Alexandria Port</h3>
-<span class="font-label-caps text-label-caps text-secondary-container">HUB PORT</span>
 </div>
 <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="anchor">anchor</span>
 </div>
@@ -312,18 +311,16 @@
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Dekhila Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">COMMERCIAL</span>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="directions_boat">directions_boat</span>
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="damietta">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Damietta Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">CONTAINER TERMINAL</span>
+
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="inventory_2">inventory_2</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="port-said">
@@ -339,25 +336,22 @@
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Suez Port</h3>
-<span class="font-label-caps text-label-caps text-secondary-container">SUEZ CANAL EXIT</span>
+
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="waves">waves</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="ain-sokhna">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Ain Sokhna</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">RED SEA HUB</span>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="anchor">anchor</span>
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="adabeyah">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Adabeyah Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">BULK CARGO</span>
 </div>
 <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="conveyor_belt">conveyor_belt</span>
 </div>
@@ -366,45 +360,44 @@
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Safaga Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">MINERALS EXPORT</span>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="precision_manufacturing">precision_manufacturing</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="arish">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Arish Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">MEDITERRANEAN</span>
+
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="directions_boat">directions_boat</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="abu-qir">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Abu Qir Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">NAVAL &amp; COMMERCIAL</span>
+=
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="military_tech">military_tech</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="sidi-kerir">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Sidi Kerir</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">OIL TERMINAL</span>
+
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="oil_barrel">oil_barrel</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="gargoub">
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Gargoub Port</h3>
-<span class="font-label-caps text-label-caps text-on-surface-variant">DEVELOPING HUB</span>
+
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="construction">construction</span>
+
 </div>
 </li>
 </ul>
