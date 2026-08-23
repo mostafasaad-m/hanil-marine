@@ -327,9 +327,9 @@
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Port Said</h3>
-<span class="font-label-caps text-label-caps text-secondary-container">SUEZ CANAL ENTRY</span>
+
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="waves">waves</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="suez">
@@ -353,7 +353,7 @@
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Adabeyah Port</h3>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="conveyor_belt">conveyor_belt</span>
+
 </div>
 </li>
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="safaga">
@@ -377,7 +377,7 @@
 <div class="flex items-center justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary">Abu Qir Port</h3>
-=
+
 </div>
 
 </div>
