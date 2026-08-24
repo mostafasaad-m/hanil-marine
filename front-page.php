@@ -184,39 +184,27 @@
 <ul class="flex flex-col gap-2">
 <!-- 01. Port Said -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="port-said">
-	<h3 class="font-headline-md text-headline-md text-primary">Port Said (East & West)</h3>
+	<h3 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'port_said', 'Port Said (East & West)' ) ); ?></h3>
 </li>
 <!-- 02. Suez Canal Zone -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="suez">
-	<h3 class="font-headline-md text-headline-md text-primary">Suez Canal Zone</h3>
+	<h3 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'port_suez', 'Suez Canal Zone' ) ); ?></h3>
 </li>
 <!-- 03. Damietta Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="damietta">
-	<h3 class="font-headline-md text-headline-md text-primary">Damietta Port</h3>
+	<h3 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'port_damietta', 'Damietta Port' ) ); ?></h3>
 </li>
 <!-- 04. Alexandria Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="alexandria">
-	<h3 class="font-headline-md text-headline-md text-primary">Alexandria Port</h3>
+	<h3 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'port_alexandria', 'Alexandria Port' ) ); ?></h3>
 </li>
 <!-- 05. Ain Sokhna -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="ain-sokhna">
-	<h3 class="font-headline-md text-headline-md text-primary">Ain Sokhna</h3>
+	<h3 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'port_sokhna', 'Ain Sokhna & Adabeyah' ) ); ?></h3>
 </li>
-<!-- 06. Adabeyah Port -->
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="adabeyah">
-	<h3 class="font-headline-md text-headline-md text-primary">Adabeyah Port</h3>
-</li>
-<!-- 07. Safaga Port -->
+<!-- 06. Safaga Port -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="safaga">
-	<h3 class="font-headline-md text-headline-md text-primary">Safaga Port</h3>
-</li>
-<!-- 08. Arish Port -->
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="arish">
-	<h3 class="font-headline-md text-headline-md text-primary">Arish Port</h3>
-</li>
-<!-- 09. El Dekheila -->
-<li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="dekhila">
-	<h3 class="font-headline-md text-headline-md text-primary">El Dekheila</h3>
+	<h3 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'port_redsea', 'Safaga & Red Sea Ports' ) ); ?></h3>
 </li>
 <!-- 10. Abu Qir -->
 <li class="port-item group cursor-pointer p-4 bg-surface rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-high transition-colors" data-port="abu-qir">

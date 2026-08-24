@@ -85,33 +85,33 @@ get_header();
 		<div id="tab-ship-supply" class="service-tab-panel block" role="tabpanel">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 				<div class="lg:col-span-7">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block">24/7 Provisions & Stores</span>
-					<h3 class="font-headline-xl text-headline-lg text-primary mb-4">Complete Ship Supply & Bonded Stores</h3>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block"><?php echo esc_html( bayrak_t( 'tab_provisions_badge', '24/7 Provisions & Stores' ) ); ?></span>
+					<h3 class="font-headline-xl text-headline-lg text-primary mb-4"><?php echo esc_html( bayrak_t( 'tab_provisions_title', 'Complete Ship Supply & Bonded Stores' ) ); ?></h3>
 					<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-						We supply international merchant vessels, tankers, and offshore fleets with top-grade fresh, frozen, and dry provisions alongside duty-free bonded goods and deck/engine stores.
+						<?php echo esc_html( bayrak_t( 'tab_provisions_desc', 'Fresh, frozen, and dry provisions complying with HACCP & ISO 22000 standards. Full range of bonded goods, cabin stores, and galley equipment.' ) ); ?>
 					</p>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
 							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
-							<span class="font-body-md text-primary font-semibold">Fresh & Frozen Foods</span>
+							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'prov_fresh_title', 'Fresh & Frozen Foods' ) ); ?></span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
 							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
-							<span class="font-body-md text-primary font-semibold">Duty-Free Bonded Goods</span>
+							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'card_provisions_title', 'Duty-Free Bonded Goods' ) ); ?></span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
 							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
-							<span class="font-body-md text-primary font-semibold">Deck & Engine Consumables</span>
+							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'card_technical_title', 'Deck & Engine Stores' ) ); ?></span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
 							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
-							<span class="font-body-md text-primary font-semibold">IMO & ISSA Compliant</span>
+							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'cert_title', 'HACCP & ISO Compliant' ) ); ?></span>
 						</div>
 					</div>
 
 					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
-						Request Ship Supply Quote
+						<?php echo esc_html( bayrak_t( 'get_quotation', 'Request Ship Supply Quote' ) ); ?>
 					</a>
 				</div>
 				<div class="lg:col-span-5">
@@ -126,10 +126,10 @@ get_header();
 		<div id="tab-logistics" class="service-tab-panel hidden" role="tabpanel">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 				<div class="lg:col-span-7">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block">Port Logistics & Transit</span>
-					<h3 class="font-headline-xl text-headline-lg text-primary mb-4">Streamlined Maritime Logistics</h3>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block"><?php echo esc_html( bayrak_t( 'tab_logistics_badge', 'Zero-Delay Logistics' ) ); ?></span>
+					<h3 class="font-headline-xl text-headline-lg text-primary mb-4"><?php echo esc_html( bayrak_t( 'tab_logistics_title', 'Port Clearance & Anchorage Launch Delivery' ) ); ?></h3>
 					<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-						Our dedicated port logistics teams ensure rapid customs clearance, bonded warehousing, and seamless door-to-deck delivery across Suez Canal, Port Said, Alexandria, & Red Sea ports.
+						<?php echo esc_html( bayrak_t( 'tab_logistics_desc', 'Express customs clearance, bonded warehousing, launch boat dispatch at Port Said and Suez anchorages, and direct truck logistics alongside all Egyptian berths.' ) ); ?>
 					</p>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -152,7 +152,7 @@ get_header();
 					</div>
 
 					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
-						Inquire About Logistics
+						<?php echo esc_html( bayrak_t( 'get_quotation', 'Inquire About Logistics' ) ); ?>
 					</a>
 				</div>
 				<div class="lg:col-span-5">
@@ -167,10 +167,10 @@ get_header();
 		<div id="tab-crew-change" class="service-tab-panel hidden" role="tabpanel">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 				<div class="lg:col-span-7">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block">24/7 Crew Mobility</span>
-					<h3 class="font-headline-xl text-headline-lg text-primary mb-4">Shore-to-Ship Crew Handling</h3>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block"><?php echo esc_html( bayrak_t( 'tab_crew_badge', 'Fleet Support' ) ); ?></span>
+					<h3 class="font-headline-xl text-headline-lg text-primary mb-4"><?php echo esc_html( bayrak_t( 'tab_crew_title', 'Maritime Crew Change & Transit Handling' ) ); ?></h3>
 					<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-						Full assistance for crew sign-on and sign-off, OK-to-board immigration clearances, VIP airport transfers, hotel accommodations, and medical transport at all Egyptian gateways.
+						<?php echo esc_html( bayrak_t( 'tab_crew_desc', '24/7 airport meet & assist, visa arrangements, hotel transfers, shore launches, and medical emergency assistance across Cairo, Alexandria, Port Said, and Suez.' ) ); ?>
 					</p>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -193,7 +193,7 @@ get_header();
 					</div>
 
 					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
-						Book Crew Logistics
+						<?php echo esc_html( bayrak_t( 'get_quotation', 'Book Crew Logistics' ) ); ?>
 					</a>
 				</div>
 				<div class="lg:col-span-5">
@@ -208,10 +208,10 @@ get_header();
 		<div id="tab-safety" class="service-tab-panel hidden" role="tabpanel">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 				<div class="lg:col-span-7">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block">SOLAS & IMO Compliant</span>
-					<h3 class="font-headline-xl text-headline-lg text-primary mb-4">Certified Safety & Life-Saving Equipment</h3>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block"><?php echo esc_html( bayrak_t( 'tab_safety_badge', 'SOLAS Certified' ) ); ?></span>
+					<h3 class="font-headline-xl text-headline-lg text-primary mb-4"><?php echo esc_html( bayrak_t( 'tab_safety_title', 'Marine Safety Gear & Life Saving Appliances' ) ); ?></h3>
 					<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-						Certified safety equipment supply and annual inspection services including life rafts, firefighting systems, immersion suits, flares, and gas detection systems.
+						<?php echo esc_html( bayrak_t( 'tab_safety_desc', 'SOLAS approved life rafts, pyrotechnics, firefighting equipment, immersion suits, safety harnesses, and class-certified inspection services.' ) ); ?>
 					</p>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -234,7 +234,7 @@ get_header();
 					</div>
 
 					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
-						Request Safety Inspection
+						<?php echo esc_html( bayrak_t( 'get_quotation', 'Request Safety Inspection' ) ); ?>
 					</a>
 				</div>
 				<div class="lg:col-span-5">
@@ -249,10 +249,10 @@ get_header();
 		<div id="tab-technical" class="service-tab-panel hidden" role="tabpanel">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 				<div class="lg:col-span-7">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block">24/7 Marine Engineering</span>
-					<h3 class="font-headline-xl text-headline-lg text-primary mb-4">Technical Maintenance & Repair</h3>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-4 inline-block"><?php echo esc_html( bayrak_t( 'tab_technical_badge', 'IMPA / ISSA Coded' ) ); ?></span>
+					<h3 class="font-headline-xl text-headline-lg text-primary mb-4"><?php echo esc_html( bayrak_t( 'tab_technical_title', 'Deck, Engine & Electrical Technical Spares' ) ); ?></h3>
 					<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-						Qualified marine engineers and technicians providing main engine overhauls, electrical automation repairs, hydraulic troubleshooting, and underwater inspection.
+						<?php echo esc_html( bayrak_t( 'tab_technical_desc', 'Comprehensive stock of IMPA/ISSA coded engine spares, valves, pumps, electrical components, pneumatic tools, and marine technician repairs at berth.' ) ); ?>
 					</p>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -275,7 +275,7 @@ get_header();
 					</div>
 
 					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
-						Request Technical Team
+						<?php echo esc_html( bayrak_t( 'get_quotation', 'Request Technical Team' ) ); ?>
 					</a>
 				</div>
 				<div class="lg:col-span-5">
