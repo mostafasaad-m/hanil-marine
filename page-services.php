@@ -110,7 +110,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						Request Ship Supply Quote
 					</a>
 				</div>
@@ -151,7 +151,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						Inquire About Logistics
 					</a>
 				</div>
@@ -192,7 +192,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						Book Crew Logistics
 					</a>
 				</div>
@@ -233,7 +233,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						Request Safety Inspection
 					</a>
 				</div>
@@ -274,7 +274,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						Request Technical Team
 					</a>
 				</div>

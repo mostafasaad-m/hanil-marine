@@ -3,16 +3,16 @@
 <!-- Hero Section -->
 <header class="relative h-[80vh] flex items-center bg-surface-container-highest overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="bg-cover bg-center w-full h-full opacity-80" data-alt="A majestic, massive cargo vessel docked at a busy commercial port during early morning. Industrial maritime setting. Strong sunrise lighting casting long shadows. Corporate modern aesthetic, hyper-realistic, 8k resolution. Deep ocean blues and crisp industrial whites dominating the palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYLQ0d672RovfEYsopCoJHAHOU8icvgOiSu5LdUmdOVpqHxI1tuazMgPiMvIaeG39n2ldjiVEo6v4Apzei82bV59X9tEWJ5usYfLNT0Osr3ShTCRPZ_tKSSfA-Vm1Gp0LF4MOP81kc3OymupqOPs-hMXk8TdlsVNsiCtFq9SP3Yh8nl2up64JbZLezD0u_PmQ39AdUwczDpjf3c_-1xpo3mli8ov6XeutSVXhl-n_oeLzDeSsIohoS-g')"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+<div class="bg-cover bg-center w-full h-full opacity-80" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYLQ0d672RovfEYsopCoJHAHOU8icvgOiSu5LdUmdOVpqHxI1tuazMgPiMvIaeG39n2ldjiVEo6v4Apzei82bV59X9tEWJ5usYfLNT0Osr3ShTCRPZ_tKSSfA-Vm1Gp0LF4MOP81kc3OymupqOPs-hMXk8TdlsVNsiCtFq9SP3Yh8nl2up64JbZLezD0u_PmQ39AdUwczDpjf3c_-1xpo3mli8ov6XeutSVXhl-n_oeLzDeSsIohoS-g')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-transparent"></div>
 </div>
 <div class="relative z-10 w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="max-w-2xl text-on-primary">
-<span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-6 uppercase tracking-wider">Trusted Maritime Partner</span>
-<h1 class="font-headline-xl text-headline-xl mb-4">All Your Captain Needs, Everything..</h1>
-<p class="font-body-lg text-body-lg mb-8 text-primary-fixed">Your trusted partner for maritime excellence in Egypt. Unwavering logistical precision for global fleets.</p>
+<span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-6 uppercase tracking-wider">Licensed Ship Chandler - Egypt</span>
+<h1 class="font-headline-xl text-headline-xl mb-4">Complete Ship Supplies & Port Services in Egypt</h1>
+<p class="font-body-lg text-body-lg mb-8 text-primary-fixed">Fresh provisions, bonded stores, deck & engine spares, and rapid launch delivery at Port Said, Suez Canal, Alexandria, Damietta, and Ain Sokhna. 24/7 operational dispatch.</p>
 <a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(229,169,60,0.3)]" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
-                    Get Your Quotation Now
+                    Get Quotation Now
                 </a>
 </div>
 </div>
@@ -21,70 +21,70 @@
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-[1280px] mx-auto" id="services">
 	<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
 		<div>
-			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Maritime Excellence</span>
-			<h2 class="font-headline-lg text-headline-lg text-primary">Core Services & Supply Solutions</h2>
+			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">24/7 Port Delivery</span>
+			<h2 class="font-headline-lg text-headline-lg text-primary">Marine Supplies & Port Agency Services</h2>
 			<div class="h-1 w-20 bg-secondary-container mt-4"></div>
 		</div>
 		<a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded font-button-text hover:bg-primary-container transition-colors shadow-sm self-start md:self-auto">
-			<span>Explore Full Services Page</span>
+			<span>View All Services</span>
 			<span class="material-symbols-outlined text-sm">arrow_forward</span>
 		</a>
 	</div>
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 		<!-- Ship Supply & Provisions -->
-		<a href="<?php echo esc_url( home_url( '/services#services-tabs' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
+		<a href="<?php echo esc_url( home_url( '/provisions' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
 			<div>
 				<div class="flex justify-between items-start mb-6">
-					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Ship Supply & Provisions</h3>
+					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Provisions & Bonded Stores</h3>
 					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">inventory_2</span>
 				</div>
-				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Fresh, frozen, & dry food provisions alongside duty-free bonded stores and cabin items efficiently stocked for international voyages.</p>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Fresh, frozen, and dry provisions delivered in refrigerated reefers under HACCP standards. Complete stock of duty-free bonded goods and cabin supplies.</p>
 				<div class="flex flex-wrap gap-2 mb-6">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Fresh Supply</span>
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Duty-Free</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Reefer Delivery</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">HACCP Certified</span>
 				</div>
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
-				<span>View Details</span>
+				<span>View Provisions Details</span>
 				<span class="material-symbols-outlined text-sm">arrow_forward</span>
 			</div>
 		</a>
 
 		<!-- Logistics & Port Handling -->
-		<a href="<?php echo esc_url( home_url( '/services#services-tabs' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
+		<a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
 			<div>
 				<div class="flex justify-between items-start mb-6">
-					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Logistics & Port Transit</h3>
+					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Port Logistics & Transit Clearance</h3>
 					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">local_shipping</span>
 				</div>
-				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Unwavering port logistics, customs clearance, bonded warehousing, and rapid vessel delivery across all major Egyptian gateways.</p>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Customs clearance, bonded warehousing, launch boat delivery at anchorage, and zero-delay logistics for Suez Canal transit and port calls.</p>
 				<div class="flex flex-wrap gap-2 mb-6">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">24/7 Delivery</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Anchorage Launch</span>
 					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Customs Clearance</span>
 				</div>
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
-				<span>View Details</span>
+				<span>View Logistics Details</span>
 				<span class="material-symbols-outlined text-sm">arrow_forward</span>
 			</div>
 		</a>
 
 		<!-- Technical Parts & Repairs -->
-		<a href="<?php echo esc_url( home_url( '/services#services-tabs' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
+		<a href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>" class="service-card group bg-surface-container-lowest border border-outline-variant p-8 relative overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col justify-between">
 			<div>
 				<div class="flex justify-between items-start mb-6">
-					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Technical Support & Spares</h3>
+					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Technical Spares & Engine Stores</h3>
 					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">build</span>
 				</div>
-				<p class="font-body-md text-body-md text-on-surface-variant mb-6">Essential engine, deck, and electrical spare parts plus qualified engineering teams for vessel maintenance and repairs.</p>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-6">IMPA & ISSA coded engine, deck, and electrical spare parts, SOLAS safety gear, and qualified marine technicians for urgent port repairs.</p>
 				<div class="flex flex-wrap gap-2 mb-6">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">OEM Spares</span>
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Engineering</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">IMPA/ISSA Coded</span>
+					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">SOLAS Certified</span>
 				</div>
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
-				<span>View Details</span>
+				<span>View Technical Details</span>
 				<span class="material-symbols-outlined text-sm">arrow_forward</span>
 			</div>
 		</a>
@@ -93,86 +93,93 @@
 	<!-- Bottom Quotation Banner -->
 	<div class="mt-12 bg-primary text-on-primary rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg">
 		<div>
-			<h3 class="font-headline-md text-headline-md mb-2">Need a Fast Vessel Quotation?</h3>
-			<p class="font-body-md text-primary-fixed">Send us your vessel requirements for immediate 24/7 port processing.</p>
+			<h3 class="font-headline-md text-headline-md mb-2">Need Immediate Port Delivery or Transit Supplies?</h3>
+			<p class="font-body-md text-primary-fixed">Submit your requisition list (PDF, XLSX) for an instant quotation from our dispatch desk.</p>
 		</div>
 		<div class="flex flex-wrap gap-4">
 			<a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="bg-surface-container-lowest text-primary px-6 py-3 rounded font-button-text hover:bg-surface transition-colors">
 				View All Services
 			</a>
-			<a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>" class="bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text hover:bg-secondary transition-colors shadow-md">
+			<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="bg-secondary-container text-on-secondary px-6 py-3 rounded font-button-text hover:bg-secondary transition-colors shadow-md">
 				Request Quotation Now
 			</a>
 		</div>
 	</div>
 </section>
+
 <!-- Trust Section -->
 <section class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop" id="about">
 <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
 <div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Trusted by fleets worldwide.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Operating out of major Egyptian ports, Hanil Marine delivers industrial reliability and logistical precision to international fleet managers.</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Established Ship Supplies & Port Operations in Egypt</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Hanil Marine (Al-Bayrak) provides direct ship chandlery, bonded logistics, and technical supplies across all Egyptian ports. Operating temperature-controlled warehouses and dedicated supply launches to ensure zero vessel delay.</p>
 <div class="flex items-center gap-4 bg-surface-container-lowest p-6 border border-outline-variant rounded">
 <span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
 <div>
-<h4 class="font-headline-md text-headline-md text-primary">Best Grade Achievement</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Certified for excellence in marine supply chain operations.</p>
+<h4 class="font-headline-md text-headline-md text-primary">Certified Quality Assurance</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">HACCP & ISO 22000 certified storage with strict IMPA/ISSA sourcing standards.</p>
 </div>
 </div>
 </div>
 <div class="relative h-96 w-full">
-<div class="absolute inset-0 bg-cover bg-center rounded border border-outline-variant" data-alt="A high-angle view of a bustling, modern maritime logistics hub in Egypt. Shipping containers perfectly stacked, heavy cranes in operation. Bright, clear daylight emphasizing operational efficiency. Corporate minimal style, strict linear perspective, cool blue and stark white tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcCTNHvtyFdaejsM6Qm43gfNIrsu5w6wXke5nE4BgVUJ68_CNVAHhIYGB1L4x4Ilpy7FKhJEpMRTc4K4GPJBiVsB2sa8_GPwycvuFl8xp26xZZXnuAH4XHoCmtKcSHL3_0OEx4z3VrBlZZzcY3VWvRlH8zMNRVQmYVmVB6Ydm9UBv_FiDa21S6YwdKYoPkIheQfGpoGCvpQmN0dGUvEev_t5p7k4ao7wJ58SEFL0VyvuBtMo4s2sJwqA')"></div>
+<div class="absolute inset-0 bg-cover bg-center rounded border border-outline-variant" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcCTNHvtyFdaejsM6Qm43gfNIrsu5w6wXke5nE4BgVUJ68_CNVAHhIYGB1L4x4Ilpy7FKhJEpMRTc4K4GPJBiVsB2sa8_GPwycvuFl8xp26xZZXnuAH4XHoCmtKcSHL3_0OEx4z3VrBlZZzcY3VWvRlH8zMNRVQmYVmVB6Ydm9UBv_FiDa21S6YwdKYoPkIheQfGpoGCvpQmN0dGUvEev_t5p7k4ao7wJ58SEFL0VyvuBtMo4s2sJwqA')"></div>
 </div>
 </div>
 </section>
+
+<!-- Quick Quote Section -->
 <section class="bg-tertiary text-on-tertiary py-section-gap px-margin-mobile md:px-margin-desktop" id="quote">
 <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-section-gap">
 <div>
-<h2 class="font-headline-lg text-headline-lg mb-4 text-on-tertiary">Get your quotation now.</h2>
-<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-8">Submit your vessel's requirements. We operate with logistical precision and will reply shortly.</p>
-<button class="flex items-center gap-2 bg-transparent border border-primary-fixed-dim text-primary-fixed-dim px-6 py-3 rounded hover:bg-surface-tint hover:text-on-primary transition-colors font-button-text text-button-text">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-tertiary">Direct Quotation Request</h2>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-8">Submit your vessel schedule and requisition list. Our port dispatchers respond within 2 hours with itemized pricing.</p>
+<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors shadow-md">
 <span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
-                    Upload Your Request
-                </button>
+                    Launch Multi-Step Quotation Form
+</a>
 </div>
 <div class="bg-surface-container-lowest p-8 rounded border border-outline-variant">
-<form class="space-y-6">
+<form class="space-y-6" action="<?php echo esc_url( home_url( '/step-1' ) ); ?>" method="GET">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div>
 <label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Vessel Name</label>
-<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="e.g. MV Hanil Star" type="text">
+<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="e.g. MV Hanil Star" type="text" name="vessel">
 </div>
 <div>
 <label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">IMO Number</label>
-<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="e.g. 1234567" type="text">
+<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="e.g. 9839430" type="text" name="imo">
 </div>
 </div>
 <div>
 <label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Port of Call (Egypt)</label>
-<select class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md">
-<option>Port Said</option>
-<option>Alexandria</option>
-<option>Suez</option>
-<option>Damietta</option>
+<select class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" name="port">
+<option>Port Said (East & West)</option>
+<option>Suez Canal Zone</option>
+<option>Alexandria & El Dekheila</option>
+<option>Damietta Port</option>
+<option>Ain Sokhna & Adabeyah</option>
+<option>Safaga & Red Sea Ports</option>
 </select>
 </div>
 <div>
-<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Additional Details</label>
-<textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="Briefly describe your requirements..." rows="4"></textarea>
+<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase">Requirements Summary</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="Briefly specify provisions, engine spares, or bonded store items needed..." rows="3"></textarea>
 </div>
-<button class="w-full bg-secondary-container text-on-secondary py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(229,169,60,0.3)]" type="submit">
-                        Submit Request
-                    </button>
+<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="block w-full bg-secondary-container text-on-secondary text-center py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-md">
+                        Proceed to Quotation Request
+</a>
 </form>
 </div>
 </div>
 </section>
-<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col lg:flex-row gap-gutter" id="port-coverage">
+
+<!-- Ports Coverage Section -->
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col lg:flex-row gap-gutter" id="ports">
 <!-- Sidebar: Port List -->
 <aside class="w-full lg:w-1/3 flex flex-col gap-base bg-surface-container rounded-xl p-gutter border border-outline-variant shadow-sm h-[896px] overflow-y-auto">
 <div class="mb-4">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Strategic Port Presence</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Operating across Egypt's vital maritime corridors, we ensure your vessel receives support at every major gateway.</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Egyptian Port Operations</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">24/7 delivery at berth and anchorage across all key Egyptian gateways and Suez Canal transit points.</p>
 </div>
 <ul class="flex flex-col gap-2">
 <!-- 01. Port Said -->
@@ -225,181 +232,125 @@
 </li>
 </ul>
 </aside>
+
 <!-- Map Canvas Area -->
-<!-- Map Canvas Area -->
-<section
-    class="w-full lg:w-2/3 h-[896px] rounded-xl relative overflow-hidden"
->
-    <!-- Map Area -->
+<section class="w-full lg:w-2/3 h-[896px] rounded-xl relative overflow-hidden">
     <div class="absolute inset-0 p-6 lg:p-10">
         <div class="relative w-full h-full rounded-xl overflow-hidden">
-
             <!-- Egypt Map -->
-            <img
-                src="/wp-content/uploads/2026/08/eg.svg"
-                alt="Egypt Map"
-                class="absolute inset-0 w-full h-full object-contain"
-            >
+            <img src="/wp-content/uploads/2026/08/eg.svg" alt="Egypt Map" class="absolute inset-0 w-full h-full object-contain">
 
             <!-- Interactive Map Layer -->
             <div class="absolute inset-0 map-container">
-
                 <!-- Alexandria -->
-                <div
-                    class="absolute left-[28%] top-[18%] group cursor-pointer map-pin"
-                    data-target="alexandria"
-                >
+                <div class="absolute left-[28%] top-[18%] group cursor-pointer map-pin" data-target="alexandria">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(229,169,60,0.85)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Alexandria</span>
                     </div>
                 </div>
 
                 <!-- Dekhila -->
-                <div
-                    class="absolute left-[26%] top-[19%] group cursor-pointer map-pin"
-                    data-target="dekhila"
-                >
+                <div class="absolute left-[26%] top-[19%] group cursor-pointer map-pin" data-target="dekhila">
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
                 </div>
 
                 <!-- Sidi Kerir -->
-                <div
-                    class="absolute left-[24%] top-[20%] group cursor-pointer map-pin"
-                    data-target="sidi-kerir"
-                >
+                <div class="absolute left-[24%] top-[20%] group cursor-pointer map-pin" data-target="sidi-kerir">
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
                 </div>
 
                 <!-- Abu Qir -->
-                <div
-                    class="absolute left-[30%] top-[17%] group cursor-pointer map-pin"
-                    data-target="abu-qir"
-                >
+                <div class="absolute left-[30%] top-[17%] group cursor-pointer map-pin" data-target="abu-qir">
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
                 </div>
 
                 <!-- Damietta -->
-                <div
-                    class="absolute left-[40%] top-[15%] group cursor-pointer map-pin"
-                    data-target="damietta"
-                >
+                <div class="absolute left-[40%] top-[15%] group cursor-pointer map-pin" data-target="damietta">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(229,169,60,0.85)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Damietta</span>
                     </div>
                 </div>
 
                 <!-- Port Said -->
-                <div
-                    class="absolute left-[52%] top-[18%] group cursor-pointer map-pin"
-                    data-target="port-said"
-                >
+                <div class="absolute left-[52%] top-[18%] group cursor-pointer map-pin" data-target="port-said">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(229,169,60,0.85)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Port Said</span>
                     </div>
                 </div>
 
                 <!-- Arish -->
-                <div
-                    class="absolute left-[65%] top-[16%] group cursor-pointer map-pin"
-                    data-target="arish"
-                >
+                <div class="absolute left-[65%] top-[16%] group cursor-pointer map-pin" data-target="arish">
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
                 </div>
 
                 <!-- Cairo -->
-                <div
-                    class="absolute left-[42%] top-[29%] group cursor-pointer map-pin"
-                    data-target="cairo"
-                >
+                <div class="absolute left-[42%] top-[29%] group cursor-pointer map-pin" data-target="cairo">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_12px_rgba(229,169,60,0.9)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Cairo</span>
                     </div>
                 </div>
 
                 <!-- Suez -->
-                <div
-                    class="absolute left-[53%] top-[35%] group cursor-pointer map-pin"
-                    data-target="suez"
-                >
+                <div class="absolute left-[53%] top-[35%] group cursor-pointer map-pin" data-target="suez">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(229,169,60,0.85)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Suez Canal</span>
                     </div>
                 </div>
 
                 <!-- Adabeyah -->
-                <div
-                    class="absolute left-[52%] top-[38%] group cursor-pointer map-pin"
-                    data-target="adabeyah"
-                >
+                <div class="absolute left-[52%] top-[38%] group cursor-pointer map-pin" data-target="adabeyah">
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
                 </div>
 
                 <!-- Ain Sokhna -->
-                <div
-                    class="absolute left-[54%] top-[45%] group cursor-pointer map-pin"
-                    data-target="ain-sokhna"
-                >
+                <div class="absolute left-[54%] top-[45%] group cursor-pointer map-pin" data-target="ain-sokhna">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(229,169,60,0.85)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Ain Sokhna</span>
                     </div>
                 </div>
 
                 <!-- Safaga -->
-                <div
-                    class="absolute left-[62%] top-[70%] group cursor-pointer map-pin"
-                    data-target="safaga"
-                >
+                <div class="absolute left-[62%] top-[70%] group cursor-pointer map-pin" data-target="safaga">
                     <span class="absolute -inset-2 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-4 h-4 rounded-full bg-secondary-container border-2 border-white shadow-[0_0_10px_rgba(229,169,60,0.85)]"></span>
-
                     <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface text-on-surface px-3 py-1 rounded-md shadow-md border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
                         <span class="font-button-text text-button-text">Safaga</span>
                     </div>
                 </div>
 
                 <!-- Gargoub -->
-                <div
-                    class="absolute left-[10%] top-[24%] group cursor-pointer map-pin"
-                    data-target="gargoub"
-                >
+                <div class="absolute left-[10%] top-[24%] group cursor-pointer map-pin" data-target="gargoub">
                     <span class="absolute -inset-1.5 rounded-full border-2 border-secondary-container pulse-ring"></span>
                     <span class="relative z-10 block w-3 h-3 rounded-full bg-secondary-container border border-white shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
 </main>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const portListItems = document.querySelectorAll('.port-item');
         const mapPins = document.querySelectorAll('.map-pin');
 
-        // Simple interaction logic to tie list to map pins
         portListItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 const targetPort = item.dataset.port;
@@ -420,10 +371,10 @@
             mapPins.forEach(pin => {
                 if (pin.dataset.target === portId) {
                     const innerCircle = pin.querySelector('.bg-secondary-container');
-                    innerCircle.classList.add('scale-150', 'bg-white');
-                    innerCircle.classList.remove('bg-secondary-container');
-                    const pulse = pin.querySelector('.pulse-ring');
-                    if(pulse) pulse.style.animationDuration = '0.5s';
+                    if (innerCircle) {
+                        innerCircle.classList.add('scale-150', 'bg-white');
+                        innerCircle.classList.remove('bg-secondary-container');
+                    }
                 } else {
                     pin.style.opacity = '0.5';
                 }
@@ -434,10 +385,10 @@
             mapPins.forEach(pin => {
                 pin.style.opacity = '1';
                 const innerCircle = pin.querySelector('div:first-child');
-                innerCircle.classList.remove('scale-150', 'bg-white');
-                innerCircle.classList.add('bg-secondary-container');
-                const pulse = pin.querySelector('.pulse-ring');
-                if(pulse) pulse.style.animationDuration = '2s';
+                if (innerCircle) {
+                    innerCircle.classList.remove('scale-150', 'bg-white');
+                    innerCircle.classList.add('bg-secondary-container');
+                }
             });
         }
 
