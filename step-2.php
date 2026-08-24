@@ -34,8 +34,8 @@ get_header();
 		<!-- Section Header -->
 		<div class="mb-8">
 			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Step 2 of 4</span>
-			<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Personal & Company Information</h1>
-			<p class="font-body-md text-body-md text-on-surface-variant">Please provide your contact details so our maritime coordinators can deliver your quotation.</p>
+			<h1 class="font-headline-lg text-headline-lg text-primary mb-2"><?php echo esc_html( bayrak_t( 'step_2_title', 'Personal & Company Information' ) ); ?></h1>
+			<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'step_2_sub', 'Please provide your contact details so our maritime coordinators can deliver your quotation.' ) ); ?></p>
 		</div>
 
 		<!-- Form Fields -->
@@ -43,12 +43,12 @@ get_header();
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<!-- Full Name -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="fullName">Full Name <span class="text-error">*</span></label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="fullName"><?php echo esc_html( bayrak_t( 'full_name', 'Full Name' ) ); ?> <span class="text-error">*</span></label>
 					<input required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="fullName" name="fullName" placeholder="Captain Jane Doe" type="text">
 				</div>
 				<!-- Email Address -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="email">Work Email Address <span class="text-error">*</span></label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="email"><?php echo esc_html( bayrak_t( 'email_address', 'Work Email Address' ) ); ?> <span class="text-error">*</span></label>
 					<input required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="email" name="email" placeholder="jane.doe@fleetcompany.com" type="email">
 				</div>
 			</div>
@@ -56,31 +56,31 @@ get_header();
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<!-- Company Name -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="companyName">Shipping / Fleet Company <span class="text-error">*</span></label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="companyName"><?php echo esc_html( bayrak_t( 'company_name', 'Shipping / Fleet Company' ) ); ?> <span class="text-error">*</span></label>
 					<input required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="companyName" name="companyName" placeholder="Global Logistics Corp" type="text">
 				</div>
 				<!-- Job Title -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="jobTitle">Job Title / Designation</label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="jobTitle"><?php echo esc_html( bayrak_t( 'job_title', 'Job Title / Designation' ) ); ?></label>
 					<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="jobTitle" name="jobTitle" placeholder="Supply Chain Manager / Superintendent" type="text">
 				</div>
 			</div>
 
 			<!-- Phone Number -->
 			<div>
-				<label class="block font-label-caps text-label-caps text-primary mb-2" for="phone">Phone / WhatsApp Number <span class="text-error">*</span></label>
+				<label class="block font-label-caps text-label-caps text-primary mb-2" for="phone"><?php echo esc_html( bayrak_t( 'phone_number', 'Phone / WhatsApp Number' ) ); ?> <span class="text-error">*</span></label>
 				<input required class="w-full md:w-1/2 bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="phone" name="phone" placeholder="+20 100 000 0000" type="tel">
 			</div>
 
 			<!-- Navigation Buttons -->
 			<div class="mt-10 pt-6 border-t border-outline-variant flex justify-between items-center">
 				<button id="back-btn" type="button" class="px-6 py-3 border border-primary text-primary rounded font-button-text text-button-text hover:bg-surface-container transition-colors flex items-center gap-2">
-					<span class="material-symbols-outlined text-sm">arrow_back</span>
-					<span>Back</span>
+					<span class="material-symbols-outlined text-sm rtl-flip">arrow_back</span>
+					<span><?php echo esc_html( bayrak_t( 'back', 'Back' ) ); ?></span>
 				</button>
 				<button id="next-btn" type="button" class="px-8 py-3 bg-secondary-container text-on-secondary font-button-text text-button-text rounded shadow-md hover:bg-secondary transition-all flex items-center gap-2">
-					<span>Next: Vessel Logistics</span>
-					<span class="material-symbols-outlined text-sm">arrow_forward</span>
+					<span><?php echo esc_html( bayrak_t( 'next', 'Next' ) ); ?></span>
+					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</button>
 			</div>
 		</form>

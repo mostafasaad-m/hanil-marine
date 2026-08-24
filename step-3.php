@@ -34,8 +34,8 @@ get_header();
 		<!-- Section Header -->
 		<div class="mb-8">
 			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Step 3 of 4</span>
-			<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Vessel Schedule & Specifications</h1>
-			<p class="font-body-md text-body-md text-on-surface-variant">Provide your vessel details and upload any requisition spreadsheets or specification documents.</p>
+			<h1 class="font-headline-lg text-headline-lg text-primary mb-2"><?php echo esc_html( bayrak_t( 'step_3_title', 'Vessel Schedule & Specifications' ) ); ?></h1>
+			<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'step_3_sub', 'Provide your vessel details and upload any requisition spreadsheets or specification documents.' ) ); ?></p>
 		</div>
 
 		<!-- Form -->
@@ -43,21 +43,21 @@ get_header();
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<!-- Vessel Name -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="vesselName">Vessel Name <span class="text-error">*</span></label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="vesselName"><?php echo esc_html( bayrak_t( 'vessel_name', 'Vessel Name' ) ); ?> <span class="text-error">*</span></label>
 					<input required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="vesselName" name="vesselName" placeholder="e.g. MV Hanil Star" type="text">
 				</div>
 				<!-- IMO Number -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="imoNumber">IMO Number <span class="text-error">*</span></label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="imoNumber"><?php echo esc_html( bayrak_t( 'imo_number', 'IMO Number' ) ); ?> <span class="text-error">*</span></label>
 					<input required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="imoNumber" name="imoNumber" placeholder="e.g. 9839430" type="text">
 				</div>
 			</div>
 
 			<!-- Port of Call -->
 			<div>
-				<label class="block font-label-caps text-label-caps text-primary mb-2" for="portOfCall">Port of Call (Egypt) <span class="text-error">*</span></label>
+				<label class="block font-label-caps text-label-caps text-primary mb-2" for="portOfCall"><?php echo esc_html( bayrak_t( 'port_of_call', 'Port of Call (Egypt)' ) ); ?> <span class="text-error">*</span></label>
 				<select required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="portOfCall" name="portOfCall">
-					<option value="" disabled selected>Select Egyptian Gateway Port</option>
+					<option value="" disabled selected>Select Gateway Port</option>
 					<option value="Port Said (East & West)">Port Said (East & West)</option>
 					<option value="Suez Canal Zone">Suez Canal Zone</option>
 					<option value="Damietta Port">Damietta Port</option>
@@ -76,31 +76,31 @@ get_header();
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<!-- ETA -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="eta">Estimated Time of Arrival (ETA) <span class="text-error">*</span></label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="eta"><?php echo esc_html( bayrak_t( 'eta', 'Estimated Time of Arrival (ETA)' ) ); ?> <span class="text-error">*</span></label>
 					<input required class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="eta" name="eta" type="datetime-local">
 				</div>
 				<!-- ETD -->
 				<div>
-					<label class="block font-label-caps text-label-caps text-primary mb-2" for="etd">Estimated Time of Departure (ETD)</label>
+					<label class="block font-label-caps text-label-caps text-primary mb-2" for="etd"><?php echo esc_html( bayrak_t( 'etd', 'Estimated Time of Departure (ETD)' ) ); ?></label>
 					<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="etd" name="etd" type="datetime-local">
 				</div>
 			</div>
 
 			<!-- Additional Requirements / Notes -->
 			<div>
-				<label class="block font-label-caps text-label-caps text-primary mb-2" for="notes">Additional Requirements / Description</label>
+				<label class="block font-label-caps text-label-caps text-primary mb-2" for="notes"><?php echo esc_html( bayrak_t( 'notes', 'Additional Requirements / Description' ) ); ?></label>
 				<textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all" id="notes" name="notes" placeholder="Specify food preferences, technical part codes, or urgent delivery instructions..." rows="3"></textarea>
 			</div>
 
 			<!-- File Upload Section -->
 			<div class="space-y-2 pt-2">
-				<label class="block font-label-caps text-label-caps text-primary mb-1">Upload Quotation Requisition File (PDF, XLSX, DOCX, Images)</label>
-				<p class="text-sm text-on-surface-variant mb-3">Attach any requisitions, store lists, spreadsheets, or technical drawings for instant processing by our port dispatcher.</p>
+				<label class="block font-label-caps text-label-caps text-primary mb-1"><?php echo esc_html( bayrak_t( 'upload_title', 'Upload Quotation Requisition File (PDF, XLSX, DOCX, Images)' ) ); ?></label>
+				<p class="text-sm text-on-surface-variant mb-3"><?php echo esc_html( bayrak_t( 'upload_sub', 'Attach any requisitions, store lists, spreadsheets, or technical drawings for instant processing by our port dispatcher.' ) ); ?></p>
 				
 				<div id="drop-zone" class="border-2 border-dashed border-outline-variant rounded-lg p-6 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer text-center" onclick="document.getElementById('file-input').click()">
 					<span class="material-symbols-outlined text-primary text-4xl mb-2">upload_file</span>
-					<p class="font-body-md text-on-surface mb-1 font-bold">Click or drag & drop file here</p>
-					<p class="text-xs text-on-surface-variant">Supports PDF, XLSX, DOCX, PNG, JPG up to 15MB</p>
+					<p class="font-body-md text-on-surface mb-1 font-bold"><?php echo esc_html( bayrak_t( 'click_drag', 'Click or drag & drop file here' ) ); ?></p>
+					<p class="text-xs text-on-surface-variant"><?php echo esc_html( bayrak_t( 'file_formats', 'Supports PDF, XLSX, DOCX, PNG, JPG up to 15MB' ) ); ?></p>
 					<input type="file" id="file-input" class="hidden" accept=".pdf,.xlsx,.xls,.doc,.docx,.png,.jpg,.jpeg">
 				</div>
 
@@ -121,12 +121,12 @@ get_header();
 			<!-- Navigation Buttons -->
 			<div class="mt-10 pt-6 border-t border-outline-variant flex justify-between items-center">
 				<button id="back-btn" type="button" class="px-6 py-3 border border-primary text-primary rounded font-button-text text-button-text hover:bg-surface-container transition-colors flex items-center gap-2">
-					<span class="material-symbols-outlined text-sm">arrow_back</span>
-					<span>Back</span>
+					<span class="material-symbols-outlined text-sm rtl-flip">arrow_back</span>
+					<span><?php echo esc_html( bayrak_t( 'back', 'Back' ) ); ?></span>
 				</button>
 				<button id="next-btn" type="button" class="px-8 py-3 bg-secondary-container text-on-secondary font-button-text text-button-text rounded shadow-md hover:bg-secondary transition-all flex items-center gap-2">
-					<span>Next: Review Request</span>
-					<span class="material-symbols-outlined text-sm">arrow_forward</span>
+					<span><?php echo esc_html( bayrak_t( 'next', 'Next' ) ); ?></span>
+					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</button>
 			</div>
 		</form>

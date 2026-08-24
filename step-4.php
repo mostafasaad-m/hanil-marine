@@ -34,8 +34,8 @@ get_header();
 		<!-- Header -->
 		<div class="text-center mb-10">
 			<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Final Step 4 of 4</span>
-			<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-primary mb-3">Review & Submit Request</h1>
-			<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Please review your quotation details below before submitting to our 24/7 port operations team.</p>
+			<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-primary mb-3"><?php echo esc_html( bayrak_t( 'step_4_title', 'Review & Submit Request' ) ); ?></h1>
+			<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"><?php echo esc_html( bayrak_t( 'step_4_sub', 'Please review your quotation details below before submitting to our 24/7 port operations team.' ) ); ?></p>
 		</div>
 
 		<!-- Summary Panel -->
@@ -45,7 +45,7 @@ get_header();
 				<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
 					<div class="flex items-center mb-4 text-primary">
 						<span class="material-symbols-outlined mr-2 text-secondary">inventory_2</span>
-						<h3 class="font-headline-md text-headline-md">Service Category</h3>
+						<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'step_1_name', 'Service Category' ) ); ?></h3>
 					</div>
 					<dl class="space-y-3">
 						<div class="flex justify-between border-b border-outline-variant/30 pb-2">
@@ -59,23 +59,23 @@ get_header();
 				<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
 					<div class="flex items-center mb-4 text-primary">
 						<span class="material-symbols-outlined mr-2 text-secondary">contact_mail</span>
-						<h3 class="font-headline-md text-headline-md">Contact Information</h3>
+						<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'step_2_name', 'Contact Information' ) ); ?></h3>
 					</div>
 					<dl class="space-y-2 text-sm">
 						<div class="flex justify-between border-b border-outline-variant/30 pb-1.5">
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase">Name</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase"><?php echo esc_html( bayrak_t( 'full_name', 'Name' ) ); ?></dt>
 							<dd id="sum-name" class="font-bold text-primary">-</dd>
 						</div>
 						<div class="flex justify-between border-b border-outline-variant/30 pb-1.5">
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase">Email</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase"><?php echo esc_html( bayrak_t( 'email_address', 'Email' ) ); ?></dt>
 							<dd id="sum-email" class="font-bold text-primary">-</dd>
 						</div>
 						<div class="flex justify-between border-b border-outline-variant/30 pb-1.5">
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase">Company</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase"><?php echo esc_html( bayrak_t( 'company_name', 'Company' ) ); ?></dt>
 							<dd id="sum-company" class="font-bold text-primary">-</dd>
 						</div>
 						<div class="flex justify-between pb-1">
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase">Phone</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase"><?php echo esc_html( bayrak_t( 'phone_number', 'Phone' ) ); ?></dt>
 							<dd id="sum-phone" class="font-bold text-primary">-</dd>
 						</div>
 					</dl>
@@ -85,30 +85,30 @@ get_header();
 				<div class="md:col-span-2 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
 					<div class="flex items-center mb-4 text-primary">
 						<span class="material-symbols-outlined mr-2 text-secondary">directions_boat</span>
-						<h3 class="font-headline-md text-headline-md">Vessel & Port Schedule</h3>
+						<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'step_3_name', 'Vessel & Port Schedule' ) ); ?></h3>
 					</div>
 					<div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm mb-4">
 						<div>
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Vessel Name</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"><?php echo esc_html( bayrak_t( 'vessel_name', 'Vessel Name' ) ); ?></dt>
 							<dd id="sum-vessel" class="font-bold text-primary text-base">-</dd>
 						</div>
 						<div>
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">IMO Number</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"><?php echo esc_html( bayrak_t( 'imo_number', 'IMO Number' ) ); ?></dt>
 							<dd id="sum-imo" class="font-bold text-primary text-base">-</dd>
 						</div>
 						<div>
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Port of Call</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"><?php echo esc_html( bayrak_t( 'port_of_call', 'Port of Call' ) ); ?></dt>
 							<dd id="sum-port" class="font-bold text-primary text-base">-</dd>
 						</div>
 						<div>
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">ETA</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"><?php echo esc_html( bayrak_t( 'eta', 'ETA' ) ); ?></dt>
 							<dd id="sum-eta" class="font-bold text-primary text-base">-</dd>
 						</div>
 					</div>
 					
 					<div class="pt-3 border-t border-outline-variant/30 space-y-3">
 						<div>
-							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Additional Notes</dt>
+							<dt class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"><?php echo esc_html( bayrak_t( 'notes', 'Additional Notes' ) ); ?></dt>
 							<dd id="sum-notes" class="font-body-md text-on-surface italic bg-surface p-3 rounded">No special instructions provided.</dd>
 						</div>
 
@@ -132,18 +132,18 @@ get_header();
 				</div>
 				<div class="ml-3 text-sm">
 					<label for="terms" class="font-body-md text-on-surface cursor-pointer">
-						I confirm that all details provided are accurate and I authorize Hanil Marine to process this quotation request.
+						<?php echo esc_html( bayrak_t( 'terms_agree', 'I confirm that all details provided are accurate and I authorize Hanil Marine to process this quotation request.' ) ); ?>
 					</label>
 				</div>
 			</div>
 
 			<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
 				<button id="edit-btn" type="button" class="px-8 py-4 rounded border border-primary text-primary font-button-text text-button-text hover:bg-surface-container transition-colors text-center">
-					Edit Details
+					<?php echo esc_html( bayrak_t( 'edit_details', 'Edit Details' ) ); ?>
 				</button>
 				<button id="submit-btn" type="button" class="px-10 py-4 rounded bg-secondary-container text-on-secondary font-button-text text-button-text hover:bg-secondary transition-all shadow-lg flex items-center justify-center gap-2">
-					<span>Submit Quotation Request</span>
-					<span class="material-symbols-outlined text-sm">send</span>
+					<span><?php echo esc_html( bayrak_t( 'submit_quote', 'Submit Quotation Request' ) ); ?></span>
+					<span class="material-symbols-outlined text-sm rtl-flip">send</span>
 				</button>
 			</div>
 		</div>
@@ -155,14 +155,14 @@ get_header();
 			<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 ring-8 ring-secondary-container/20">
 				<span class="material-symbols-outlined text-secondary-container text-4xl">check_circle</span>
 			</div>
-			<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Request Submitted Successfully!</h2>
-			<p class="font-body-md text-body-md text-on-surface-variant mb-6">Your quotation request and attachments have been logged in WordPress. Our dispatch team will respond within 2 hours.</p>
+			<h2 class="font-headline-lg text-headline-lg text-primary mb-2"><?php echo esc_html( bayrak_t( 'success_title', 'Request Submitted Successfully!' ) ); ?></h2>
+			<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'success_msg', 'Your quotation request and attachments have been logged in WordPress. Our dispatch team will respond within 2 hours.' ) ); ?></p>
 			<div class="bg-surface-container p-4 rounded-lg mb-6 border border-outline-variant inline-block w-full">
-				<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block mb-1">Your Unique Reference ID</span>
+				<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block mb-1"><?php echo esc_html( bayrak_t( 'ref_id_label', 'Your Unique Reference ID' ) ); ?></span>
 				<span id="res-ref-id" class="font-headline-md text-headline-md font-bold text-primary">HM-2026-XXXX</span>
 			</div>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="font-button-text text-button-text px-8 py-3.5 rounded bg-primary text-on-primary hover:bg-primary-container transition-colors inline-block w-full">
-				Return to Homepage
+				<?php echo esc_html( bayrak_t( 'return_home', 'Return to Homepage' ) ); ?>
 			</a>
 		</div>
 	</div>
