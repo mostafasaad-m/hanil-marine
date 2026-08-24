@@ -22,14 +22,14 @@ get_header();
 	<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 		<div class="max-w-2xl text-on-primary">
 			<span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-4 uppercase tracking-wider">
-				Our Maritime Solutions
+				<?php echo esc_html( bayrak_t( 'sec_services_badge', '24/7 Port Delivery' ) ); ?>
 			</span>
-			<h1 class="font-headline-xl text-headline-xl mb-4">Comprehensive Maritime Services</h1>
+			<h1 class="font-headline-xl text-headline-xl mb-4"><?php echo esc_html( bayrak_t( 'sec_services_title', 'Comprehensive Maritime Services' ) ); ?></h1>
 			<p class="font-body-lg text-body-lg mb-8 text-primary-fixed">
-				Unwavering logistical precision for global fleets navigating Suez Canal & all Egyptian ports.
+				<?php echo esc_html( bayrak_t( 'hero_subtitle', 'Fresh provisions, bonded stores, deck & engine spares, and rapid launch delivery across Egyptian ports.' ) ); ?>
 			</p>
 			<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-lg" href="#services-tabs">
-				Explore Services Below
+				<?php echo esc_html( bayrak_t( 'view_all_services', 'Explore Services Below' ) ); ?>
 			</a>
 		</div>
 	</div>
@@ -38,7 +38,7 @@ get_header();
 <!-- Functional Services Tabs Section -->
 <section id="services-tabs" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-container-max mx-auto">
 	<div class="mb-12 text-center">
-		<h2 class="font-headline-lg text-headline-lg text-primary mb-3">Our Core Operations</h2>
+		<h2 class="font-headline-lg text-headline-lg text-primary mb-3"><?php echo esc_html( bayrak_t( 'sec_services_title', 'Our Core Operations' ) ); ?></h2>
 		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
 			Select a service category below to view detailed capabilities, certifications, and supply specifications.
 		</p>
@@ -50,13 +50,13 @@ get_header();
 		<!-- Tab 1: Ship Supply -->
 		<button data-tab="tab-ship-supply" class="service-tab-btn active bg-primary text-on-primary shadow-lg border border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="true">
 			<span class="material-symbols-outlined text-2xl">inventory_2</span>
-			<span class="text-left leading-tight">Ship Supply</span>
+			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_provisions', 'Ship Supply' ) ); ?></span>
 		</button>
 
 		<!-- Tab 2: Logistic Services -->
 		<button data-tab="tab-logistics" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
 			<span class="material-symbols-outlined text-2xl">local_shipping</span>
-			<span class="text-left leading-tight">Logistic Services</span>
+			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Logistic Services' ) ); ?></span>
 		</button>
 
 		<!-- Tab 3: Crew Change -->
@@ -68,13 +68,13 @@ get_header();
 		<!-- Tab 4: Safety Supplies -->
 		<button data-tab="tab-safety" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
 			<span class="material-symbols-outlined text-2xl">verified_user</span>
-			<span class="text-left leading-tight">Safety Supplies</span>
+			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety Supplies' ) ); ?></span>
 		</button>
 
 		<!-- Tab 5: Technical Support -->
 		<button data-tab="tab-technical" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
 			<span class="material-symbols-outlined text-2xl">build</span>
-			<span class="text-left leading-tight">Technical Support</span>
+			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Support' ) ); ?></span>
 		</button>
 	</div>
 

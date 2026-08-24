@@ -13,34 +13,34 @@ get_header();
 <main class="flex-grow pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 <!-- Contact Hero -->
 <section class="mb-12">
-	<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-xs uppercase tracking-wider mb-3 inline-block">24/7 Dispatch Desk</span>
-	<h1 class="font-headline-xl text-headline-xl text-primary mb-4">Contact Port Operations & Dispatch</h1>
-	<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">24/7 Marine Supply & Logistics Support Across All Egyptian Ports. Contact our dispatchers directly for urgent vessel requirements.</p>
+	<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-xs uppercase tracking-wider mb-3 inline-block"><?php echo esc_html( bayrak_t( 'contact_badge', '24/7 Dispatch Desk' ) ); ?></span>
+	<h1 class="font-headline-xl text-headline-xl text-primary mb-4"><?php echo esc_html( bayrak_t( 'contact_title', 'Contact Port Operations & Dispatch' ) ); ?></h1>
+	<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl"><?php echo esc_html( bayrak_t( 'contact_sub', '24/7 Marine Supply & Logistics Support Across All Egyptian Ports. Contact our dispatchers directly for urgent vessel requirements.' ) ); ?></p>
 </section>
 
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 	<!-- Form Area -->
 	<div class="lg:col-span-7 bg-primary text-on-primary p-8 rounded-xl border border-outline-variant shadow-sm">
-		<h2 class="font-headline-md text-headline-md text-on-primary mb-6 border-b border-primary-container pb-4">General Inquiry & Operations Desk</h2>
+		<h2 class="font-headline-md text-headline-md text-on-primary mb-6 border-b border-primary-container pb-4"><?php echo esc_html( bayrak_t( 'contact_form_title', 'General Inquiry & Operations Desk' ) ); ?></h2>
 		<form class="space-y-6" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message received. Our dispatch team will contact you shortly.');">
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 				<div>
-					<label class="block font-button-text text-button-text text-on-primary mb-2">Your Name *</label>
+					<label class="block font-button-text text-button-text text-on-primary mb-2"><?php echo esc_html( bayrak_t( 'full_name', 'Your Name' ) ); ?> *</label>
 					<input class="w-full bg-surface text-on-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" required type="text" placeholder="Captain / Superintendent Name"/>
 				</div>
 				<div>
-					<label class="block font-button-text text-button-text text-on-primary mb-2">Company Name *</label>
+					<label class="block font-button-text text-button-text text-on-primary mb-2"><?php echo esc_html( bayrak_t( 'company_name', 'Company Name' ) ); ?> *</label>
 					<input class="w-full bg-surface text-on-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" required type="text" placeholder="Shipping / Management Co."/>
 				</div>
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 				<div>
-					<label class="block font-button-text text-button-text text-on-primary mb-2">Email Address *</label>
+					<label class="block font-button-text text-button-text text-on-primary mb-2"><?php echo esc_html( bayrak_t( 'email_address', 'Email Address' ) ); ?> *</label>
 					<input class="w-full bg-surface text-on-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" required type="email" placeholder="ops@company.com"/>
 				</div>
 				<div>
-					<label class="block font-button-text text-button-text text-on-primary mb-2">Inquiry Type</label>
+					<label class="block font-button-text text-button-text text-on-primary mb-2"><?php echo esc_html( bayrak_t( 'step_1_name', 'Inquiry Type' ) ); ?></label>
 					<select class="w-full bg-surface text-on-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all">
 						<option>General Operational Inquiry</option>
 						<option>Provisions & Bonded Stores</option>
@@ -51,7 +51,7 @@ get_header();
 			</div>
 
 			<div>
-				<label class="block font-button-text text-button-text text-on-primary mb-2">Message / Details *</label>
+				<label class="block font-button-text text-button-text text-on-primary mb-2"><?php echo esc_html( bayrak_t( 'notes', 'Message / Details' ) ); ?> *</label>
 				<textarea class="w-full bg-surface text-on-surface border border-outline-variant rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" required rows="4" placeholder="Describe vessel schedule or general requirements..."></textarea>
 			</div>
 
@@ -73,14 +73,14 @@ get_header();
 				</div>
 			</div>
 			<a class="inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-6 py-3.5 rounded hover:bg-secondary transition-colors shadow-sm" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
-				<span>Launch Quotation Form</span>
-				<span class="material-symbols-outlined text-sm">arrow_forward</span>
+				<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Launch Quotation Form' ) ); ?></span>
+				<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 			</a>
 		</div>
 
 		<!-- Office Details -->
 		<div class="bg-surface p-6 rounded-xl border border-outline-variant">
-			<h3 class="font-headline-md text-headline-md text-primary mb-6">Operations Headquarters</h3>
+			<h3 class="font-headline-md text-headline-md text-primary mb-6"><?php echo esc_html( bayrak_t( 'contact_hq', 'Operations Headquarters' ) ); ?></h3>
 			<ul class="space-y-4">
 				<li class="flex items-start gap-3 text-on-surface-variant">
 					<span class="material-symbols-outlined text-primary mt-1">location_on</span>
