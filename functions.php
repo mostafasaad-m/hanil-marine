@@ -494,14 +494,6 @@ function bayrak_get_translations() {
 	return $dict;
 }
 
-
-
-		),
-	);
-
-	return $dict;
-}
-
 function bayrak_t( $key, $default_en = '' ) {
 	$lang = bayrak_get_current_lang();
 	$dict = bayrak_get_translations();
