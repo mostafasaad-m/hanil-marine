@@ -22,9 +22,9 @@ get_header();
 
 	<!-- Section Header -->
 	<div class="text-center mb-12">
-		<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block">Step 1 of 4</span>
-		<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-primary mb-4">Select Primary Service Category</h1>
-		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Choose the primary service your vessel requires. Selecting a service will automatically advance to Step 2.</p>
+		<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block"><?php echo esc_html( bayrak_t( 'step_1_badge', 'Step 1 of 4' ) ); ?></span>
+		<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-primary mb-4"><?php echo esc_html( bayrak_t( 'step_1_title', 'Select Primary Service Category' ) ); ?></h1>
+		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"><?php echo esc_html( bayrak_t( 'step_1_sub', 'Choose the primary service your vessel requires. Selecting a service will automatically advance to Step 2.' ) ); ?></p>
 	</div>
 
 	<!-- Service Cards Grid -->

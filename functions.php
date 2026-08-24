@@ -55,6 +55,207 @@ function bayrak_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'bayrak_enqueue_scripts' );
 
 /**
+ * Dynamic Multi-Lingual Engine (EN, AR, TR) & RTL Handler
+ */
+function bayrak_init_language() {
+	if ( isset( $_GET['lang'] ) && in_array( strtolower( $_GET['lang'] ), array( 'en', 'ar', 'tr' ), true ) ) {
+		$lang = strtolower( $_GET['lang'] );
+		setcookie( 'bayrak_lang', $lang, time() + ( 365 * 24 * 60 * 60 ), '/' );
+		$_COOKIE['bayrak_lang'] = $lang;
+	}
+}
+add_action( 'init', 'bayrak_init_language' );
+
+function bayrak_get_current_lang() {
+	if ( isset( $_GET['lang'] ) && in_array( strtolower( $_GET['lang'] ), array( 'en', 'ar', 'tr' ), true ) ) {
+		return strtolower( $_GET['lang'] );
+	}
+	if ( isset( $_COOKIE['bayrak_lang'] ) && in_array( strtolower( $_COOKIE['bayrak_lang'] ), array( 'en', 'ar', 'tr' ), true ) ) {
+		return strtolower( $_COOKIE['bayrak_lang'] );
+	}
+	return 'en';
+}
+
+function bayrak_is_rtl() {
+	return bayrak_get_current_lang() === 'ar';
+}
+
+function bayrak_get_translations() {
+	static $dict = null;
+	if ( null !== $dict ) {
+		return $dict;
+	}
+
+	$dict = array(
+		'en' => array(
+			'home' => 'Home',
+			'services' => 'Services',
+			'about_us' => 'About Us',
+			'contact' => 'Contact',
+			'get_quotation' => 'Get Quotation',
+			'nav_provisions' => 'Provisions Supply',
+			'nav_bonded' => 'Bonded Stores',
+			'nav_technical' => 'Technical Spares',
+			'nav_logistics' => 'Port Logistics',
+			'nav_safety' => 'Safety & SOLAS',
+			'step_1_title' => 'Select Primary Service Category',
+			'step_1_sub' => 'Choose the primary service your vessel requires. Selecting a service will automatically advance to Step 2.',
+			'step_1_badge' => 'Step 1 of 4',
+			'step_1_name' => 'Service Type',
+			'step_2_name' => 'Contact Details',
+			'step_3_name' => 'Vessel Logistics',
+			'step_4_name' => 'Review & Submit',
+			'step_2_title' => 'Personal & Company Information',
+			'step_2_sub' => 'Please provide your contact details so our maritime coordinators can deliver your quotation.',
+			'full_name' => 'Full Name',
+			'email_address' => 'Work Email Address',
+			'company_name' => 'Shipping / Fleet Company',
+			'job_title' => 'Job Title / Designation',
+			'phone_number' => 'Phone / WhatsApp Number',
+			'step_3_title' => 'Vessel Schedule & Specifications',
+			'step_3_sub' => 'Provide your vessel details and upload any requisition spreadsheets or specification documents.',
+			'vessel_name' => 'Vessel Name',
+			'imo_number' => 'IMO Number',
+			'port_of_call' => 'Port of Call (Egypt)',
+			'eta' => 'Estimated Time of Arrival (ETA)',
+			'etd' => 'Estimated Time of Departure (ETD)',
+			'notes' => 'Additional Requirements / Description',
+			'upload_title' => 'Upload Quotation Requisition File (PDF, XLSX, DOCX, Images)',
+			'upload_sub' => 'Attach any requisitions, store lists, spreadsheets, or technical drawings for instant processing by our port dispatcher.',
+			'click_drag' => 'Click or drag & drop file here',
+			'file_formats' => 'Supports PDF, XLSX, DOCX, PNG, JPG up to 15MB',
+			'step_4_title' => 'Review & Submit Request',
+			'step_4_sub' => 'Please review your quotation details below before submitting to our 24/7 port operations team.',
+			'terms_agree' => 'I confirm that all details provided are accurate and I authorize Hanil Marine to process this quotation request.',
+			'submit_quote' => 'Submit Quotation Request',
+			'edit_details' => 'Edit Details',
+			'back' => 'Back',
+			'next' => 'Next',
+			'cancel' => 'Cancel',
+			'success_title' => 'Request Submitted Successfully!',
+			'success_msg' => 'Your quotation request and attachments have been logged in WordPress. Our dispatch team will respond within 2 hours.',
+			'ref_id_label' => 'Your Unique Reference ID',
+			'return_home' => 'Return to Homepage',
+		),
+		'ar' => array(
+			'home' => 'الرئيسية',
+			'services' => 'الخدمات البحرية',
+			'about_us' => 'عن الشركة',
+			'contact' => 'اتصل بنا',
+			'get_quotation' => 'طلب عرض أسعار',
+			'nav_provisions' => 'تموين السفن والمؤن',
+			'nav_bonded' => 'المخازن الجمركية الحرة',
+			'nav_technical' => 'قطع الغيار والدعم الفني',
+			'nav_logistics' => 'الخدمات اللوجستية والتخليص',
+			'nav_safety' => 'معدات السلامة ومكافحة الحريق',
+			'step_1_title' => 'حدد فئة الخدمة الرئيسية',
+			'step_1_sub' => 'اختر الخدمة الرئيسية التي تحتاجها سفينتك. سيتنقل النظام تلقائياً للخطوة الثانية فور الاختيار.',
+			'step_1_badge' => 'الخطوة 1 من 4',
+			'step_1_name' => 'نوع الخدمة',
+			'step_2_name' => 'بيانات الاتصال',
+			'step_3_name' => 'تفاصيل السفينة والخدمات اللوجستية',
+			'step_4_name' => 'المراجعة والإرسال',
+			'step_2_title' => 'البيانات الشخصية وبيانات الشركة',
+			'step_2_sub' => 'يرجى تقديم بيانات الاتصال الخاصة بك حتى يتمكن منسقو العمليات البحرية من إرسال عرض الأسعار.',
+			'full_name' => 'الاسم بالكامل',
+			'email_address' => 'البريد الإلكتروني للعمل',
+			'company_name' => 'شركة الملاحة / الأسطول',
+			'job_title' => 'المسمى الوظيفي',
+			'phone_number' => 'رقم الهاتف / الواتساب',
+			'step_3_title' => 'جدول الملاحة ومواصفات السفينة',
+			'step_3_sub' => 'أدخل تفاصيل السفينة وجدول الرسو وميعاد الوصول بالجرينتش وارفق كشوف المؤن وطلبات الشراء.',
+			'vessel_name' => 'اسم السفينة',
+			'imo_number' => 'رقم المنظمة البحرية (IMO)',
+			'port_of_call' => 'ميناء الرسو (مصر)',
+			'eta' => 'الموعد المتوقع للوصول (ETA)',
+			'etd' => 'الموعد المتوقع للمغادرة (ETD)',
+			'notes' => 'متطلبات إضافية / الملاحظات',
+			'upload_title' => 'رفع ملف طلب عرض الأسعار (PDF, XLSX, DOCX, صور)',
+			'upload_sub' => 'أرفق كشوف التموين أو قوائم قطع الغيار أو الرسومات الفنية للمعالجة الفورية بواسطة موجه الميناء.',
+			'click_drag' => 'انقر هنا أو اسحب الملف لرفعه',
+			'file_formats' => 'يدعم PDF, XLSX, DOCX, PNG, JPG حتى 15 ميجابايت',
+			'step_4_title' => 'مراجعة وتأكيد الطلب',
+			'step_4_sub' => 'يرجى مراجعة تفاصيل عرض الأسعار أدناه قبل الإرسال لفريق عمليات الميناء المتاح 24/7.',
+			'terms_agree' => 'أؤكد أن جميع البيانات المقدمة صحيحة وأفوض هانيل مارين بمعالجة طلب عرض الأسعار هذا.',
+			'submit_quote' => 'إرسال طلب عرض الأسعار',
+			'edit_details' => 'تعديل البيانات',
+			'back' => 'السابق',
+			'next' => 'التالي',
+			'cancel' => 'إلغاء',
+			'success_title' => 'تم إرسال الطلب بنجاح!',
+			'success_msg' => 'تم تسجيل طلب عرض الأسعار والملفات المرفقة بنجاح. سيرد فريق عمليات الميناء خلال ساعتين.',
+			'ref_id_label' => 'رقم المرجع الموحد الخاص بك',
+			'return_home' => 'العودة للصفحة الرئيسية',
+		),
+		'tr' => array(
+			'home' => 'Ana Sayfa',
+			'services' => 'Hizmetler',
+			'about_us' => 'Hakkımızda',
+			'contact' => 'İletişim',
+			'get_quotation' => 'Teklif Alın',
+			'nav_provisions' => 'Gemi Kumanya İkmal',
+			'nav_bonded' => 'Transit & Gümrüksüz Mağaza',
+			'nav_technical' => 'Teknik Yedek Parça & Destek',
+			'nav_logistics' => 'Liman Lojistiği & Transit',
+			'nav_safety' => 'Güvenlik & SOLAS Ekipmanları',
+			'step_1_title' => 'Ana Hizmet Kategorisini Seçin',
+			'step_1_sub' => 'Geminizin ihtiyaç duyduğu ana hizmeti seçin. Seçiminiz otomatik olarak 2. Adıma ilerleyecektir.',
+			'step_1_badge' => 'Adım 1 / 4',
+			'step_1_name' => 'Hizmet Türü',
+			'step_2_name' => 'İletişim Bilgileri',
+			'step_3_name' => 'Gemi Detayları & Lojistik',
+			'step_4_name' => 'İncele & Gönder',
+			'step_2_title' => 'Kişisel ve Şirket Bilgileri',
+			'step_2_sub' => 'Denizcilik operasyon ekibimizin teklifinizi iletebilmesi için lütfen iletişim bilgilerinizi girin.',
+			'full_name' => 'Ad Soyad',
+			'email_address' => 'Kurumsal E-posta Adresi',
+			'company_name' => 'Armatör / İşletme Şirketi',
+			'job_title' => 'Unvan / Görev',
+			'phone_number' => 'Telefon / WhatsApp Numarası',
+			'step_3_title' => 'Gemi Programı & Teknik Detaylar',
+			'step_3_sub' => 'Gemi bilgilerinizi, liman varış programınızı ve malzeme listenizi (Excel/PDF) yükleyin.',
+			'vessel_name' => 'Gemi Adı',
+			'imo_number' => 'IMO Numarası',
+			'port_of_call' => 'Varış Limanı (Mısır)',
+			'eta' => 'Tahmini Varış Zamanı (ETA)',
+			'etd' => 'Tahmini Kalkış Zamanı (ETD)',
+			'notes' => 'Ek İhtiyaçlar & Açıklama',
+			'upload_title' => 'Teklif İhtiyaç Dosyasını Yükleyin (PDF, XLSX, DOCX, Görseller)',
+			'upload_sub' => 'Liman vardiya amirimiz tarafından hızlı işlenmesi için sipariş listelerinizi veya teknik çizimlerinizi ekleyin.',
+			'click_drag' => 'Dosyayı buraya tıklayın veya sürükleyip bırakın',
+			'file_formats' => '15MB\'a kadar PDF, XLSX, DOCX, PNG, JPG destekler',
+			'step_4_title' => 'Talebi İnceleyin & Onaylayın',
+			'step_4_sub' => 'Lütfen 7/24 liman operasyon ekibimize göndermeden önce teklif detaylarınızı inceleyin.',
+			'terms_agree' => 'Verilen tüm bilgilerin doğru olduğunu onaylıyor ve Hanil Marine\'e teklif talebini işleme yetkisi veriyorum.',
+			'submit_quote' => 'Teklif Talebini Gönder',
+			'edit_details' => 'Detayları Düzenle',
+			'back' => 'Geri',
+			'next' => 'İleri',
+			'cancel' => 'İptal',
+			'success_title' => 'Talep Başarıyla Gönderildi!',
+			'success_msg' => 'Teklif talebiniz ve dosyalarınız kaydedildi. Liman operasyon ekibimiz 2 saat içinde yanıt verecektir.',
+			'ref_id_label' => 'Benzersiz Referans Numaranız',
+			'return_home' => 'Ana Sayfaya Dön',
+		),
+	);
+
+	return $dict;
+}
+
+function bayrak_t( $key, $default_en = '' ) {
+	$lang = bayrak_get_current_lang();
+	$dict = bayrak_get_translations();
+	if ( isset( $dict[ $lang ][ $key ] ) ) {
+		return $dict[ $lang ][ $key ];
+	}
+	if ( isset( $dict['en'][ $key ] ) ) {
+		return $dict['en'][ $key ];
+	}
+	return $default_en ? $default_en : $key;
+}
+
+
+/**
  * Register Quotation Request Custom Post Type
  */
 function bayrak_register_quotation_cpt() {

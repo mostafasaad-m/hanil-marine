@@ -31,9 +31,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		} else {
 			?>
 			<ul class="space-y-2">
-				<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors opacity-90 hover:opacity-100" href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Services</a></li>
-				<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors opacity-90 hover:opacity-100" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>">About Us</a></li>
-				<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors opacity-90 hover:opacity-100" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>">Contact</a></li>
+				<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors opacity-90 hover:opacity-100" href="<?php echo esc_url( home_url( '/#services' ) ); ?>"><?php echo esc_html( bayrak_t( 'services', 'Services' ) ); ?></a></li>
+				<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors opacity-90 hover:opacity-100" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>"><?php echo esc_html( bayrak_t( 'about_us', 'About Us' ) ); ?></a></li>
+				<li><a class="text-tertiary-fixed-dim hover:text-secondary-container transition-colors opacity-90 hover:opacity-100" href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>"><?php echo esc_html( bayrak_t( 'contact', 'Contact' ) ); ?></a></li>
 			</ul>
 			<?php
 		}

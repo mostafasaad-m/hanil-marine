@@ -29,7 +29,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 						1
 					<?php endif; ?>
 				</div>
-				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 1 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>">Service Type</span>
+				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 1 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>"><?php echo esc_html( bayrak_t( 'step_1_name', 'Service Type' ) ); ?></span>
 			</a>
 
 			<!-- Step 2 -->
@@ -41,7 +41,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 						2
 					<?php endif; ?>
 				</div>
-				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 2 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>">Contact Details</span>
+				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 2 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>"><?php echo esc_html( bayrak_t( 'step_2_name', 'Contact Details' ) ); ?></span>
 			</a>
 
 			<!-- Step 3 -->
@@ -53,7 +53,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 						3
 					<?php endif; ?>
 				</div>
-				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 3 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>">Vessel Logistics</span>
+				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 3 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>"><?php echo esc_html( bayrak_t( 'step_3_name', 'Vessel Logistics' ) ); ?></span>
 			</a>
 
 			<!-- Step 4 -->
@@ -61,7 +61,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 				<div class="w-8 h-8 rounded-full <?php echo $current_step === 4 ? 'bg-primary text-on-primary ring-4 ring-primary-fixed' : 'bg-surface-container-highest text-on-surface-variant'; ?> flex items-center justify-center font-button-text text-sm transition-all shadow-sm">
 					4
 				</div>
-				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 4 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>">Review & Submit</span>
+				<span class="mt-2 font-label-caps text-xs <?php echo $current_step === 4 ? 'text-primary font-bold' : 'text-on-surface-variant'; ?>"><?php echo esc_html( bayrak_t( 'step_4_name', 'Review & Submit' ) ); ?></span>
 			</a>
 		</div>
 	</div>
