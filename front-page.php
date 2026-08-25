@@ -8,7 +8,7 @@
 </div>
 <div class="relative z-10 w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="max-w-2xl text-on-primary">
-<span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-label-caps mb-6 uppercase tracking-wider"><?php echo esc_html( bayrak_t( 'hero_badge', 'Licensed Ship Chandler - Egypt' ) ); ?></span>
+
 <h1 class="font-headline-xl text-headline-xl mb-4"><?php echo esc_html( bayrak_t( 'hero_title', 'Complete Ship Supplies & Port Services in Egypt' ) ); ?></h1>
 <p class="font-body-lg text-body-lg mb-8 text-primary-fixed"><?php echo esc_html( bayrak_t( 'hero_subtitle', 'Fresh provisions, bonded stores, deck & engine spares, and rapid launch delivery at Port Said, Suez Canal, Alexandria, Damietta, and Ain Sokhna. 24/7 operational dispatch.' ) ); ?></p>
 <a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-[0_12px_24px_-4px_rgba(229,169,60,0.3)]" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
@@ -38,10 +38,7 @@
 					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'card_provisions_title', 'Provisions & Bonded Stores' ) ); ?></h3>
 				</div>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'card_provisions_desc', 'Fresh, frozen, and dry provisions delivered in refrigerated reefers under HACCP standards. Complete stock of duty-free bonded goods and cabin supplies.' ) ); ?></p>
-				<div class="flex flex-wrap gap-2 mb-6">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Reefer Delivery</span>
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">HACCP Certified</span>
-				</div>
+			
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
 				<span><?php echo esc_html( bayrak_t( 'services', 'View Details' ) ); ?></span>
@@ -55,10 +52,7 @@
 					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'card_logistics_title', 'Port Logistics & Transit Clearance' ) ); ?></h3>
 				</div>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'card_logistics_desc', 'Customs clearance, bonded warehousing, launch boat delivery at anchorage, and zero-delay logistics for Suez Canal transit and port calls.' ) ); ?></p>
-				<div class="flex flex-wrap gap-2 mb-6">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Anchorage Launch</span>
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">Customs Clearance</span>
-				</div>
+				
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
 				<span><?php echo esc_html( bayrak_t( 'services', 'View Details' ) ); ?></span>
@@ -72,10 +66,7 @@
 					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'card_technical_title', 'Technical Spares & Engine Stores' ) ); ?></h3>
 				</div>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'card_technical_desc', 'IMPA & ISSA coded engine, deck, and electrical spare parts, SOLAS safety gear, and qualified marine technicians for urgent port repairs.' ) ); ?></p>
-				<div class="flex flex-wrap gap-2 mb-6">
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">IMPA/ISSA Coded</span>
-					<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps">SOLAS Certified</span>
-				</div>
+				
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
 				<span><?php echo esc_html( bayrak_t( 'services', 'View Details' ) ); ?></span>

@@ -191,7 +191,7 @@
 					<span>🇬🇧</span> English
 				</a>
 				<a href="?lang=ar" class="flex items-center gap-2 px-3 py-2 text-xs font-bold text-primary hover:bg-surface-container rounded transition-colors <?php echo bayrak_get_current_lang() === 'ar' ? 'bg-surface-container-low text-secondary' : ''; ?>">
-					<span>🇪🇬</span> العربية (RTL)
+					<span>🇪🇬</span> العربية 
 				</a>
 				<a href="?lang=tr" class="flex items-center gap-2 px-3 py-2 text-xs font-bold text-primary hover:bg-surface-container rounded transition-colors <?php echo bayrak_get_current_lang() === 'tr' ? 'bg-surface-container-low text-secondary' : ''; ?>">
 					<span>🇹🇷</span> Türkçe

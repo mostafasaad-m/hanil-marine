@@ -16,7 +16,7 @@ get_header();
 
 		<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 			<div class="max-w-2xl text-left text-on-primary">
-				<span class="inline-block bg-secondary-container text-on-secondary px-3 py-1 rounded font-label-caps text-xs uppercase tracking-wider mb-4"><?php echo esc_html( bayrak_t( 'prov_hero_badge', 'Premier Provisions Supply' ) ); ?></span>
+	
 				<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl mb-6"><?php echo esc_html( bayrak_t( 'prov_hero_title', 'Complete Ship Provisions Supply in Egypt' ) ); ?></h1>
 				<p class="font-body-lg text-body-lg text-primary-fixed mb-8"><?php echo esc_html( bayrak_t( 'prov_hero_sub', 'Ensuring every galley across Egyptian ports is stocked with fresh, frozen, and dry provisions to support your crew\'s health and well-being.' ) ); ?></p>
 				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-md" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
