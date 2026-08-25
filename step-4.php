@@ -44,7 +44,6 @@ get_header();
 				<!-- Service Summary -->
 				<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
 					<div class="flex items-center mb-4 text-primary">
-						<span class="material-symbols-outlined mr-2 text-secondary">inventory_2</span>
 						<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'step_1_name', 'Service Category' ) ); ?></h3>
 					</div>
 					<dl class="space-y-3">
@@ -58,7 +57,6 @@ get_header();
 				<!-- Contact Summary -->
 				<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
 					<div class="flex items-center mb-4 text-primary">
-						<span class="material-symbols-outlined mr-2 text-secondary">contact_mail</span>
 						<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'step_2_name', 'Contact Information' ) ); ?></h3>
 					</div>
 					<dl class="space-y-2 text-sm">
@@ -84,7 +82,6 @@ get_header();
 				<!-- Vessel Summary (Full Width) -->
 				<div class="md:col-span-2 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant">
 					<div class="flex items-center mb-4 text-primary">
-						<span class="material-symbols-outlined mr-2 text-secondary">directions_boat</span>
 						<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'step_3_name', 'Vessel & Port Schedule' ) ); ?></h3>
 					</div>
 					<div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm mb-4">
@@ -114,7 +111,6 @@ get_header();
 
 						<div id="sum-file-wrapper" class="hidden flex items-center justify-between bg-surface p-3 rounded border border-outline-variant/30">
 							<div class="flex items-center gap-2">
-								<span class="material-symbols-outlined text-secondary">attach_file</span>
 								<span id="sum-file-name" class="font-bold text-sm text-primary">filename.pdf</span>
 							</div>
 							<span class="text-xs text-secondary-container font-bold px-2 py-1 bg-surface-container rounded-full">Requisition File Attached</span>
@@ -143,7 +139,6 @@ get_header();
 				</button>
 				<button id="submit-btn" type="button" class="px-10 py-4 rounded bg-secondary-container text-on-secondary font-button-text text-button-text hover:bg-secondary transition-all shadow-lg flex items-center justify-center gap-2">
 					<span><?php echo esc_html( bayrak_t( 'submit_quote', 'Submit Quotation Request' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm rtl-flip">send</span>
 				</button>
 			</div>
 		</div>
@@ -153,7 +148,7 @@ get_header();
 	<div id="success-overlay" class="fixed inset-0 bg-primary/90 backdrop-blur-sm z-50 hidden flex items-center justify-center opacity-0 transition-opacity duration-300 p-4">
 		<div id="success-modal" class="bg-surface-container-lowest p-8 md:p-12 rounded-xl max-w-lg w-full text-center shadow-2xl transform scale-95 transition-transform duration-300">
 			<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 ring-8 ring-secondary-container/20">
-				<span class="material-symbols-outlined text-secondary-container text-4xl">check_circle</span>
+				<span class="text-secondary-container text-4xl font-bold">✓</span>
 			</div>
 			<h2 class="font-headline-lg text-headline-lg text-primary mb-2"><?php echo esc_html( bayrak_t( 'success_title', 'Request Submitted Successfully!' ) ); ?></h2>
 			<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'success_msg', 'Your quotation request and attachments have been logged in WordPress. Our dispatch team will respond within 2 hours.' ) ); ?></p>
@@ -231,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const btn = document.getElementById('submit-btn');
 		btn.disabled = true;
-		btn.innerHTML = '<span>Transmitting Request & File...</span><span class="material-symbols-outlined text-sm animate-spin">sync</span>';
+		btn.innerHTML = '<span>Transmitting Request & File...</span>';
 
 		const formData = new FormData();
 		formData.append('action', 'bayrak_submit_quotation');
@@ -283,17 +278,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else {
 				alert(data.data ? data.data.message : 'Submission failed. Please try again.');
 				btn.disabled = false;
-				btn.innerHTML = '<span>Submit Quotation Request</span><span class="material-symbols-outlined text-sm">send</span>';
+				btn.innerHTML = '<span>Submit Quotation Request</span>';
 			}
 		})
 		.catch(err => {
 			console.error(err);
 			alert('Network error. Please check your connection and try again.');
 			btn.disabled = false;
-			btn.innerHTML = '<span>Submit Quotation Request</span><span class="material-symbols-outlined text-sm">send</span>';
+			btn.innerHTML = '<span>Submit Quotation Request</span>';
 		});
 	});
 });
+</script>
 </script>
 
 <?php get_footer(); ?>

@@ -65,16 +65,12 @@ get_header();
 	<div class="lg:col-span-5 space-y-gutter">
 		<!-- Fast Quotation Card -->
 		<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant flex flex-col justify-between">
-			<div class="flex items-start gap-4 mb-4">
-				<span class="material-symbols-outlined text-secondary text-4xl">inventory_2</span>
-				<div>
-					<h3 class="font-headline-md text-headline-md text-primary mb-1">Need an Itemized Quotation?</h3>
-					<p class="font-body-md text-body-md text-on-surface-variant">Use our step-by-step quotation builder to specify vessel details and upload requisition spreadsheets.</p>
-				</div>
+			<div class="mb-4">
+				<h3 class="font-headline-md text-headline-md text-primary mb-1">Need an Itemized Quotation?</h3>
+				<p class="font-body-md text-body-md text-on-surface-variant">Use our step-by-step quotation builder to specify vessel details and upload requisition spreadsheets.</p>
 			</div>
 			<a class="inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-6 py-3.5 rounded hover:bg-secondary transition-colors shadow-sm" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 				<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Launch Quotation Form' ) ); ?></span>
-				<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 			</a>
 		</div>
 
@@ -82,16 +78,13 @@ get_header();
 		<div class="bg-surface p-6 rounded-xl border border-outline-variant">
 			<h3 class="font-headline-md text-headline-md text-primary mb-6"><?php echo esc_html( bayrak_t( 'contact_hq', 'Operations Headquarters' ) ); ?></h3>
 			<ul class="space-y-4">
-				<li class="flex items-start gap-3 text-on-surface-variant">
-					<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+				<li class="text-on-surface-variant">
 					<span class="font-body-md text-body-md">Port Said & Alexandria Port Operations Areas,<br/>Suez Canal Maritime Gateway, Egypt</span>
 				</li>
-				<li class="flex items-center gap-3 text-on-surface-variant">
-					<span class="material-symbols-outlined text-primary">mail</span>
+				<li class="text-on-surface-variant">
 					<span class="font-body-md text-body-md">ops@hanilmarine.com</span>
 				</li>
-				<li class="flex items-center gap-3 text-on-surface-variant">
-					<span class="material-symbols-outlined text-primary">phone</span>
+				<li class="text-on-surface-variant">
 					<span class="font-body-md text-body-md">24/7 Dispatch Hotline Available</span>
 				</li>
 			</ul>

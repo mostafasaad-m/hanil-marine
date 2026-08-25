@@ -44,25 +44,16 @@ get_header();
 <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Capability 1 -->
 <div class="bg-surface p-8 border border-outline-variant rounded-lg hover:border-primary transition-all shadow-sm flex flex-col items-start">
-<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl">anchor</span>
-</div>
 <h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'about_cap1_title', '24/7 Berth & Anchorage Delivery' ) ); ?></h3>
 <p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'about_cap1_desc', 'Direct supply launch service for ships waiting at Port Said and Suez anchorages, plus direct truck delivery alongside all Egyptian berths.' ) ); ?></p>
 </div>
 <!-- Capability 2 -->
 <div class="bg-surface p-8 border border-outline-variant rounded-lg hover:border-primary transition-all shadow-sm flex flex-col items-start">
-<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl">verified</span>
-</div>
 <h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'about_cap2_title', 'HACCP & IMPA/ISSA Compliance' ) ); ?></h3>
 <p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'about_cap2_desc', 'Refrigerated food storage conforming to ISO 22000 & HACCP, plus IMPA & ISSA coded technical spares sourcing.' ) ); ?></p>
 </div>
 <!-- Capability 3 -->
 <div class="bg-surface p-8 border border-outline-variant rounded-lg hover:border-primary transition-all shadow-sm flex flex-col items-start">
-<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl">local_shipping</span>
-</div>
 <h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'about_cap3_title', 'Rapid Quotation & Clear Invoicing' ) ); ?></h3>
 <p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'about_cap3_desc', 'Itemized quotations delivered within 2 hours of requisition receipt with clear pricing and zero hidden port fees.' ) ); ?></p>
 </div>

@@ -21,7 +21,6 @@ get_header();
 				<p class="font-body-lg text-body-lg text-primary-fixed mb-8"><?php echo esc_html( bayrak_t( 'prov_hero_sub', 'Ensuring every galley across Egyptian ports is stocked with fresh, frozen, and dry provisions to support your crew\'s health and well-being.' ) ); ?></p>
 				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-md" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Get a Quotation' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</a>
 			</div>
 		</div>
@@ -78,21 +77,20 @@ get_header();
 				<p class="font-body-lg text-body-lg text-primary-fixed mb-6"><?php echo esc_html( bayrak_t( 'prov_standards_desc', 'Hanil Marine\'s warehouses comply with global industrial standards and the requirements set by local Egyptian authorities, ensuring strict handling and control of food safety, freshness, and quality.' ) ); ?></p>
 				<ul class="space-y-4 mb-8">
 					<li class="flex items-start gap-3">
-						<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+						<span class="text-secondary font-bold">✓</span>
 						<span class="font-body-md text-body-md">Best Grade Achievement Certified for Quality Control</span>
 					</li>
 					<li class="flex items-start gap-3">
-						<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+						<span class="text-secondary font-bold">✓</span>
 						<span class="font-body-md text-body-md">HACCP & ISO 22000 Certified facilities</span>
 					</li>
 					<li class="flex items-start gap-3">
-						<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+						<span class="text-secondary font-bold">✓</span>
 						<span class="font-body-md text-body-md">Strict adherence to IMPA and ISSA standards</span>
 					</li>
 				</ul>
 				<a class="inline-flex items-center gap-2 border border-secondary text-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary hover:text-on-secondary transition-colors duration-200" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Request Provisions Quote' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</a>
 			</div>
 
@@ -101,7 +99,6 @@ get_header();
 				<p class="font-body-md text-body-md text-primary-fixed mb-6">Our dedicated procurement team continuously monitors local Egyptian markets and global supply chains to secure the highest quality provisions at competitive rates.</p>
 				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary transition-colors duration-200" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Get Fast Quotation' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</a>
 			</div>
 		</div>
@@ -113,7 +110,6 @@ get_header();
 		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8"><?php echo esc_html( bayrak_t( 'prov_cta_desc', 'Experience seamless ordering, transparent pricing, and guaranteed delivery schedules across all major Egyptian ports.' ) ); ?></p>
 		<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-10 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-lg" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 			<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation Request' ) ); ?></span>
-			<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 		</a>
 	</section>
 </main>

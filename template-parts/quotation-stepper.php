@@ -24,7 +24,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 			<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="flex flex-col items-center group">
 				<div class="w-8 h-8 rounded-full <?php echo $current_step > 1 ? 'bg-secondary-container text-on-secondary' : ( $current_step === 1 ? 'bg-primary text-on-primary ring-4 ring-primary-fixed' : 'bg-surface-container-highest text-on-surface-variant' ); ?> flex items-center justify-center font-button-text text-sm transition-all shadow-sm">
 					<?php if ( $current_step > 1 ) : ?>
-						<span class="material-symbols-outlined text-base">check</span>
+						<span class="font-bold">✓</span>
 					<?php else : ?>
 						1
 					<?php endif; ?>
@@ -36,7 +36,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 			<a href="<?php echo esc_url( home_url( '/step-2' ) ); ?>" class="flex flex-col items-center group">
 				<div class="w-8 h-8 rounded-full <?php echo $current_step > 2 ? 'bg-secondary-container text-on-secondary' : ( $current_step === 2 ? 'bg-primary text-on-primary ring-4 ring-primary-fixed' : 'bg-surface-container-highest text-on-surface-variant' ); ?> flex items-center justify-center font-button-text text-sm transition-all shadow-sm">
 					<?php if ( $current_step > 2 ) : ?>
-						<span class="material-symbols-outlined text-base">check</span>
+						<span class="font-bold">✓</span>
 					<?php else : ?>
 						2
 					<?php endif; ?>
@@ -48,7 +48,7 @@ $progress_width = isset( $progress_percentages[ $current_step ] ) ? $progress_pe
 			<a href="<?php echo esc_url( home_url( '/step-3' ) ); ?>" class="flex flex-col items-center group">
 				<div class="w-8 h-8 rounded-full <?php echo $current_step > 3 ? 'bg-secondary-container text-on-secondary' : ( $current_step === 3 ? 'bg-primary text-on-primary ring-4 ring-primary-fixed' : 'bg-surface-container-highest text-on-surface-variant' ); ?> flex items-center justify-center font-button-text text-sm transition-all shadow-sm">
 					<?php if ( $current_step > 3 ) : ?>
-						<span class="material-symbols-outlined text-base">check</span>
+						<span class="font-bold">✓</span>
 					<?php else : ?>
 						3
 					<?php endif; ?>

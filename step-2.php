@@ -75,12 +75,10 @@ get_header();
 			<!-- Navigation Buttons -->
 			<div class="mt-10 pt-6 border-t border-outline-variant flex justify-between items-center">
 				<button id="back-btn" type="button" class="px-6 py-3 border border-primary text-primary rounded font-button-text text-button-text hover:bg-surface-container transition-colors flex items-center gap-2">
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_back</span>
 					<span><?php echo esc_html( bayrak_t( 'back', 'Back' ) ); ?></span>
 				</button>
 				<button id="next-btn" type="button" class="px-8 py-3 bg-secondary-container text-on-secondary font-button-text text-button-text rounded shadow-md hover:bg-secondary transition-all flex items-center gap-2">
 					<span><?php echo esc_html( bayrak_t( 'next', 'Next' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</button>
 			</div>
 		</form>

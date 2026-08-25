@@ -27,7 +27,6 @@
 		</div>
 		<a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded font-button-text hover:bg-primary-container transition-colors shadow-sm self-start md:self-auto">
 			<span><?php echo esc_html( bayrak_t( 'view_all_services', 'View All Services' ) ); ?></span>
-			<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 		</a>
 	</div>
 
@@ -37,7 +36,6 @@
 			<div>
 				<div class="flex justify-between items-start mb-6">
 					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'card_provisions_title', 'Provisions & Bonded Stores' ) ); ?></h3>
-					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">inventory_2</span>
 				</div>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'card_provisions_desc', 'Fresh, frozen, and dry provisions delivered in refrigerated reefers under HACCP standards. Complete stock of duty-free bonded goods and cabin supplies.' ) ); ?></p>
 				<div class="flex flex-wrap gap-2 mb-6">
@@ -47,7 +45,6 @@
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
 				<span><?php echo esc_html( bayrak_t( 'services', 'View Details' ) ); ?></span>
-				<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 			</div>
 		</a>
 
@@ -56,7 +53,6 @@
 			<div>
 				<div class="flex justify-between items-start mb-6">
 					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'card_logistics_title', 'Port Logistics & Transit Clearance' ) ); ?></h3>
-					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">local_shipping</span>
 				</div>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'card_logistics_desc', 'Customs clearance, bonded warehousing, launch boat delivery at anchorage, and zero-delay logistics for Suez Canal transit and port calls.' ) ); ?></p>
 				<div class="flex flex-wrap gap-2 mb-6">
@@ -66,7 +62,6 @@
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
 				<span><?php echo esc_html( bayrak_t( 'services', 'View Details' ) ); ?></span>
-				<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 			</div>
 		</a>
 
@@ -75,7 +70,6 @@
 			<div>
 				<div class="flex justify-between items-start mb-6">
 					<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'card_technical_title', 'Technical Spares & Engine Stores' ) ); ?></h3>
-					<span class="material-symbols-outlined service-icon text-secondary-container text-3xl transition-transform duration-300">build</span>
 				</div>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6"><?php echo esc_html( bayrak_t( 'card_technical_desc', 'IMPA & ISSA coded engine, deck, and electrical spare parts, SOLAS safety gear, and qualified marine technicians for urgent port repairs.' ) ); ?></p>
 				<div class="flex flex-wrap gap-2 mb-6">
@@ -85,7 +79,6 @@
 			</div>
 			<div class="flex items-center text-secondary font-button-text gap-1 group-hover:translate-x-1 transition-transform">
 				<span><?php echo esc_html( bayrak_t( 'services', 'View Details' ) ); ?></span>
-				<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 			</div>
 		</a>
 	</div>
@@ -114,7 +107,6 @@
 <h2 class="font-headline-lg text-headline-lg text-primary mb-6"><?php echo esc_html( bayrak_t( 'about_sec_title', 'Established Ship Supplies & Port Operations in Egypt' ) ); ?></h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8"><?php echo esc_html( bayrak_t( 'about_sec_desc', 'Hanil Marine (Al-Bayrak) provides direct ship chandlery, bonded logistics, and technical supplies across all Egyptian ports. Operating temperature-controlled warehouses and dedicated supply launches to ensure zero vessel delay.' ) ); ?></p>
 <div class="flex items-center gap-4 bg-surface-container-lowest p-6 border border-outline-variant rounded">
-<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
 <div>
 <h4 class="font-headline-md text-headline-md text-primary"><?php echo esc_html( bayrak_t( 'cert_title', 'Certified Quality Assurance' ) ); ?></h4>
 <p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'cert_desc', 'HACCP & ISO 22000 certified storage with strict IMPA/ISSA sourcing standards.' ) ); ?></p>
@@ -134,7 +126,6 @@
 <h2 class="font-headline-lg text-headline-lg mb-4 text-on-tertiary"><?php echo esc_html( bayrak_t( 'quick_quote_title', 'Direct Quotation Request' ) ); ?></h2>
 <p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-8"><?php echo esc_html( bayrak_t( 'quick_quote_desc', 'Submit your vessel schedule and requisition list. Our port dispatchers respond within 2 hours with itemized pricing.' ) ); ?></p>
 <a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors shadow-md">
-<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
                     <?php echo esc_html( bayrak_t( 'get_quotation', 'Launch Multi-Step Quotation Form' ) ); ?>
 </a>
 </div>

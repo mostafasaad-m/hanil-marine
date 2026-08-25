@@ -98,7 +98,6 @@ get_header();
 				<p class="text-sm text-on-surface-variant mb-3"><?php echo esc_html( bayrak_t( 'upload_sub', 'Attach any requisitions, store lists, spreadsheets, or technical drawings for instant processing by our port dispatcher.' ) ); ?></p>
 				
 				<div id="drop-zone" class="border-2 border-dashed border-outline-variant rounded-lg p-6 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer text-center" onclick="document.getElementById('file-input').click()">
-					<span class="material-symbols-outlined text-primary text-4xl mb-2">upload_file</span>
 					<p class="font-body-md text-on-surface mb-1 font-bold"><?php echo esc_html( bayrak_t( 'click_drag', 'Click or drag & drop file here' ) ); ?></p>
 					<p class="text-xs text-on-surface-variant"><?php echo esc_html( bayrak_t( 'file_formats', 'Supports PDF, XLSX, DOCX, PNG, JPG up to 15MB' ) ); ?></p>
 					<input type="file" id="file-input" class="hidden" accept=".pdf,.xlsx,.xls,.doc,.docx,.png,.jpg,.jpeg">
@@ -106,14 +105,13 @@ get_header();
 
 				<div id="file-preview-area" class="hidden mt-3 p-3 bg-surface border border-outline-variant rounded-lg flex items-center justify-between">
 					<div class="flex items-center gap-3 overflow-hidden">
-						<span class="material-symbols-outlined text-secondary text-2xl">description</span>
 						<div class="truncate">
 							<p id="file-preview-name" class="font-bold text-sm text-primary truncate">filename.pdf</p>
 							<p id="file-preview-size" class="text-xs text-on-surface-variant">0 KB</p>
 						</div>
 					</div>
 					<button type="button" onclick="removeUploadedFile(event)" class="text-error hover:text-red-700 p-1">
-						<span class="material-symbols-outlined text-xl">close</span>
+						<span class="font-bold text-xl">✕</span>
 					</button>
 				</div>
 			</div>
@@ -121,12 +119,10 @@ get_header();
 			<!-- Navigation Buttons -->
 			<div class="mt-10 pt-6 border-t border-outline-variant flex justify-between items-center">
 				<button id="back-btn" type="button" class="px-6 py-3 border border-primary text-primary rounded font-button-text text-button-text hover:bg-surface-container transition-colors flex items-center gap-2">
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_back</span>
 					<span><?php echo esc_html( bayrak_t( 'back', 'Back' ) ); ?></span>
 				</button>
 				<button id="next-btn" type="button" class="px-8 py-3 bg-secondary-container text-on-secondary font-button-text text-button-text rounded shadow-md hover:bg-secondary transition-all flex items-center gap-2">
 					<span><?php echo esc_html( bayrak_t( 'next', 'Next' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 				</button>
 			</div>
 		</form>

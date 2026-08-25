@@ -49,31 +49,26 @@ get_header();
 	<div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12" role="tablist" aria-label="Services Navigation">
 		<!-- Tab 1: Ship Supply -->
 		<button data-tab="tab-ship-supply" class="service-tab-btn active bg-primary text-on-primary shadow-lg border border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="true">
-			<span class="material-symbols-outlined text-2xl">inventory_2</span>
 			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_provisions', 'Ship Supply' ) ); ?></span>
 		</button>
 
 		<!-- Tab 2: Logistic Services -->
 		<button data-tab="tab-logistics" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
-			<span class="material-symbols-outlined text-2xl">local_shipping</span>
 			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Logistic Services' ) ); ?></span>
 		</button>
 
 		<!-- Tab 3: Crew Change -->
 		<button data-tab="tab-crew-change" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
-			<span class="material-symbols-outlined text-2xl">groups</span>
 			<span class="text-left leading-tight">Crew Change</span>
 		</button>
 
 		<!-- Tab 4: Safety Supplies -->
 		<button data-tab="tab-safety" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
-			<span class="material-symbols-outlined text-2xl">verified_user</span>
 			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety Supplies' ) ); ?></span>
 		</button>
 
 		<!-- Tab 5: Technical Support -->
 		<button data-tab="tab-technical" class="service-tab-btn bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary px-6 py-4 rounded-lg flex items-center gap-3 transition-all duration-300 cursor-pointer font-button-text" role="tab" aria-selected="false">
-			<span class="material-symbols-outlined text-2xl">build</span>
 			<span class="text-left leading-tight"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Support' ) ); ?></span>
 		</button>
 	</div>
@@ -93,19 +88,19 @@ get_header();
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'prov_fresh_title', 'Fresh & Frozen Foods' ) ); ?></span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'card_provisions_title', 'Duty-Free Bonded Goods' ) ); ?></span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'card_technical_title', 'Deck & Engine Stores' ) ); ?></span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold"><?php echo esc_html( bayrak_t( 'cert_title', 'HACCP & ISO Compliant' ) ); ?></span>
 						</div>
 					</div>
@@ -134,19 +129,19 @@ get_header();
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Customs Clearance</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Bonded Warehousing</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Offshore Launch Delivery</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Suez Canal Transit Support</span>
 						</div>
 					</div>
@@ -175,19 +170,19 @@ get_header();
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">OK-to-Board & Visas</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Airport Pick-up & Escort</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Hotel Accommodation</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Emergency Medical Care</span>
 						</div>
 					</div>
@@ -216,19 +211,19 @@ get_header();
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Life Rafts & Life Jackets</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Fire Extinguishers & Hoses</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Pyrotechnics & Signals</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Class Re-certification</span>
 						</div>
 					</div>
@@ -257,19 +252,19 @@ get_header();
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Engine & Hydraulic Repairs</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Electrical & Automation</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">OEM Spare Parts Sourcing</span>
 						</div>
 						<div class="flex items-center gap-3 bg-surface-container-low p-4 rounded border border-outline-variant">
-							<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+							<span class="text-secondary-container font-bold">✓</span>
 							<span class="font-body-md text-primary font-semibold">Underwater Inspection</span>
 						</div>
 					</div>

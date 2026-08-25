@@ -45,7 +45,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p class="text-xs text-tertiary-fixed-dim mb-4">Operations: Port Said & Alexandria, Egypt</p>
 			<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center gap-1.5 bg-secondary-container text-on-secondary px-4 py-2 rounded text-xs font-bold hover:bg-secondary transition-colors">
 				<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Request Quote' ) ); ?></span>
-				<span class="material-symbols-outlined text-xs rtl-flip">arrow_forward</span>
 			</a>
 		</div>
 	</div>

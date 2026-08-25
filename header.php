@@ -4,11 +4,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -108,9 +106,6 @@
         html[dir="rtl"] {
             text-align: right;
         }
-        html[dir="rtl"] .material-symbols-outlined.rtl-flip {
-            transform: scaleX(-1);
-        }
     </style>
 <?php wp_head(); ?>
 </head>
@@ -132,7 +127,7 @@
 		<div class="group relative py-6">
 			<a class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-button-text transition-colors cursor-pointer" href="<?php echo esc_url( home_url( '/services' ) ); ?>">
 				<span><?php echo esc_html( bayrak_t( 'services', 'Services' ) ); ?></span>
-				<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+				<svg class="w-4 h-4 transition-transform group-hover:rotate-180 inline-block ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
 			</a>
 
 			<!-- Mega Menu Panel -->
@@ -142,11 +137,11 @@
 					<div>
 						<h4 class="font-label-caps text-xs text-primary uppercase tracking-wider mb-4 border-b border-outline-variant/30 pb-2">Maritime Categories</h4>
 						<ul class="space-y-3 text-sm">
-							<li><a href="<?php echo esc_url( home_url( '/provisions' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">restaurant</span> <?php echo esc_html( bayrak_t( 'nav_provisions', 'Provisions Supply' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">inventory_2</span> <?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">build</span> <?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">local_shipping</span> <?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-base">health_and_safety</span> <?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/provisions' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_provisions', 'Provisions Supply' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a></li>
 						</ul>
 					</div>
 
@@ -154,12 +149,12 @@
 					<div>
 						<h4 class="font-label-caps text-xs text-primary uppercase tracking-wider mb-4 border-b border-outline-variant/30 pb-2"><?php echo esc_html( bayrak_t( 'footer_ports', 'Egyptian Gateways' ) ); ?></h4>
 						<ul class="space-y-3 text-sm">
-							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'port_said', 'Port Said (East & West)' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'port_suez', 'Suez Canal Zone' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'port_damietta', 'Damietta Port' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'port_alexandria', 'Alexandria Port' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'port_sokhna', 'Ain Sokhna & Adabeyah' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><span class="material-symbols-outlined text-base text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'port_redsea', 'Safaga & Red Sea Ports' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><?php echo esc_html( bayrak_t( 'port_said', 'Port Said (East & West)' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><?php echo esc_html( bayrak_t( 'port_suez', 'Suez Canal Zone' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><?php echo esc_html( bayrak_t( 'port_damietta', 'Damietta Port' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><?php echo esc_html( bayrak_t( 'port_alexandria', 'Alexandria Port' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><?php echo esc_html( bayrak_t( 'port_sokhna', 'Ain Sokhna & Adabeyah' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/#ports' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2"><?php echo esc_html( bayrak_t( 'port_redsea', 'Safaga & Red Sea Ports' ) ); ?></a></li>
 						</ul>
 					</div>
 
@@ -172,7 +167,6 @@
 						</div>
 						<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded text-xs font-bold hover:bg-primary-container transition-colors">
 							<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation' ) ); ?></span>
-							<span class="material-symbols-outlined text-sm rtl-flip">arrow_forward</span>
 						</a>
 					</div>
 				</div>
@@ -190,7 +184,7 @@
 			<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-secondary font-button-text text-sm transition-colors py-1.5 px-3 bg-surface-container rounded-lg border border-outline-variant/40">
 				<span class="text-base"><?php echo bayrak_get_current_lang() === 'ar' ? '🇪🇬' : ( bayrak_get_current_lang() === 'tr' ? '🇹🇷' : '🇬🇧' ); ?></span>
 				<span class="font-bold uppercase"><?php echo esc_html( bayrak_get_current_lang() ); ?></span>
-				<span class="material-symbols-outlined text-xs">expand_more</span>
+				<svg class="w-3.5 h-3.5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
 			</button>
 			<div class="absolute top-full right-0 w-36 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
 				<a href="?lang=en" class="flex items-center gap-2 px-3 py-2 text-xs font-bold text-primary hover:bg-surface-container rounded transition-colors <?php echo bayrak_get_current_lang() === 'en' ? 'bg-surface-container-low text-secondary' : ''; ?>">
@@ -212,7 +206,7 @@
 
 	<!-- Mobile Hamburger Button -->
 	<button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" class="md:hidden text-primary focus:outline-none p-2 flex items-center justify-center">
-		<span id="mobile-menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+		<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
 	</button>
 </nav>
 
@@ -221,13 +215,13 @@
 	<!-- Main Panel (Level 1) -->
 	<div id="mobile-panel-main" class="flex flex-col p-6 space-y-4">
 		<button onclick="openMobileSub('services')" class="flex justify-between items-center w-full text-left font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary">
-			<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">inventory_2</span> <?php echo esc_html( bayrak_t( 'services', 'Services' ) ); ?></span>
-			<span class="material-symbols-outlined text-on-surface-variant rtl-flip">chevron_right</span>
+			<span class="flex items-center gap-2"><?php echo esc_html( bayrak_t( 'services', 'Services' ) ); ?></span>
+			<span class="font-bold">›</span>
 		</button>
 
 		<button onclick="openMobileSub('ports')" class="flex justify-between items-center w-full text-left font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary">
-			<span class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">anchor</span> <?php echo esc_html( bayrak_t( 'ports_title', 'Egyptian Ports' ) ); ?></span>
-			<span class="material-symbols-outlined text-on-surface-variant rtl-flip">chevron_right</span>
+			<span class="flex items-center gap-2"><?php echo esc_html( bayrak_t( 'ports_title', 'Egyptian Ports' ) ); ?></span>
+			<span class="font-bold">›</span>
 		</button>
 
 		<a class="font-button-text text-lg py-3 border-b border-outline-variant/30 text-primary" href="<?php echo esc_url( home_url( '/about-us' ) ); ?>"><?php echo esc_html( bayrak_t( 'about_us', 'About Us' ) ); ?></a>
@@ -251,22 +245,22 @@
 	<!-- Sub-Panel: Services (Level 2) -->
 	<div id="mobile-panel-services" class="hidden flex-col p-6 space-y-4">
 		<button onclick="closeMobileSub()" class="flex items-center gap-2 font-bold text-secondary text-sm pb-2 border-b border-outline-variant/30">
-			<span class="material-symbols-outlined text-base rtl-flip">arrow_back</span>
+			<span>‹</span>
 			<span><?php echo esc_html( bayrak_t( 'back', 'Back to Main Menu' ) ); ?></span>
 		</button>
 		<span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-wider"><?php echo esc_html( bayrak_t( 'services', 'All Maritime Services' ) ); ?></span>
 		
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/provisions' ) ); ?>"><span class="material-symbols-outlined text-secondary">restaurant</span> <?php echo esc_html( bayrak_t( 'nav_provisions', 'Provisions Supply' ) ); ?></a>
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>"><span class="material-symbols-outlined text-secondary">inventory_2</span> <?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a>
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>"><span class="material-symbols-outlined text-secondary">build</span> <?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a>
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>"><span class="material-symbols-outlined text-secondary">local_shipping</span> <?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a>
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>"><span class="material-symbols-outlined text-secondary">health_and_safety</span> <?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/provisions' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_provisions', 'Provisions Supply' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a>
 	</div>
 
 	<!-- Sub-Panel: Ports (Level 2) -->
 	<div id="mobile-panel-ports" class="hidden flex-col p-6 space-y-4">
 		<button onclick="closeMobileSub()" class="flex items-center gap-2 font-bold text-secondary text-sm pb-2 border-b border-outline-variant/30">
-			<span class="material-symbols-outlined text-base rtl-flip">arrow_back</span>
+			<span>‹</span>
 			<span><?php echo esc_html( bayrak_t( 'back', 'Back to Main Menu' ) ); ?></span>
 		</button>
 		<span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-wider"><?php echo esc_html( bayrak_t( 'ports_title', 'Egyptian Port Locations' ) ); ?></span>
@@ -284,23 +278,23 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const menuBtn = document.getElementById('mobile-menu-toggle');
 	const menuDrawer = document.getElementById('mobile-menu-drawer');
-	const menuIcon = document.getElementById('mobile-menu-icon');
+	const menuPath = document.getElementById('menu-icon-path');
 
-	if (menuBtn && menuDrawer && menuIcon) {
+	if (menuBtn && menuDrawer) {
 		menuBtn.addEventListener('click', function() {
 			menuDrawer.classList.toggle('hidden');
 			if (menuDrawer.classList.contains('hidden')) {
-				menuIcon.textContent = 'menu';
+				if (menuPath) menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
 				closeMobileSub();
 			} else {
-				menuIcon.textContent = 'close';
+				if (menuPath) menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
 			}
 		});
 
 		menuDrawer.querySelectorAll('a').forEach(link => {
 			link.addEventListener('click', function() {
 				menuDrawer.classList.add('hidden');
-				menuIcon.textContent = 'menu';
+				if (menuPath) menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
 				closeMobileSub();
 			});
 		});
