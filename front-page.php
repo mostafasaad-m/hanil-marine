@@ -221,7 +221,7 @@
 			<div id="quick-success-modal" class="hidden mt-4 p-6 bg-surface-container-low border border-primary/20 rounded-lg text-center">
 				<div class="w-12 h-12 bg-secondary-container text-on-secondary rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-2xl">✓</div>
 				<h3 class="font-headline-md text-headline-md text-primary mb-1">Quotation Request Submitted!</h3>
-				<p class="text-xs text-on-surface-variant mb-3">Logged in WordPress Admin. Dispatch team will respond within 2 hours.</p>
+				<p class="text-xs text-on-surface-variant mb-3">Thank you for you request, our team will respond within 2 hours.</p>
 				<div class="bg-surface p-3 rounded border border-outline-variant mb-3">
 					<span class="text-xs font-bold text-on-surface-variant block uppercase">Your Reference ID</span>
 					<span id="quick-ref-id" class="text-lg font-bold text-primary">HM-2026-XXXX</span>
