@@ -23,7 +23,6 @@ get_header();
 				<p class="font-body-lg text-body-lg text-surface-container-lowest/90 mb-8"><?php echo esc_html( bayrak_t( 'bonded_hero_sub', 'Providing premium duty-free goods and secure storage solutions for vessels across all Egyptian ports.' ) ); ?></p>
 				<a class="bg-secondary text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary-container transition-colors inline-flex items-center gap-2" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Get a Quotation' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm">arrow_forward</span>
 				</a>
 			</div>
 		</div>
@@ -75,28 +74,22 @@ get_header();
 				<h2 class="font-headline-lg text-headline-lg mb-6"><?php echo esc_html( bayrak_t( 'bonded_compliance_title', 'Security & Customs Compliance' ) ); ?></h2>
 				<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-8"><?php echo esc_html( bayrak_t( 'bonded_compliance_sub', 'Our bonded stores operate under strict regulatory frameworks, ensuring seamless customs clearance and secure custody of all duty-free goods.' ) ); ?></p>
 				<div class="space-y-6">
-					<div class="flex gap-4">
-						<div class="w-12 h-12 rounded bg-surface-tint/20 flex items-center justify-center shrink-0">
-							<span class="material-symbols-outlined text-secondary-fixed">warehouse</span>
-						</div>
+					<div class="flex gap-4 items-start">
+						<div class="w-8 h-8 rounded-full bg-secondary-fixed/20 text-secondary-fixed flex items-center justify-center font-bold text-sm shrink-0 mt-1">✓</div>
 						<div>
 							<h4 class="font-headline-md text-headline-md mb-1"><?php echo esc_html( bayrak_t( 'storage_fac_title', 'Secure Storage Facilities' ) ); ?></h4>
 							<p class="font-body-md text-body-md text-tertiary-fixed-dim"><?php echo esc_html( bayrak_t( 'storage_fac_desc', 'Climate-controlled, monitored warehousing ensuring product integrity.' ) ); ?></p>
 						</div>
 					</div>
-					<div class="flex gap-4">
-						<div class="w-12 h-12 rounded bg-surface-tint/20 flex items-center justify-center shrink-0">
-							<span class="material-symbols-outlined text-secondary-fixed">inventory_2</span>
-						</div>
+					<div class="flex gap-4 items-start">
+						<div class="w-8 h-8 rounded-full bg-secondary-fixed/20 text-secondary-fixed flex items-center justify-center font-bold text-sm shrink-0 mt-1">✓</div>
 						<div>
 							<h4 class="font-headline-md text-headline-md mb-1"><?php echo esc_html( bayrak_t( 'inventory_mgmt_title', 'Inventory Management' ) ); ?></h4>
 							<p class="font-body-md text-body-md text-tertiary-fixed-dim"><?php echo esc_html( bayrak_t( 'inventory_mgmt_desc', 'Real-time tracking and precise stock control for reliable supply.' ) ); ?></p>
 						</div>
 					</div>
-					<div class="flex gap-4">
-						<div class="w-12 h-12 rounded bg-surface-tint/20 flex items-center justify-center shrink-0">
-							<span class="material-symbols-outlined text-secondary-fixed">verified_user</span>
-						</div>
+					<div class="flex gap-4 items-start">
+						<div class="w-8 h-8 rounded-full bg-secondary-fixed/20 text-secondary-fixed flex items-center justify-center font-bold text-sm shrink-0 mt-1">✓</div>
 						<div>
 							<h4 class="font-headline-md text-headline-md mb-1"><?php echo esc_html( bayrak_t( 'customs_comp_title', 'Customs Compliance' ) ); ?></h4>
 							<p class="font-body-md text-body-md text-tertiary-fixed-dim"><?php echo esc_html( bayrak_t( 'customs_comp_desc', 'Full adherence to Egyptian customs regulations for rapid clearance.' ) ); ?></p>
@@ -118,7 +111,6 @@ get_header();
 			<p class="font-body-lg text-body-lg text-on-surface-variant mb-8"><?php echo esc_html( bayrak_t( 'bonded_cta_desc', 'Partner with Hanil Marine for reliable, compliant, and premium duty-free provisions across all major Egyptian ports.' ) ); ?></p>
 			<a class="bg-secondary text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary-container transition-colors inline-flex items-center gap-2" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 				<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation Request' ) ); ?></span>
-				<span class="material-symbols-outlined text-sm">assignment</span>
 			</a>
 		</div>
 	</section>

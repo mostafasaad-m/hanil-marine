@@ -144,7 +144,7 @@
 							<li><a href="<?php echo esc_url( home_url( '/bonded-stores' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/technical-spares' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/safety-solas' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a></li>
 						</ul>
 					</div>
 
@@ -260,7 +260,7 @@
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/bonded-stores' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/technical-spares' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a>
-		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#safety' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/safety-solas' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a>
 	</div>
 
 	<!-- Sub-Panel: Ports (Level 2) -->

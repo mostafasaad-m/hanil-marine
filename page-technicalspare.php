@@ -27,7 +27,6 @@ get_header();
 				</p>
 				<a class="bg-safety-orange hover:bg-secondary text-white font-button-text text-button-text px-8 py-4 rounded transition-colors duration-200 inline-flex items-center gap-2 shadow-lg shadow-safety-orange/20" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'submit_rfq_now', 'Submit RFQ Now' ) ); ?></span>
-					<span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
 				</a>
 			</div>
 		</div>
@@ -47,7 +46,6 @@ get_header();
 				<img alt="<?php echo esc_attr( bayrak_t( 'tech_c1_title', 'Engine & Deck Spares' ) ); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1V_z1cmLDbCIOWeMm8C7-euWReaGjwtWZkV9ekXQbZXO06Y2iFcsNs7o8B-WhNwM8PQXfLe3glPtuW46WuoX0DxDKZ2umZjnKEwCk12vrWCoaLn9o2wkHwX4ws6AP3TNiafygG909GsEGiubdBVgp6ayBW2jStU-SaBlMMNGsPIaZrFcpScFQ-ycoy6lcLTe-4Q62t9xGFRuea2HLuDnebbtUyKDSUmsu5uc6i8i1hVODOb5TlyO57iDCw"/>
 				<div class="absolute inset-0 bg-gradient-to-t from-ocean-navy/80 to-transparent"></div>
 				<div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
-					<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">build</span>
 					<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'tech_c1_title', 'Engine & Deck Spares' ) ); ?></h3>
 				</div>
 			</div>
@@ -56,13 +54,12 @@ get_header();
 					<?php echo esc_html( bayrak_t( 'tech_c1_desc', 'Complete range of mechanical components, gaskets, and filters sourced from trusted manufacturers to ensure vessel reliability.' ) ); ?>
 				</p>
 				<ul class="space-y-2 font-body-md text-sm text-ocean-navy/80 mb-6 border-t border-outline-variant/30 pt-4">
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c1_item1', 'Pumps & Compressors' ) ); ?></li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c1_item2', 'Valves & Bearings' ) ); ?></li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c1_item3', 'Filtration Systems' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c1_item1', 'Pumps & Compressors' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c1_item2', 'Valves & Bearings' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c1_item3', 'Filtration Systems' ) ); ?></li>
 				</ul>
 				<a class="inline-flex items-center gap-1 font-button-text text-button-text text-ocean-navy hover:text-safety-orange transition-colors mt-auto" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'view_inv_details', 'View Inventory Details' ) ); ?></span>
-					<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
 				</a>
 			</div>
 		</div>
@@ -73,7 +70,6 @@ get_header();
 				<img alt="<?php echo esc_attr( bayrak_t( 'tech_c2_title', 'Electrical & Automation' ) ); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1U7uO4f7pa2wwBoveSkM-e7o-bgHcZdYHcYq5U1KHhCLtmKoUFy6lVUzssk7ZOR5oAF74U2v8EgxWW8TSfxO_aXkqx4DXWSXr68u0lSmSTgOMPkEnaeSnjwP5EZmEbNGqehUe_JzDUFsY9jr3ScnoOja0K52xBIwp-cN_AhxAXJ6s1dCxhdC4A6g9Otl0lz3RRjRNJi4JiN7AyGATigPmifpckVRwOcIF24w4yqARsbIVsWazsPBe-IA2na"/>
 				<div class="absolute inset-0 bg-gradient-to-t from-ocean-navy/80 to-transparent"></div>
 				<div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
-					<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">electrical_services</span>
 					<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'tech_c2_title', 'Electrical & Automation' ) ); ?></h3>
 				</div>
 			</div>
@@ -82,13 +78,12 @@ get_header();
 					<?php echo esc_html( bayrak_t( 'tech_c2_desc', 'Specialized sensors, control panels, and automation modules to ensure modern vessel operational readiness.' ) ); ?>
 				</p>
 				<ul class="space-y-2 font-body-md text-sm text-ocean-navy/80 mb-6 border-t border-outline-variant/30 pt-4">
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c2_item1', 'Navigational Equipment' ) ); ?></li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c2_item2', 'Sensors & Transmitters' ) ); ?></li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c2_item3', 'Switchgear & Breakers' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c2_item1', 'Navigational Equipment' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c2_item2', 'Sensors & Transmitters' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c2_item3', 'Switchgear & Breakers' ) ); ?></li>
 				</ul>
 				<a class="inline-flex items-center gap-1 font-button-text text-button-text text-ocean-navy hover:text-safety-orange transition-colors mt-auto" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'view_inv_details', 'View Inventory Details' ) ); ?></span>
-					<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
 				</a>
 			</div>
 		</div>
@@ -99,7 +94,6 @@ get_header();
 				<img alt="<?php echo esc_attr( bayrak_t( 'tech_c3_title', 'Cabin & Safety Stores' ) ); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1V9hajpkmBgIb6NhnytPAvtFvjlCj1vmi5g8qrZC-I9xbvqxt6fHBsIBZQqKai6O1qUKlnPen-7fcNm54JhJMFvv87TUHJgc3WWdhXDLZjBQHKkXwhM6vWWNoei5GkdWfeKyR8Y-ZbgrA1BdrzmK2wj1IXcOT7NtJaNZaP4rvLSYyWq_0nYO6KCZsQ2nt4HcLm4W3P_nDIYaiPdLAU0hxT4EL_PlRAOsTGjCLa14h9YJImbGcAwnbyqQ7jV"/>
 				<div class="absolute inset-0 bg-gradient-to-t from-ocean-navy/80 to-transparent"></div>
 				<div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
-					<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
 					<h3 class="font-headline-md text-headline-md"><?php echo esc_html( bayrak_t( 'tech_c3_title', 'Cabin & Safety Stores' ) ); ?></h3>
 				</div>
 			</div>
@@ -108,13 +102,12 @@ get_header();
 					<?php echo esc_html( bayrak_t( 'tech_c3_desc', 'Certified safety equipment, life-saving appliances, and comprehensive cabin supplies for crew protection.' ) ); ?>
 				</p>
 				<ul class="space-y-2 font-body-md text-sm text-ocean-navy/80 mb-6 border-t border-outline-variant/30 pt-4">
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c3_item1', 'Life Saving Appliances (LSA)' ) ); ?></li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c3_item2', 'Fire Fighting Equipment (FFE)' ) ); ?></li>
-					<li class="flex items-start gap-2"><span class="material-symbols-outlined text-safety-orange text-[16px] mt-0.5">check_circle</span> <?php echo esc_html( bayrak_t( 'tech_c3_item3', 'General Cabin Consumables' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c3_item1', 'Life Saving Appliances (LSA)' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c3_item2', 'Fire Fighting Equipment (FFE)' ) ); ?></li>
+					<li class="flex items-start gap-2"><span class="text-safety-orange font-bold text-sm">✓</span> <?php echo esc_html( bayrak_t( 'tech_c3_item3', 'General Cabin Consumables' ) ); ?></li>
 				</ul>
 				<a class="inline-flex items-center gap-1 font-button-text text-button-text text-ocean-navy hover:text-safety-orange transition-colors mt-auto" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'view_inv_details', 'View Inventory Details' ) ); ?></span>
-					<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
 				</a>
 			</div>
 		</div>
@@ -128,15 +121,19 @@ get_header();
 				<?php echo esc_html( bayrak_t( 'eng_excellence_desc', 'We understand that time in port is critical. Our dedicated technical team operates with precision to ensure the correct parts are identified, procured, and delivered seamlessly to your vessel.' ) ); ?>
 			</p>
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-				<div class="flex flex-col gap-2">
-					<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
-					<h4 class="font-headline-md text-[18px] text-ocean-navy"><?php echo esc_html( bayrak_t( 'oem_certified_title', 'OEM Certified' ) ); ?></h4>
-					<p class="font-body-md text-sm text-on-surface-variant"><?php echo esc_html( bayrak_t( 'oem_certified_desc', 'Sourced directly from certified global manufacturers.' ) ); ?></p>
+				<div class="flex items-start gap-3">
+					<div class="w-8 h-8 rounded-full bg-safety-orange/10 text-safety-orange flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+					<div>
+						<h4 class="font-headline-md text-[18px] text-ocean-navy"><?php echo esc_html( bayrak_t( 'oem_certified_title', 'OEM Certified' ) ); ?></h4>
+						<p class="font-body-md text-sm text-on-surface-variant"><?php echo esc_html( bayrak_t( 'oem_certified_desc', 'Sourced directly from certified global manufacturers.' ) ); ?></p>
+					</div>
 				</div>
-				<div class="flex flex-col gap-2">
-					<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
-					<h4 class="font-headline-md text-[18px] text-ocean-navy"><?php echo esc_html( bayrak_t( 'rapid_delivery_title', 'Rapid Delivery' ) ); ?></h4>
-					<p class="font-body-md text-sm text-on-surface-variant"><?php echo esc_html( bayrak_t( 'rapid_delivery_desc', 'Expedited customs clearance for all Egyptian ports.' ) ); ?></p>
+				<div class="flex items-start gap-3">
+					<div class="w-8 h-8 rounded-full bg-safety-orange/10 text-safety-orange flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+					<div>
+						<h4 class="font-headline-md text-[18px] text-ocean-navy"><?php echo esc_html( bayrak_t( 'rapid_delivery_title', 'Rapid Delivery' ) ); ?></h4>
+						<p class="font-body-md text-sm text-on-surface-variant"><?php echo esc_html( bayrak_t( 'rapid_delivery_desc', 'Expedited customs clearance for all Egyptian ports.' ) ); ?></p>
+					</div>
 				</div>
 			</div>
 		</div>
