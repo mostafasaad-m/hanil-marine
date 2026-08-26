@@ -138,6 +138,9 @@
 						<h4 class="font-label-caps text-xs text-primary uppercase tracking-wider mb-4 border-b border-outline-variant/30 pb-2">Maritime Categories</h4>
 						<ul class="space-y-3 text-sm">
 							<li><a href="<?php echo esc_url( home_url( '/provisions' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_provisions', 'Provisions Supply' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/repair-services' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_repair', 'Marine Repair Services' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/crew-change' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_crew', 'Crew Change Logistics' ) ); ?></a></li>
+							<li><a href="<?php echo esc_url( home_url( '/bunker-fuel-trading' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_bunker', 'Bunker & Fuel Trading' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a></li>
@@ -251,6 +254,9 @@
 		<span class="font-label-caps text-xs text-on-surface-variant uppercase tracking-wider"><?php echo esc_html( bayrak_t( 'services', 'All Maritime Services' ) ); ?></span>
 		
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/provisions' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_provisions', 'Provisions Supply' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/repair-services' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_repair', 'Marine Repair Services' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/crew-change' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_crew', 'Crew Change Logistics' ) ); ?></a>
+		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/bunker-fuel-trading' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_bunker', 'Bunker & Fuel Trading' ) ); ?></a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#bonded' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#technical' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a>
 		<a class="py-2.5 text-primary font-bold border-b border-outline-variant/20 flex items-center gap-2" href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a>
