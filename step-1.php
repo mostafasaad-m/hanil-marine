@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					serviceNameElem.textContent = matchedName;
 					banner.classList.remove('hidden');
 
-					let timeLeft = 2;
+					let timeLeft = 7;
 					if (timerElem) timerElem.textContent = timeLeft;
 
 					countdownInterval = setInterval(() => {
