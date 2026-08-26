@@ -112,48 +112,235 @@
 
 <!-- Quick Quote Section -->
 <section class="bg-tertiary text-on-tertiary py-section-gap px-margin-mobile md:px-margin-desktop" id="quote">
-<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-section-gap">
-<div>
-<h2 class="font-headline-lg text-headline-lg mb-4 text-on-tertiary"><?php echo esc_html( bayrak_t( 'quick_quote_title', 'Direct Quotation Request' ) ); ?></h2>
-<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-8"><?php echo esc_html( bayrak_t( 'quick_quote_desc', 'Submit your vessel schedule and requisition list. Our port dispatchers respond within 2 hours with itemized pricing.' ) ); ?></p>
-<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors shadow-md">
-                    <?php echo esc_html( bayrak_t( 'get_quotation', 'Launch Multi-Step Quotation Form' ) ); ?>
-</a>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded border border-outline-variant">
-<form class="space-y-6" action="<?php echo esc_url( home_url( '/step-1' ) ); ?>" method="GET">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase"><?php echo esc_html( bayrak_t( 'vessel_name', 'Vessel Name' ) ); ?></label>
-<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="e.g. MV Hanil Star" type="text" name="vessel">
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase"><?php echo esc_html( bayrak_t( 'imo_number', 'IMO Number' ) ); ?></label>
-<input class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="e.g. 9839430" type="text" name="imo">
-</div>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase"><?php echo esc_html( bayrak_t( 'port_of_call', 'Port of Call (Egypt)' ) ); ?></label>
-<select class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" name="port">
-<option>Port Said (East & West)</option>
-<option>Suez Canal Zone</option>
-<option>Alexandria & El Dekheila</option>
-<option>Damietta Port</option>
-<option>Ain Sokhna & Adabeyah</option>
-<option>Safaga & Red Sea Ports</option>
-</select>
-</div>
-<div>
-<label class="block font-label-caps text-label-caps text-on-surface mb-2 uppercase"><?php echo esc_html( bayrak_t( 'notes', 'Requirements Summary' ) ); ?></label>
-<textarea class="w-full bg-surface border border-outline-variant rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:border-2 focus:ring-0 transition-all font-body-md" placeholder="Briefly specify provisions, engine spares, or bonded store items needed..." rows="3"></textarea>
-</div>
-<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="block w-full bg-secondary-container text-on-secondary text-center py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-md">
-                        <?php echo esc_html( bayrak_t( 'get_quotation', 'Proceed to Quotation Request' ) ); ?>
-</a>
-</form>
-</div>
-</div>
+	<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-section-gap">
+		<div>
+			<h2 class="font-headline-lg text-headline-lg mb-4 text-on-tertiary"><?php echo esc_html( bayrak_t( 'quick_quote_title', 'Direct Quotation Request' ) ); ?></h2>
+			<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-6"><?php echo esc_html( bayrak_t( 'quick_quote_desc', 'Submit your vessel schedule and requisition list. Our port dispatchers respond within 2 hours with itemized pricing.' ) ); ?></p>
+			
+			<div class="space-y-4 mb-8">
+				<div class="flex items-center gap-3 text-tertiary-fixed-dim font-body-md">
+					<span class="text-secondary-container font-bold">✓</span>
+					<span>24/7 Port Dispatch &amp; Technical Support</span>
+				</div>
+				<div class="flex items-center gap-3 text-tertiary-fixed-dim font-body-md">
+					<span class="text-secondary-container font-bold">✓</span>
+					<span>Instant Requisition Upload (PDF, XLSX, DOCX, Images)</span>
+				</div>
+				<div class="flex items-center gap-3 text-tertiary-fixed-dim font-body-md">
+					<span class="text-secondary-container font-bold">✓</span>
+					<span>Direct Delivery Across All Major Egyptian Ports</span>
+				</div>
+			</div>
+
+			<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary transition-colors shadow-md">
+				<?php echo esc_html( bayrak_t( 'get_quotation', 'Launch Multi-Step Quotation Form' ) ); ?>
+			</a>
+		</div>
+
+		<div class="bg-surface-container-lowest p-8 rounded border border-outline-variant text-on-surface">
+			<form id="quick-quote-form" class="space-y-4">
+				<div id="quick-quote-error" class="hidden p-3 bg-red-100 border border-red-400 text-red-700 text-sm rounded font-bold mb-3"></div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div>
+						<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'full_name', 'Contact Name' ) ); ?> <span class="text-error">*</span></label>
+						<input id="quick-name" required class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" placeholder="e.g. Capt. John Smith" type="text" name="full_name">
+					</div>
+					<div>
+						<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'email_address', 'Email Address' ) ); ?> <span class="text-error">*</span></label>
+						<input id="quick-email" required class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" placeholder="ops@shipping.com" type="email" name="email">
+					</div>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div>
+						<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'phone_number', 'Phone / WhatsApp' ) ); ?> <span class="text-error">*</span></label>
+						<input id="quick-phone" required class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" placeholder="+20 100 000 0000" type="tel" name="phone">
+					</div>
+					<div>
+						<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'vessel_name', 'Vessel Name' ) ); ?> <span class="text-error">*</span></label>
+						<input id="quick-vessel" required class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" placeholder="e.g. MV Hanil Star" type="text" name="vessel_name">
+					</div>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div>
+						<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'imo_number', 'IMO Number' ) ); ?></label>
+						<input id="quick-imo" class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" placeholder="e.g. 9839430" type="text" name="imo_number">
+					</div>
+					<div>
+						<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'port_of_call', 'Port of Call (Egypt)' ) ); ?></label>
+						<select id="quick-port" class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" name="port_of_call">
+							<option value="Port Said (East &amp; West)">Port Said (East &amp; West)</option>
+							<option value="Suez Canal Zone">Suez Canal Zone</option>
+							<option value="Alexandria &amp; El Dekheila">Alexandria &amp; El Dekheila</option>
+							<option value="Damietta Port">Damietta Port</option>
+							<option value="Ain Sokhna &amp; Adabeyah">Ain Sokhna &amp; Adabeyah</option>
+							<option value="Safaga &amp; Red Sea Ports">Safaga &amp; Red Sea Ports</option>
+						</select>
+					</div>
+				</div>
+
+				<div>
+					<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'step_1_name', 'Service Category' ) ); ?></label>
+					<select id="quick-service" class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" name="service_type">
+						<option value="Provisions Supply">Provisions Supply</option>
+						<option value="Bonded Stores">Bonded Stores</option>
+						<option value="Technical Parts &amp; Spares">Technical Support &amp; Spares</option>
+						<option value="Logistics &amp; Port Handling">Logistics &amp; Port Transit</option>
+						<option value="Safety &amp; SOLAS Equipment">Safety &amp; SOLAS Equipment</option>
+						<option value="General Requisition">General Requisition</option>
+					</select>
+				</div>
+
+				<div>
+					<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'notes', 'Requirements / Store Items' ) ); ?></label>
+					<textarea id="quick-notes" class="w-full bg-surface border border-outline-variant rounded px-3 py-2.5 text-on-surface focus:outline-none focus:border-primary focus:border-2 transition-all font-body-md" placeholder="Briefly specify provisions, engine spares, or bonded store items needed..." rows="2" name="notes"></textarea>
+				</div>
+
+				<!-- Upload Button & Dropzone -->
+				<div>
+					<label class="block font-label-caps text-label-caps text-on-surface mb-1 uppercase"><?php echo esc_html( bayrak_t( 'upload_title', 'Requisition File Upload (PDF, XLSX, DOCX, Images)' ) ); ?></label>
+					<div id="quick-dropzone" class="border-2 border-dashed border-outline-variant rounded-lg p-4 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer text-center" onclick="document.getElementById('quick-file-input').click()">
+						<p class="font-body-md text-on-surface mb-1 font-bold">📄 Click or drag &amp; drop file here</p>
+						<p class="text-xs text-on-surface-variant">PDF, XLSX, DOCX, PNG, JPG up to 15MB</p>
+						<input type="file" id="quick-file-input" class="hidden" accept=".pdf,.xlsx,.xls,.doc,.docx,.png,.jpg,.jpeg" name="quotation_file">
+					</div>
+					<div id="quick-file-preview" class="hidden mt-2 p-2 bg-surface border border-outline-variant rounded flex items-center justify-between">
+						<span id="quick-file-name" class="font-bold text-xs text-primary truncate max-w-[200px]">filename.pdf</span>
+						<button type="button" id="quick-remove-file" class="text-error hover:text-red-700 font-bold text-sm px-2">✕</button>
+					</div>
+				</div>
+
+				<button id="quick-submit-btn" type="submit" class="w-full bg-secondary-container text-on-secondary text-center py-3.5 rounded font-button-text text-button-text hover:bg-secondary transition-colors duration-200 shadow-md flex items-center justify-center gap-2">
+					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Submit Quotation Request' ) ); ?></span>
+				</button>
+			</form>
+
+			<!-- Quick Success Modal -->
+			<div id="quick-success-modal" class="hidden mt-4 p-6 bg-surface-container-low border border-primary/20 rounded-lg text-center">
+				<div class="w-12 h-12 bg-secondary-container text-on-secondary rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-2xl">✓</div>
+				<h3 class="font-headline-md text-headline-md text-primary mb-1">Quotation Request Submitted!</h3>
+				<p class="text-xs text-on-surface-variant mb-3">Logged in WordPress Admin. Dispatch team will respond within 2 hours.</p>
+				<div class="bg-surface p-3 rounded border border-outline-variant mb-3">
+					<span class="text-xs font-bold text-on-surface-variant block uppercase">Your Reference ID</span>
+					<span id="quick-ref-id" class="text-lg font-bold text-primary">HM-2026-XXXX</span>
+				</div>
+				<button type="button" onclick="document.getElementById('quick-success-modal').classList.add('hidden');" class="text-xs text-primary underline font-bold">Submit Another Request</button>
+			</div>
+		</div>
+	</div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const dropzone = document.getElementById('quick-dropzone');
+	const fileInput = document.getElementById('quick-file-input');
+	const filePreview = document.getElementById('quick-file-preview');
+	const fileNameSpan = document.getElementById('quick-file-name');
+	const removeBtn = document.getElementById('quick-remove-file');
+	const form = document.getElementById('quick-quote-form');
+	const errorDiv = document.getElementById('quick-quote-error');
+	const submitBtn = document.getElementById('quick-submit-btn');
+
+	if (!form) return;
+
+	// File Selection
+	fileInput.addEventListener('change', (e) => {
+		if (e.target.files && e.target.files[0]) {
+			const file = e.target.files[0];
+			if (file.size > 15 * 1024 * 1024) {
+				alert("File size exceeds 15MB limit.");
+				fileInput.value = '';
+				filePreview.classList.add('hidden');
+				return;
+			}
+			fileNameSpan.textContent = file.name + ' (' + (file.size / 1024 / 1024).toFixed(2) + ' MB)';
+			filePreview.classList.remove('hidden');
+		}
+	});
+
+	removeBtn.addEventListener('click', (e) => {
+		e.stopPropagation();
+		fileInput.value = '';
+		filePreview.classList.add('hidden');
+	});
+
+	// Drag and Drop
+	dropzone.addEventListener('dragover', (e) => {
+		e.preventDefault();
+		dropzone.classList.add('bg-surface-container');
+	});
+	dropzone.addEventListener('dragleave', (e) => {
+		e.preventDefault();
+		dropzone.classList.remove('bg-surface-container');
+	});
+	dropzone.addEventListener('drop', (e) => {
+		e.preventDefault();
+		dropzone.classList.remove('bg-surface-container');
+		if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+			fileInput.files = e.dataTransfer.files;
+			const event = new Event('change');
+			fileInput.dispatchEvent(event);
+		}
+	});
+
+	// Form Submission with Validation
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		errorDiv.classList.add('hidden');
+
+		const name = document.getElementById('quick-name').value.trim();
+		const email = document.getElementById('quick-email').value.trim();
+		const phone = document.getElementById('quick-phone').value.trim();
+		const vessel = document.getElementById('quick-vessel').value.trim();
+
+		if (!name || !email || !phone || !vessel) {
+			errorDiv.textContent = "Please fill in all required fields marked with *.";
+			errorDiv.classList.remove('hidden');
+			return;
+		}
+
+		if (!email.includes('@') || !email.includes('.')) {
+			errorDiv.textContent = "Please enter a valid work email address.";
+			errorDiv.classList.remove('hidden');
+			return;
+		}
+
+		submitBtn.disabled = true;
+		submitBtn.innerHTML = '<span>Transmitting Request & File...</span>';
+
+		const formData = new FormData(form);
+		formData.append('action', 'bayrak_submit_quotation');
+
+		fetch("<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>", {
+			method: 'POST',
+			body: formData
+		})
+		.then(res => res.json())
+		.then(data => {
+			if (data.success) {
+				document.getElementById('quick-ref-id').textContent = data.data.ref_id;
+				document.getElementById('quick-success-modal').classList.remove('hidden');
+				form.reset();
+				filePreview.classList.add('hidden');
+			} else {
+				errorDiv.textContent = data.data ? data.data.message : 'Submission failed. Please try again.';
+				errorDiv.classList.remove('hidden');
+			}
+			submitBtn.disabled = false;
+			submitBtn.innerHTML = '<span>Submit Quotation Request</span>';
+		})
+		.catch(err => {
+			console.error(err);
+			errorDiv.textContent = "Network error. Please check your connection and try again.";
+			errorDiv.classList.remove('hidden');
+			submitBtn.disabled = false;
+			submitBtn.innerHTML = '<span>Submit Quotation Request</span>';
+		});
+	});
+});
+</script>
 
 <!-- Ports Coverage Section -->
 <main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col lg:flex-row gap-gutter" id="ports">

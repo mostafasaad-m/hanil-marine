@@ -709,4 +709,67 @@ function bayrak_render_quotation_admin_meta_box( $post ) {
 	<?php
 }
 
+/**
+ * Custom Admin Columns for Quotation Requests CPT (All Quotations Admin Tab)
+ */
+function bayrak_quotation_cpt_columns( $columns ) {
+	$new_columns = array(
+		'cb'            => $columns['cb'],
+		'title'         => __( 'Quotation Title / Ref ID', 'bayrak' ),
+		'ref_id'        => __( 'Ref ID', 'bayrak' ),
+		'service_type'  => __( 'Service Category', 'bayrak' ),
+		'vessel_info'   => __( 'Vessel / IMO', 'bayrak' ),
+		'contact_info'  => __( 'Contact Person', 'bayrak' ),
+		'port_of_call'  => __( 'Port of Call', 'bayrak' ),
+		'attachment'    => __( 'Requisition File', 'bayrak' ),
+		'date'          => $columns['date'],
+	);
+	return $new_columns;
+}
+add_filter( 'manage_quotation_request_posts_columns', 'bayrak_quotation_cpt_columns' );
+
+function bayrak_quotation_cpt_custom_column_content( $column, $post_id ) {
+	switch ( $column ) {
+		case 'ref_id':
+			$ref_id = get_post_meta( $post_id, 'ref_id', true );
+			echo '<strong>' . esc_html( $ref_id ? $ref_id : 'N/A' ) . '</strong>';
+			break;
+		case 'service_type':
+			$service = get_post_meta( $post_id, 'service_type', true );
+			echo '<span style="background:#e2e8f0;color:#1e293b;padding:3px 8px;border-radius:4px;font-weight:bold;font-size:11px;">' . esc_html( $service ? $service : 'General' ) . '</span>';
+			break;
+		case 'vessel_info':
+			$vessel = get_post_meta( $post_id, 'vessel_name', true );
+			$imo    = get_post_meta( $post_id, 'imo_number', true );
+			echo '<strong>' . esc_html( $vessel ? $vessel : 'N/A' ) . '</strong>' . ( $imo ? '<br><small style="color:#64748b;">IMO: ' . esc_html( $imo ) . '</small>' : '' );
+			break;
+		case 'contact_info':
+			$name  = get_post_meta( $post_id, 'full_name', true );
+			$email = get_post_meta( $post_id, 'email', true );
+			$phone = get_post_meta( $post_id, 'phone', true );
+			echo '<strong>' . esc_html( $name ? $name : 'N/A' ) . '</strong>';
+			if ( $email ) {
+				echo '<br><small><a href="mailto:' . esc_attr( $email ) . '">' . esc_html( $email ) . '</a></small>';
+			}
+			if ( $phone ) {
+				echo '<br><small style="color:#64748b;">' . esc_html( $phone ) . '</small>';
+			}
+			break;
+		case 'port_of_call':
+			$port = get_post_meta( $post_id, 'port_of_call', true );
+			echo esc_html( $port ? $port : 'N/A' );
+			break;
+		case 'attachment':
+			$file_url = get_post_meta( $post_id, 'attached_file_url', true );
+			if ( $file_url ) {
+				echo '<a href="' . esc_url( $file_url ) . '" target="_blank" class="button button-small button-primary" style="font-weight:bold;">📥 Download File</a>';
+			} else {
+				echo '<span style="color:#a0aec0;">No File</span>';
+			}
+			break;
+	}
+}
+add_action( 'manage_quotation_request_posts_custom_column', 'bayrak_quotation_cpt_custom_column_content', 10, 2 );
+
+
 
