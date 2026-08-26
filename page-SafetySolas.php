@@ -21,7 +21,7 @@ get_header();
 			<div class="max-w-3xl text-left">
 				<h1 class="text-headline-xl font-headline-xl text-on-primary mb-6 leading-tight"><?php echo esc_html( bayrak_t( 'solas_hero_title', 'Certified Maritime Safety & SOLAS Compliance' ) ); ?></h1>
 				<p class="text-body-lg font-body-lg text-surface-container-high mb-10 max-w-2xl"><?php echo esc_html( bayrak_t( 'solas_hero_sub', 'Equipping global fleets with reliable, class-approved life-saving and fire-fighting systems across all Egyptian ports.' ) ); ?></p>
-				<a class="bg-safety-orange text-on-primary px-8 py-4 rounded text-button-text font-button-text hover:bg-secondary-container transition-colors shadow-lg shadow-safety-orange/20 inline-block" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>"><?php echo esc_html( bayrak_t( 'solas_hero_cta', 'Request Safety Inspection' ) ); ?></a>
+				<a class="bg-safety-orange text-on-primary px-8 py-4 rounded text-button-text font-button-text hover:bg-secondary-container transition-colors shadow-lg shadow-safety-orange/20 inline-block" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Safety & SOLAS Equipment' ) ) ); ?>"><?php echo esc_html( bayrak_t( 'solas_hero_cta', 'Request Safety Inspection' ) ); ?></a>
 			</div>
 		</div>
 	</section>
@@ -42,7 +42,7 @@ get_header();
 				<div class="p-6 flex flex-col flex-grow">
 					<h3 class="text-headline-md font-headline-md text-ocean-navy mb-3"><?php echo esc_html( bayrak_t( 'solas_c1_title', 'Life-Saving Appliances (LSA)' ) ); ?></h3>
 					<p class="text-body-md font-body-md text-on-surface-variant flex-grow"><?php echo esc_html( bayrak_t( 'solas_c1_desc', 'Life jackets, lifebuoys, lifeboats, and survival suits certified under international standards.' ) ); ?></p>
-					<a class="mt-6 text-ocean-navy font-button-text text-button-text flex items-center group-hover:text-safety-orange transition-colors" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+					<a class="mt-6 text-ocean-navy font-button-text text-button-text flex items-center group-hover:text-safety-orange transition-colors" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Safety & SOLAS Equipment' ) ) ); ?>">
 						<span><?php echo esc_html( bayrak_t( 'view_catalog', 'View Catalog' ) ); ?></span>
 					</a>
 				</div>
@@ -56,7 +56,7 @@ get_header();
 				<div class="p-6 flex flex-col flex-grow">
 					<h3 class="text-headline-md font-headline-md text-ocean-navy mb-3"><?php echo esc_html( bayrak_t( 'solas_c2_title', 'Fire-Fighting Equipment (FFE)' ) ); ?></h3>
 					<p class="text-body-md font-body-md text-on-surface-variant flex-grow"><?php echo esc_html( bayrak_t( 'solas_c2_desc', 'Extinguishers, fire hoses, pumps, and protective gear maintained for immediate operational readiness.' ) ); ?></p>
-					<a class="mt-6 text-ocean-navy font-button-text text-button-text flex items-center group-hover:text-safety-orange transition-colors" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+					<a class="mt-6 text-ocean-navy font-button-text text-button-text flex items-center group-hover:text-safety-orange transition-colors" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Safety & SOLAS Equipment' ) ) ); ?>">
 						<span><?php echo esc_html( bayrak_t( 'view_catalog', 'View Catalog' ) ); ?></span>
 					</a>
 				</div>
@@ -70,7 +70,7 @@ get_header();
 				<div class="p-6 flex flex-col flex-grow">
 					<h3 class="text-headline-md font-headline-md text-ocean-navy mb-3"><?php echo esc_html( bayrak_t( 'solas_c3_title', 'Pyrotechnics & Signaling' ) ); ?></h3>
 					<p class="text-body-md font-body-md text-on-surface-variant flex-grow"><?php echo esc_html( bayrak_t( 'solas_c3_desc', 'Parachute flares, smoke signals, and line-throwing appliances compliant with SOLAS/IMO regulations.' ) ); ?></p>
-					<a class="mt-6 text-ocean-navy font-button-text text-button-text flex items-center group-hover:text-safety-orange transition-colors" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+					<a class="mt-6 text-ocean-navy font-button-text text-button-text flex items-center group-hover:text-safety-orange transition-colors" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Safety & SOLAS Equipment' ) ) ); ?>">
 						<span><?php echo esc_html( bayrak_t( 'view_catalog', 'View Catalog' ) ); ?></span>
 					</a>
 				</div>
@@ -124,7 +124,7 @@ get_header();
 		<div class="max-w-container-max mx-auto text-center relative z-10">
 			<h2 class="text-headline-lg font-headline-lg text-on-primary mb-6"><?php echo esc_html( bayrak_t( 'secure_vessel_safety_title', 'Secure Your Vessel\'s Safety' ) ); ?></h2>
 			<p class="text-body-lg font-body-lg text-primary-fixed-dim mb-8 max-w-2xl mx-auto"><?php echo esc_html( bayrak_t( 'secure_vessel_safety_sub', 'Contact our safety specialists today for a comprehensive quote on SOLAS-compliant equipment and maintenance services.' ) ); ?></p>
-			<a class="bg-safety-orange text-on-primary px-8 py-4 rounded text-button-text font-button-text hover:bg-secondary-container transition-colors shadow-lg shadow-safety-orange/20 inline-block" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>"><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation Request' ) ); ?></a>
+			<a class="bg-safety-orange text-on-primary px-8 py-4 rounded text-button-text font-button-text hover:bg-secondary-container transition-colors shadow-lg shadow-safety-orange/20 inline-block" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Safety & SOLAS Equipment' ) ) ); ?>"><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation Request' ) ); ?></a>
 		</div>
 	</section>
 </main>

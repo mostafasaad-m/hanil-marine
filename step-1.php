@@ -14,11 +14,30 @@ get_header();
 	transform: translateX(-60px);
 	opacity: 0;
 }
+@keyframes pulse-ring {
+	0% { box-shadow: 0 0 0 0 rgba(166, 59, 0, 0.4); }
+	70% { box-shadow: 0 0 0 12px rgba(166, 59, 0, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(166, 59, 0, 0); }
+}
+.card-highlighted {
+	animation: pulse-ring 1.5s infinite;
+}
 </style>
 
 <main id="swipe-wrapper" class="swipe-container flex-grow flex flex-col items-center pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
 	<!-- Progress Stepper -->
 	<?php get_template_part( 'template-parts/quotation-stepper', null, array( 'current_step' => 1 ) ); ?>
+
+	<!-- Auto-Selection Banner (hidden by default) -->
+	<div id="auto-select-banner" class="hidden w-full max-w-3xl mb-8 p-4 bg-secondary-container text-on-secondary rounded-lg shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 transition-all">
+		<div class="flex items-center gap-3">
+			<span class="font-bold text-base md:text-lg">✓ Pre-Selected: <strong id="selected-service-name"></strong></span>
+			<span id="countdown-label" class="text-xs md:text-sm opacity-90">(Advancing to Step 2 in <span id="countdown-timer">2</span>s...)</span>
+		</div>
+		<button id="undo-auto-select-btn" onclick="cancelAutoAdvance()" type="button" class="px-4 py-2 bg-on-secondary text-secondary font-bold text-xs rounded hover:bg-surface-container transition-colors shadow shrink-0">
+			Undo / Change Selection
+		</button>
+	</div>
 
 	<!-- Section Header -->
 	<div class="text-center mb-12">
@@ -56,19 +75,46 @@ get_header();
 			</div>
 		</div>
 
-		<!-- Card 4: Port Logistics -->
-		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Logistics & Port Handling" onclick="selectServiceAuto('Logistics & Port Handling', this)">
-			<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">Logistics & Port Transit</h3>
-			<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Port logistics, customs clearance, bonded warehousing, and rapid vessel delivery across all Egyptian ports.</p>
+		<!-- Card 4: Bunker & Fuel Trading -->
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Bunker & Fuel Trading" onclick="selectServiceAuto('Bunker & Fuel Trading', this)">
+			<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">Bunker & Fuel Trading</h3>
+			<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">ISO-certified marine gasoil (VLSFO/LSMGO), lubricants, and specialty marine energy logistics across Egyptian ports.</p>
 			<div class="font-button-text text-button-text text-secondary flex items-center mt-auto">
 				<span>Select Category</span>
 			</div>
 		</div>
 
-		<!-- Card 5: Safety Equipment -->
+		<!-- Card 5: Repair Services -->
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Repair Services" onclick="selectServiceAuto('Repair Services', this)">
+			<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">Repair Services</h3>
+			<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Main & auxiliary engine overhauls, steel & piping fabrication, electrical, and automation repairs.</p>
+			<div class="font-button-text text-button-text text-secondary flex items-center mt-auto">
+				<span>Select Category</span>
+			</div>
+		</div>
+
+		<!-- Card 6: Crew Change Logistics -->
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Crew Change Logistics" onclick="selectServiceAuto('Crew Change Logistics', this)">
+			<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">Crew Change Logistics</h3>
+			<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Safe personnel transfers, visa & port clearance support, lodging, and emergency medical logistics.</p>
+			<div class="font-button-text text-button-text text-secondary flex items-center mt-auto">
+				<span>Select Category</span>
+			</div>
+		</div>
+
+		<!-- Card 7: Safety & SOLAS Equipment -->
 		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Safety & SOLAS Equipment" onclick="selectServiceAuto('Safety & SOLAS Equipment', this)">
 			<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">Safety & SOLAS Equipment</h3>
 			<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Certified life rafts, pyrotechnics, firefighting gear, and maritime safety equipment conforming to SOLAS regulations.</p>
+			<div class="font-button-text text-button-text text-secondary flex items-center mt-auto">
+				<span>Select Category</span>
+			</div>
+		</div>
+
+		<!-- Card 8: Port Logistics -->
+		<div class="service-card group flex flex-col text-left bg-surface-container-lowest border border-outline-variant rounded-lg p-6 cursor-pointer hover:border-primary hover:shadow-lg transition-all duration-200" data-service="Logistics & Port Handling" onclick="selectServiceAuto('Logistics & Port Handling', this)">
+			<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">Logistics & Port Transit</h3>
+			<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Port logistics, customs clearance, bonded warehousing, and rapid vessel delivery across all Egyptian ports.</p>
 			<div class="font-button-text text-button-text text-secondary flex items-center mt-auto">
 				<span>Select Category</span>
 			</div>
@@ -88,37 +134,112 @@ get_header();
 
 <script>
 let isTransitioning = false;
+let autoAdvanceTimer = null;
+let countdownInterval = null;
 
-function selectServiceAuto(serviceName, cardElement) {
-	if (isTransitioning) return;
-	isTransitioning = true;
+function selectServiceAuto(serviceName, cardElement, isAuto = false) {
+	if (isTransitioning && !isAuto) return;
 
 	document.querySelectorAll('.service-card').forEach(card => {
-		card.classList.remove('ring-2', 'ring-secondary-container', 'border-secondary-container', 'bg-surface-container-low');
+		card.classList.remove('ring-4', 'ring-secondary', 'border-secondary', 'bg-surface-container-low', 'card-highlighted');
 	});
 
-	cardElement.classList.add('ring-2', 'ring-secondary-container', 'border-secondary-container', 'bg-surface-container-low');
+	if (cardElement) {
+		cardElement.classList.add('ring-4', 'ring-secondary', 'border-secondary', 'bg-surface-container-low');
+		if (isAuto) {
+			cardElement.classList.add('card-highlighted');
+		}
+	}
 	sessionStorage.setItem('quotation_service_type', serviceName);
 
-	// Automagical swiping transition effect
-	const wrapper = document.getElementById('swipe-wrapper');
-	wrapper.classList.add('swipe-out-left');
+	const nextBtn = document.getElementById('next-btn');
+	if (nextBtn) {
+		nextBtn.disabled = false;
+		nextBtn.classList.remove('bg-outline-variant', 'text-outline', 'cursor-not-allowed');
+		nextBtn.classList.add('bg-secondary-container', 'text-on-secondary', 'hover:bg-secondary', 'shadow-md', 'cursor-pointer');
+	}
 
-	setTimeout(() => {
-		window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
-	}, 280);
+	if (!isAuto) {
+		isTransitioning = true;
+		const wrapper = document.getElementById('swipe-wrapper');
+		wrapper.classList.add('swipe-out-left');
+
+		setTimeout(() => {
+			window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
+		}, 280);
+	}
+}
+
+function cancelAutoAdvance() {
+	if (autoAdvanceTimer) {
+		clearTimeout(autoAdvanceTimer);
+		autoAdvanceTimer = null;
+	}
+	if (countdownInterval) {
+		clearInterval(countdownInterval);
+		countdownInterval = null;
+	}
+	isTransitioning = false;
+	const banner = document.getElementById('auto-select-banner');
+	if (banner) {
+		banner.innerHTML = `
+			<div class="flex items-center gap-2">
+				<span class="font-bold">✓ Category Choice Locked</span>
+				<span class="text-xs opacity-80">(Auto-advance paused. Click another category or press Next.)</span>
+			</div>
+		`;
+		banner.classList.remove('bg-secondary-container', 'text-on-secondary');
+		banner.classList.add('bg-surface-container-high', 'text-primary');
+	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	const savedService = sessionStorage.getItem('quotation_service_type');
-	if (savedService) {
-		const targetCard = document.querySelector(`.service-card[data-service="${savedService}"]`);
+	const urlParams = new URLSearchParams(window.location.search);
+	const serviceFromUrl = urlParams.get('service') || urlParams.get('category');
+	
+	let targetService = serviceFromUrl || sessionStorage.getItem('quotation_service_type');
+
+	if (targetService) {
+		// Clean URL parameter alias matching
+		const cardElements = Array.from(document.querySelectorAll('.service-card'));
+		let targetCard = cardElements.find(card => card.dataset.service.toLowerCase() === targetService.toLowerCase());
+
+		if (!targetCard) {
+			targetCard = cardElements.find(card => card.dataset.service.toLowerCase().includes(targetService.toLowerCase()));
+		}
+
 		if (targetCard) {
-			targetCard.classList.add('ring-2', 'ring-secondary-container', 'border-secondary-container', 'bg-surface-container-low');
-			const nextBtn = document.getElementById('next-btn');
-			nextBtn.disabled = false;
-			nextBtn.classList.remove('bg-outline-variant', 'text-outline', 'cursor-not-allowed');
-			nextBtn.classList.add('bg-secondary-container', 'text-on-secondary', 'hover:bg-secondary', 'shadow-md', 'cursor-pointer');
+			const matchedName = targetCard.dataset.service;
+			selectServiceAuto(matchedName, targetCard, true);
+
+			if (serviceFromUrl) {
+				// Show auto-selection banner with notice & undo button
+				const banner = document.getElementById('auto-select-banner');
+				const serviceNameElem = document.getElementById('selected-service-name');
+				const timerElem = document.getElementById('countdown-timer');
+
+				if (banner && serviceNameElem) {
+					serviceNameElem.textContent = matchedName;
+					banner.classList.remove('hidden');
+
+					let timeLeft = 2;
+					if (timerElem) timerElem.textContent = timeLeft;
+
+					countdownInterval = setInterval(() => {
+						timeLeft--;
+						if (timerElem && timeLeft >= 0) timerElem.textContent = timeLeft;
+					}, 750);
+
+					isTransitioning = true;
+					autoAdvanceTimer = setTimeout(() => {
+						const wrapper = document.getElementById('swipe-wrapper');
+						wrapper.classList.add('swipe-out-left');
+						setTimeout(() => {
+							window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
+						}, 280);
+					}, 1600);
+				}
+			}
 		}
 	}
 

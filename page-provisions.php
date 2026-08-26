@@ -16,10 +16,9 @@ get_header();
 
 		<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 			<div class="max-w-2xl text-left text-on-primary">
-	
 				<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl mb-6"><?php echo esc_html( bayrak_t( 'prov_hero_title', 'Complete Ship Provisions Supply in Egypt' ) ); ?></h1>
 				<p class="font-body-lg text-body-lg text-primary-fixed mb-8"><?php echo esc_html( bayrak_t( 'prov_hero_sub', 'Ensuring every galley across Egyptian ports is stocked with fresh, frozen, and dry provisions to support your crew\'s health and well-being.' ) ); ?></p>
-				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-md" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-md" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Get a Quotation' ) ); ?></span>
 				</a>
 			</div>
@@ -89,7 +88,7 @@ get_header();
 						<span class="font-body-md text-body-md">Strict adherence to IMPA and ISSA standards</span>
 					</li>
 				</ul>
-				<a class="inline-flex items-center gap-2 border border-secondary text-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary hover:text-on-secondary transition-colors duration-200" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="inline-flex items-center gap-2 border border-secondary text-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary hover:text-on-secondary transition-colors duration-200" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Request Provisions Quote' ) ); ?></span>
 				</a>
 			</div>
@@ -97,7 +96,7 @@ get_header();
 			<div class="bg-primary-container p-8 rounded-xl border border-outline-variant/30">
 				<h3 class="font-headline-md text-headline-md mb-4 text-on-primary">Sourcing Insights</h3>
 				<p class="font-body-md text-body-md text-primary-fixed mb-6">Our dedicated procurement team continuously monitors local Egyptian markets and global supply chains to secure the highest quality provisions at competitive rates.</p>
-				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary transition-colors duration-200" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-6 py-3 rounded hover:bg-secondary transition-colors duration-200" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Get Fast Quotation' ) ); ?></span>
 				</a>
 			</div>
@@ -108,7 +107,7 @@ get_header();
 	<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-container-max mx-auto text-center" id="quotation">
 		<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-6"><?php echo esc_html( bayrak_t( 'prov_cta_title', 'Streamline Your Provisioning' ) ); ?></h2>
 		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8"><?php echo esc_html( bayrak_t( 'prov_cta_desc', 'Experience seamless ordering, transparent pricing, and guaranteed delivery schedules across all major Egyptian ports.' ) ); ?></p>
-		<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-10 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-lg" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+		<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary font-button-text text-button-text px-10 py-4 rounded hover:bg-secondary transition-colors duration-200 shadow-lg" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>">
 			<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation Request' ) ); ?></span>
 		</a>
 	</section>

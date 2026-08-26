@@ -21,9 +21,8 @@ get_header();
 				<span class="font-label-caps text-label-caps text-safety-orange uppercase mb-4 block tracking-widest"><?php echo esc_html( bayrak_t( 'bunker_hero_badge', 'Global Energy Logistics' ) ); ?></span>
 				<h1 class="font-headline-xl text-headline-xl text-on-primary mb-6"><?php echo esc_html( bayrak_t( 'bunker_hero_title', 'Strategic Bunker Trading & Precision Fueling' ) ); ?></h1>
 				<p class="font-body-lg text-body-lg text-on-primary-container mb-8 max-w-2xl"><?php echo esc_html( bayrak_t( 'bunker_hero_sub', 'Ensuring operational continuity for global maritime fleets with ISO-certified marine fuels, advanced lubricants, and reliable 24/7 logistics across all Egyptian ports.' ) ); ?></p>
-				<a class="bg-safety-orange text-on-primary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary-container transition-colors shadow-lg hover:shadow-xl inline-flex items-center gap-2 uppercase tracking-wide" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="bg-safety-orange text-on-primary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary-container transition-colors shadow-lg hover:shadow-xl inline-flex items-center gap-2 uppercase tracking-wide" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bunker & Fuel Trading' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'bunker_hero_cta', 'Initiate Quotation Workflow' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm">arrow_forward</span>
 				</a>
 			</div>
 		</div>
@@ -38,50 +37,36 @@ get_header();
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 			<!-- Marine Fuel Oils -->
 			<div class="bg-surface-container-lowest border border-outline-variant p-8 rounded hover:border-surface-tint transition-colors group flex flex-col md:col-span-2 relative overflow-hidden">
-				<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-					<span class="material-symbols-outlined text-9xl text-ocean-navy" style="font-variation-settings: 'FILL' 1;">oil_barrel</span>
-				</div>
 				<div class="mb-6 flex items-center justify-between">
-					<div class="p-3 bg-sea-foam-gray rounded inline-flex">
-						<span class="material-symbols-outlined text-ocean-navy text-3xl">water_drop</span>
-					</div>
 					<span class="bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps px-3 py-1 rounded-full border border-outline-variant"><?php echo esc_html( bayrak_t( 'iso_8217_badge', 'ISO 8217 Certified' ) ); ?></span>
 				</div>
 				<h3 class="font-headline-md text-headline-md text-primary mb-4 relative z-10"><?php echo esc_html( bayrak_t( 'bunker_c1_title', 'Marine Fuel Oils (VLSFO/LSMGO)' ) ); ?></h3>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow relative z-10"><?php echo esc_html( bayrak_t( 'bunker_c1_desc', 'Premium, quality-assured low-sulfur marine gasoil and very low sulfur fuel oil. Sourced from globally recognized refineries, our fuels guarantee optimal engine performance and strict adherence to current emission regulations.' ) ); ?></p>
 				<ul class="space-y-2 mb-6 font-body-md text-body-md text-on-surface-variant relative z-10">
 					<li class="flex items-center gap-2">
-						<span class="material-symbols-outlined text-safety-orange text-sm">check_circle</span>
+						<span class="text-safety-orange font-bold text-sm">✓</span>
 						<span><?php echo esc_html( bayrak_t( 'bunker_c1_check1', 'Pre-delivery quality testing' ) ); ?></span>
 					</li>
 					<li class="flex items-center gap-2">
-						<span class="material-symbols-outlined text-safety-orange text-sm">check_circle</span>
+						<span class="text-safety-orange font-bold text-sm">✓</span>
 						<span><?php echo esc_html( bayrak_t( 'bunker_c1_check2', 'Transparent density & viscosity reporting' ) ); ?></span>
 					</li>
 				</ul>
-				<a class="font-button-text text-button-text text-ocean-navy hover:text-safety-orange transition-colors inline-flex items-center gap-1 uppercase tracking-wide relative z-10 mt-auto" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="font-button-text text-button-text text-ocean-navy hover:text-safety-orange transition-colors inline-flex items-center gap-1 uppercase tracking-wide relative z-10 mt-auto" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bunker & Fuel Trading' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'bunker_c1_link', 'View Specifications' ) ); ?></span>
-					<span class="material-symbols-outlined text-sm">chevron_right</span>
 				</a>
 			</div>
 
 			<!-- Lubricants & Specialty Chemicals -->
 			<div class="bg-surface-container-lowest border border-outline-variant p-8 rounded hover:border-surface-tint transition-colors group flex flex-col">
-				<div class="mb-6">
-					<div class="p-3 bg-sea-foam-gray rounded inline-flex">
-						<span class="material-symbols-outlined text-ocean-navy text-3xl">science</span>
-					</div>
-				</div>
 				<h3 class="font-headline-md text-headline-md text-primary mb-4"><?php echo esc_html( bayrak_t( 'bunker_c2_title', 'Lubricants & Specialty Chemicals' ) ); ?></h3>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow"><?php echo esc_html( bayrak_t( 'bunker_c2_desc', 'A complete range of high-performance engine oils, hydraulic fluids, and specialty maritime chemicals designed to extend machinery lifespan under extreme conditions.' ) ); ?></p>
 				<div class="space-y-4 mt-auto">
 					<div class="flex items-center justify-between border-b border-outline-variant pb-2">
 						<span class="font-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'main_engine_oils', 'Main Engine Oils' ) ); ?></span>
-						<span class="material-symbols-outlined text-outline text-sm">arrow_outward</span>
 					</div>
 					<div class="flex items-center justify-between border-b border-outline-variant pb-2">
 						<span class="font-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'auxiliary_oils', 'Auxiliary Oils' ) ); ?></span>
-						<span class="material-symbols-outlined text-outline text-sm">arrow_outward</span>
 					</div>
 				</div>
 			</div>
@@ -90,7 +75,6 @@ get_header();
 			<div class="bg-tertiary text-on-tertiary p-8 rounded md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center relative overflow-hidden">
 				<div class="relative z-10">
 					<h3 class="font-headline-lg text-headline-lg mb-4 flex items-center gap-3">
-						<span class="material-symbols-outlined text-safety-orange text-4xl">local_shipping</span>
 						<span><?php echo esc_html( bayrak_t( 'bunker_c3_title', '24/7 Bunkering Logistics' ) ); ?></span>
 					</h3>
 					<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mb-6"><?php echo esc_html( bayrak_t( 'bunker_c3_desc', 'Our dedicated logistical fleet ensures reliable, precision delivery across all major Egyptian ports. We operate round-the-clock to minimize your vessel\'s downtime.' ) ); ?></p>
@@ -104,9 +88,6 @@ get_header();
 				<div class="relative z-10 flex justify-end">
 					<div class="bg-industrial-slate p-6 rounded border border-outline-variant/30 w-full max-w-sm backdrop-blur-sm">
 						<div class="flex items-center gap-4 mb-4">
-							<div class="w-12 h-12 bg-safety-orange rounded-full flex items-center justify-center">
-								<span class="material-symbols-outlined text-on-primary">support_agent</span>
-							</div>
 							<div>
 								<h4 class="font-headline-md text-headline-md text-on-tertiary"><?php echo esc_html( bayrak_t( 'ops_center_title', 'Operations Center' ) ); ?></h4>
 								<span class="font-body-md text-tertiary-fixed-dim text-sm"><?php echo esc_html( bayrak_t( 'always_active', 'Always Active' ) ); ?></span>
@@ -125,11 +106,10 @@ get_header();
 	<!-- Workflow CTA -->
 	<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-sea-foam-gray border-t border-b border-outline-variant">
 		<div class="max-w-4xl mx-auto text-center">
-			<span class="material-symbols-outlined text-5xl text-ocean-navy mb-4">description</span>
 			<h2 class="font-headline-lg text-headline-lg text-primary mb-6"><?php echo esc_html( bayrak_t( 'bunker_cta_title', 'Streamlined Quotation Workflow' ) ); ?></h2>
 			<p class="font-body-lg text-body-lg text-on-surface-variant mb-8"><?php echo esc_html( bayrak_t( 'bunker_cta_desc', 'Access real-time pricing and secure your bunker allocations with our precision digital quotation system. Designed for rapid procurement and full transparency.' ) ); ?></p>
 			<div class="flex justify-center gap-4">
-				<a class="bg-safety-orange text-on-primary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary-container transition-colors shadow-lg uppercase tracking-wide" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="bg-safety-orange text-on-primary font-button-text text-button-text px-8 py-4 rounded hover:bg-secondary-container transition-colors shadow-lg uppercase tracking-wide" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bunker & Fuel Trading' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'request_bunker_quote', 'Request Bunker Quote' ) ); ?></span>
 				</a>
 				<a class="bg-transparent border border-ocean-navy text-ocean-navy font-button-text text-button-text px-8 py-4 rounded hover:bg-ocean-navy hover:text-on-primary transition-colors uppercase tracking-wide" href="<?php echo esc_url( home_url( '/services' ) ); ?>">

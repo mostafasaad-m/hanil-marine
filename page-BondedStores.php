@@ -21,7 +21,7 @@ get_header();
 				<span class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 block"><?php echo esc_html( bayrak_t( 'bonded_hero_badge', 'Marine Services' ) ); ?></span>
 				<h1 class="font-headline-xl text-headline-xl mb-6"><?php echo esc_html( bayrak_t( 'bonded_hero_title', 'Global Bonded Stores & Duty-Free Supply' ) ); ?></h1>
 				<p class="font-body-lg text-body-lg text-surface-container-lowest/90 mb-8"><?php echo esc_html( bayrak_t( 'bonded_hero_sub', 'Providing premium duty-free goods and secure storage solutions for vessels across all Egyptian ports.' ) ); ?></p>
-				<a class="bg-secondary text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary-container transition-colors inline-flex items-center gap-2" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+				<a class="bg-secondary text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary-container transition-colors inline-flex items-center gap-2" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bonded Stores' ) ) ); ?>">
 					<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Get a Quotation' ) ); ?></span>
 				</a>
 			</div>
@@ -109,7 +109,7 @@ get_header();
 		<div class="max-w-3xl mx-auto text-center">
 			<h2 class="font-headline-lg text-headline-lg text-primary mb-6"><?php echo esc_html( bayrak_t( 'bonded_cta_title', 'Secure Your Bonded Supply Today' ) ); ?></h2>
 			<p class="font-body-lg text-body-lg text-on-surface-variant mb-8"><?php echo esc_html( bayrak_t( 'bonded_cta_desc', 'Partner with Hanil Marine for reliable, compliant, and premium duty-free provisions across all major Egyptian ports.' ) ); ?></p>
-			<a class="bg-secondary text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary-container transition-colors inline-flex items-center gap-2" href="<?php echo esc_url( home_url( '/step-1' ) ); ?>">
+			<a class="bg-secondary text-on-secondary px-8 py-4 rounded font-button-text text-button-text hover:bg-secondary-container transition-colors inline-flex items-center gap-2" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bonded Stores' ) ) ); ?>">
 				<span><?php echo esc_html( bayrak_t( 'get_quotation', 'Start Quotation Request' ) ); ?></span>
 			</a>
 		</div>
