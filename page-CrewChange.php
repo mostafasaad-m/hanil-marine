@@ -31,7 +31,7 @@ get_header();
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 			<!-- Service 1 -->
 			<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-				<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'crew_s1_title', 'Personnel Transfer Services' ) ); ?></h3>
+				<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'crew_s1_title', 'Personnel Airport Transfer Services' ) ); ?></h3>
 				<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'crew_s1_desc', 'Safe and reliable transportation for crew members between port facilities and vessels, utilizing certified transport.' ) ); ?></p>
 			</div>
 
