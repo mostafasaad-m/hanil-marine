@@ -143,7 +143,6 @@
 							<li><a href="<?php echo esc_url( home_url( '/bunker-fuel-trading' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_bunker', 'Bunker & Fuel Trading' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/bonded-stores' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_bonded', 'Bonded Stores' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/technical-spares' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_technical', 'Technical Spares' ) ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/services#logistics' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_logistics', 'Port Logistics' ) ); ?></a></li>
 							<li><a href="<?php echo esc_url( home_url( '/safety-solas' ) ); ?>" class="text-on-surface-variant hover:text-secondary flex items-center gap-2 font-bold"><?php echo esc_html( bayrak_t( 'nav_safety', 'Safety & SOLAS' ) ); ?></a></li>
 						</ul>
 					</div>
