@@ -32,7 +32,7 @@ get_header();
 	<div id="auto-select-banner" class="hidden w-full max-w-3xl mb-8 p-4 bg-secondary-container text-on-secondary rounded-lg shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 transition-all">
 		<div class="flex items-center gap-3">
 			<span class="font-bold text-base md:text-lg">✓ Pre-Selected: <strong id="selected-service-name"></strong></span>
-			<span id="countdown-label" class="text-xs md:text-sm opacity-90">(Advancing to Step 2 in <span id="countdown-timer">2</span>s...)</span>
+			<span id="countdown-label" class="text-xs md:text-sm opacity-90">(Advancing to Step 2 in <span id="countdown-timer">7</span>s...)</span>
 		</div>
 		<button id="undo-auto-select-btn" onclick="cancelAutoAdvance()" type="button" class="px-4 py-2 bg-on-secondary text-secondary font-bold text-xs rounded hover:bg-surface-container transition-colors shadow shrink-0">
 			Undo / Change Selection
@@ -228,7 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					countdownInterval = setInterval(() => {
 						timeLeft--;
 						if (timerElem && timeLeft >= 0) timerElem.textContent = timeLeft;
-					}, 750);
+						if (timeLeft <= 0) clearInterval(countdownInterval);
+					}, 1000);
 
 					isTransitioning = true;
 					autoAdvanceTimer = setTimeout(() => {
@@ -237,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						setTimeout(() => {
 							window.location.href = "<?php echo esc_url( home_url( '/step-2' ) ); ?>";
 						}, 280);
-					}, 1600);
+					}, timeLeft * 1000);
 				}
 			}
 		}
