@@ -37,31 +37,34 @@ get_header();
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<!-- Category 1 -->
-				<div class="group relative overflow-hidden rounded border border-outline-variant bg-surface group-hover:border-primary transition-colors h-[400px]">
-					<img class="w-full h-48 object-cover border-b border-outline-variant" alt="<?php echo esc_attr( bayrak_t( 'bonded_c1_title', 'Premium Beverages & Tobacco' ) ); ?>" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9RzySit9zMwxz1STmEDnsLt6WcZ19U8XVDRqPLSmtgmyhkYDAm8sAvLFxPsq_fJ4AdPI4ZZF5d3N2pvvopU9M5DZDzPGri7UeHjTpyYTCYHYu802bLMHjh2QTPGkzF2mx4EY9ht0zW4boBc_k3Va0LMPTY-TgTBSv2QRenJLspVeuYzKkyc_tkJrxY5q1DVnyNVEy0uapxVRNiHGJ8XhBNmzrtWXiIiuJlijzymtyP-HUehERYc3Clw">
+				<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bonded Stores' ) ) ); ?>" class="group block relative overflow-hidden rounded border border-outline-variant bg-surface hover:border-primary hover:shadow-lg transition-all h-[400px]">
+					<img class="w-full h-48 object-cover border-b border-outline-variant group-hover:scale-105 transition-transform duration-500" alt="<?php echo esc_attr( bayrak_t( 'bonded_c1_title', 'Premium Beverages & Tobacco' ) ); ?>" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9RzySit9zMwxz1STmEDnsLt6WcZ19U8XVDRqPLSmtgmyhkYDAm8sAvLFxPsq_fJ4AdPI4ZZF5d3N2pvvopU9M5DZDzPGri7UeHjTpyYTCYHYu802bLMHjh2QTPGkzF2mx4EY9ht0zW4boBc_k3Va0LMPTY-TgTBSv2QRenJLspVeuYzKkyc_tkJrxY5q1DVnyNVEy0uapxVRNiHGJ8XhBNmzrtWXiIiuJlijzymtyP-HUehERYc3Clw">
 					<div class="p-6">
-						<h3 class="font-headline-md text-headline-md text-primary mb-2"><?php echo esc_html( bayrak_t( 'bonded_c1_title', 'Premium Beverages & Tobacco' ) ); ?></h3>
-						<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3"><?php echo esc_html( bayrak_t( 'bonded_c1_desc', 'High-quality selection of international spirits, wines, and premium tobacco products sourced from global distributors.' ) ); ?></p>
+						<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'bonded_c1_title', 'Premium Beverages & Tobacco' ) ); ?></h3>
+						<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-2"><?php echo esc_html( bayrak_t( 'bonded_c1_desc', 'High-quality selection of international spirits, wines, and premium tobacco products sourced from global distributors.' ) ); ?></p>
+						<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Category &rarr;</span>
 					</div>
-				</div>
+				</a>
 
 				<!-- Category 2 -->
-				<div class="group relative overflow-hidden rounded border border-outline-variant bg-surface group-hover:border-primary transition-colors h-[400px]">
-					<img class="w-full h-48 object-cover border-b border-outline-variant" alt="<?php echo esc_attr( bayrak_t( 'bonded_c2_title', 'Luxury Confectionery & Care' ) ); ?>" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDteGMDk28DzUhLk7ltghBZsCzZsVpLL-IWHThz0Mg3u8t3OHpQ2iVX0gDMe-69swva0rQGYV7hZoK3BxTkRvUwOaxZKmxqFsKW5NPlkYs47IyGtH8Q53Yr9SxkO0elOfjlSFzoRI61QSWBdpPPrWhXuj0_eNJaWl-GHhOtm4CkWoFTOAdc9xmtB-YWnoFLkanouyWcD1FE8pu1mnqWlrc-jDrwy8fHKnuBPpU7hiqIxyUufuhvu4evjg">
+				<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bonded Stores' ) ) ); ?>" class="group block relative overflow-hidden rounded border border-outline-variant bg-surface hover:border-primary hover:shadow-lg transition-all h-[400px]">
+					<img class="w-full h-48 object-cover border-b border-outline-variant group-hover:scale-105 transition-transform duration-500" alt="<?php echo esc_attr( bayrak_t( 'bonded_c2_title', 'Luxury Confectionery & Care' ) ); ?>" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDteGMDk28DzUhLk7ltghBZsCzZsVpLL-IWHThz0Mg3u8t3OHpQ2iVX0gDMe-69swva0rQGYV7hZoK3BxTkRvUwOaxZKmxqFsKW5NPlkYs47IyGtH8Q53Yr9SxkO0elOfjlSFzoRI61QSWBdpPPrWhXuj0_eNJaWl-GHhOtm4CkWoFTOAdc9xmtB-YWnoFLkanouyWcD1FE8pu1mnqWlrc-jDrwy8fHKnuBPpU7hiqIxyUufuhvu4evjg">
 					<div class="p-6">
-						<h3 class="font-headline-md text-headline-md text-primary mb-2"><?php echo esc_html( bayrak_t( 'bonded_c2_title', 'Luxury Confectionery & Care' ) ); ?></h3>
-						<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3"><?php echo esc_html( bayrak_t( 'bonded_c2_desc', 'Premium chocolates, designer perfumes, and high-end toiletries to ensure superior crew welfare during long voyages.' ) ); ?></p>
+						<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'bonded_c2_title', 'Luxury Confectionery & Care' ) ); ?></h3>
+						<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-2"><?php echo esc_html( bayrak_t( 'bonded_c2_desc', 'Premium chocolates, designer perfumes, and high-end toiletries to ensure superior crew welfare during long voyages.' ) ); ?></p>
+						<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Category &rarr;</span>
 					</div>
-				</div>
+				</a>
 
 				<!-- Category 3 -->
-				<div class="group relative overflow-hidden rounded border border-outline-variant bg-surface group-hover:border-primary transition-colors h-[400px]">
-					<img class="w-full h-48 object-cover border-b border-outline-variant" alt="<?php echo esc_attr( bayrak_t( 'bonded_c3_title', 'High-End Electronics' ) ); ?>" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIao-mlseBS1CwAHkkJHKQBUN8jSe1AGYUB0oq-jYcddbkQ90onnqQ3luzj3nFxTRSTG0JM4uDAnssJTF5XwueQa2mmor13BslN6n5BwXehVJ38tAkiKkmVGYwm7wEsAhgPuqa4f6KbuRwYR-iImcV0f_5deh3G9BzK4BJi2MpjdADp1jamd4M9YImN1OeuiRa6Q6ZZMyMy5ablNiAM9xvpcxfAnZpnJEZz-sksWiAS6mle_6lR7GBxQ">
+				<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bonded Stores' ) ) ); ?>" class="group block relative overflow-hidden rounded border border-outline-variant bg-surface hover:border-primary hover:shadow-lg transition-all h-[400px]">
+					<img class="w-full h-48 object-cover border-b border-outline-variant group-hover:scale-105 transition-transform duration-500" alt="<?php echo esc_attr( bayrak_t( 'bonded_c3_title', 'High-End Electronics' ) ); ?>" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIao-mlseBS1CwAHkkJHKQBUN8jSe1AGYUB0oq-jYcddbkQ90onnqQ3luzj3nFxTRSTG0JM4uDAnssJTF5XwueQa2mmor13BslN6n5BwXehVJ38tAkiKkmVGYwm7wEsAhgPuqa4f6KbuRwYR-iImcV0f_5deh3G9BzK4BJi2MpjdADp1jamd4M9YImN1OeuiRa6Q6ZZMyMy5ablNiAM9xvpcxfAnZpnJEZz-sksWiAS6mle_6lR7GBxQ">
 					<div class="p-6">
-						<h3 class="font-headline-md text-headline-md text-primary mb-2"><?php echo esc_html( bayrak_t( 'bonded_c3_title', 'High-End Electronics' ) ); ?></h3>
-						<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3"><?php echo esc_html( bayrak_t( 'bonded_c3_desc', 'Professional maritime gadgets, communication devices, and duty-free consumer electronics for onboard use.' ) ); ?></p>
+						<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'bonded_c3_title', 'High-End Electronics' ) ); ?></h3>
+						<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-2"><?php echo esc_html( bayrak_t( 'bonded_c3_desc', 'Professional maritime gadgets, communication devices, and duty-free consumer electronics for onboard use.' ) ); ?></p>
+						<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Category &rarr;</span>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</section>

@@ -54,9 +54,14 @@ get_header();
 				<div class="col-span-1 bg-surface-container-lowest border border-outline-variant rounded p-8 flex flex-col shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
 					<h3 class="font-headline-md text-headline-md text-ocean-navy mb-2 relative z-10"><?php echo esc_html( bayrak_t( 'repair_steel_title', 'Steel & Piping Fabrication' ) ); ?></h3>
 					<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow relative z-10"><?php echo esc_html( bayrak_t( 'repair_steel_desc', 'Precision welding, hull repairs, and complex piping system fabrication. Executed to class-approved standards, both in-port and riding squads at-sea.' ) ); ?></p>
-					<div class="mt-auto pt-4 border-t border-outline-variant/30 flex gap-2 relative z-10">
-						<span class="bg-surface-container px-2 py-1 rounded font-label-caps text-label-caps text-on-surface-variant"><?php echo esc_html( bayrak_t( 'class_approved', 'Class Approved' ) ); ?></span>
-						<span class="bg-surface-container px-2 py-1 rounded font-label-caps text-label-caps text-on-surface-variant"><?php echo esc_html( bayrak_t( 'in_port_at_sea', 'In-Port / At-Sea' ) ); ?></span>
+					<div class="mt-auto pt-4 border-t border-outline-variant/30 flex items-center justify-between gap-2 relative z-10">
+						<div class="flex gap-2">
+							<span class="bg-surface-container px-2 py-1 rounded font-label-caps text-label-caps text-on-surface-variant"><?php echo esc_html( bayrak_t( 'class_approved', 'Class Approved' ) ); ?></span>
+							<span class="bg-surface-container px-2 py-1 rounded font-label-caps text-label-caps text-on-surface-variant"><?php echo esc_html( bayrak_t( 'in_port_at_sea', 'In-Port / At-Sea' ) ); ?></span>
+						</div>
+						<a class="text-safety-orange font-button-text text-button-text flex items-center gap-1 hover:underline" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Repair Services' ) ) ); ?>">
+							<span>Request &rarr;</span>
+						</a>
 					</div>
 				</div>
 

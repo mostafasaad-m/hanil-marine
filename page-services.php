@@ -105,7 +105,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						<?php echo esc_html( bayrak_t( 'get_quotation', 'Request Ship Supply Quote' ) ); ?>
 					</a>
 				</div>
@@ -146,7 +146,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Logistics & Port Handling' ) ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						<?php echo esc_html( bayrak_t( 'get_quotation', 'Inquire About Logistics' ) ); ?>
 					</a>
 				</div>
@@ -187,7 +187,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Crew Change Logistics' ) ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						<?php echo esc_html( bayrak_t( 'get_quotation', 'Book Crew Logistics' ) ); ?>
 					</a>
 				</div>
@@ -228,7 +228,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Safety & SOLAS Equipment' ) ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						<?php echo esc_html( bayrak_t( 'get_quotation', 'Request Safety Inspection' ) ); ?>
 					</a>
 				</div>
@@ -269,7 +269,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="<?php echo esc_url( home_url( '/step-1' ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
+					<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Technical Parts & Spares' ) ) ); ?>" class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded font-button-text hover:bg-secondary-container transition-colors">
 						<?php echo esc_html( bayrak_t( 'get_quotation', 'Request Technical Team' ) ); ?>
 					</a>
 				</div>

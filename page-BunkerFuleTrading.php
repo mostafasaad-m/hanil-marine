@@ -61,7 +61,7 @@ get_header();
 			<div class="bg-surface-container-lowest border border-outline-variant p-8 rounded hover:border-surface-tint transition-colors group flex flex-col">
 				<h3 class="font-headline-md text-headline-md text-primary mb-4"><?php echo esc_html( bayrak_t( 'bunker_c2_title', 'Lubricants & Specialty Chemicals' ) ); ?></h3>
 				<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow"><?php echo esc_html( bayrak_t( 'bunker_c2_desc', 'A complete range of high-performance engine oils, hydraulic fluids, and specialty maritime chemicals designed to extend machinery lifespan under extreme conditions.' ) ); ?></p>
-				<div class="space-y-4 mt-auto">
+				<div class="space-y-4 mt-auto mb-6">
 					<div class="flex items-center justify-between border-b border-outline-variant pb-2">
 						<span class="font-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'main_engine_oils', 'Main Engine Oils' ) ); ?></span>
 					</div>
@@ -69,6 +69,9 @@ get_header();
 						<span class="font-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'auxiliary_oils', 'Auxiliary Oils' ) ); ?></span>
 					</div>
 				</div>
+				<a class="font-button-text text-button-text text-ocean-navy hover:text-safety-orange transition-colors inline-flex items-center gap-1 uppercase tracking-wide mt-auto" href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Bunker & Fuel Trading' ) ) ); ?>">
+					<span>Inquire About Lubricants &rarr;</span>
+				</a>
 			</div>
 
 			<!-- Logistics Container -->

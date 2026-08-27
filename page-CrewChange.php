@@ -30,22 +30,25 @@ get_header();
 	<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 			<!-- Service 1 -->
-			<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-				<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'crew_s1_title', 'Personnel Airport Transfer Services' ) ); ?></h3>
-				<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'crew_s1_desc', 'Safe and reliable transportation for crew members between port facilities and vessels, utilizing certified transport.' ) ); ?></p>
-			</div>
+			<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Crew Change Logistics' ) ) ); ?>" class="group block bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md hover:border-primary transition-all">
+				<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'crew_s1_title', 'Personnel Airport Transfer Services' ) ); ?></h3>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-4"><?php echo esc_html( bayrak_t( 'crew_s1_desc', 'Safe and reliable transportation for crew members between port facilities and vessels, utilizing certified transport.' ) ); ?></p>
+				<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Service &rarr;</span>
+			</a>
 
 			<!-- Service 2 -->
-			<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-				<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'crew_s2_title', 'Visa & Immigration Support' ) ); ?></h3>
-				<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'crew_s2_desc', 'Expert handling of all Egyptian maritime port formalities, documentation, and expedited clearance processes.' ) ); ?></p>
-			</div>
+			<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Crew Change Logistics' ) ) ); ?>" class="group block bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md hover:border-primary transition-all">
+				<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'crew_s2_title', 'Visa & Immigration Support' ) ); ?></h3>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-4"><?php echo esc_html( bayrak_t( 'crew_s2_desc', 'Expert handling of all Egyptian maritime port formalities, documentation, and expedited clearance processes.' ) ); ?></p>
+				<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Service &rarr;</span>
+			</a>
 
 			<!-- Service 3 -->
-			<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-				<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'crew_s3_title', 'Accommodation & Medical Logistics' ) ); ?></h3>
-				<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'crew_s3_desc', 'Seamless arrangements for crew welfare, including secure lodging and immediate medical facilitation if required.' ) ); ?></p>
-			</div>
+			<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Crew Change Logistics' ) ) ); ?>" class="group block bg-surface-container-lowest border border-outline-variant p-6 rounded shadow-sm hover:shadow-md hover:border-primary transition-all">
+				<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'crew_s3_title', 'Accommodation & Medical Logistics' ) ); ?></h3>
+				<p class="font-body-md text-body-md text-on-surface-variant mb-4"><?php echo esc_html( bayrak_t( 'crew_s3_desc', 'Seamless arrangements for crew welfare, including secure lodging and immediate medical facilitation if required.' ) ); ?></p>
+				<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Service &rarr;</span>
+			</a>
 		</div>
 	</section>
 

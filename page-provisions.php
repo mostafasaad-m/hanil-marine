@@ -34,37 +34,40 @@ get_header();
 
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 			<!-- Fresh -->
-			<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+			<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>" class="block bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-xl hover:border-primary transition-all duration-300">
 				<div class="h-64 overflow-hidden">
 					<img alt="Fresh maritime provisions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlm5awiK_KDIw8BDdBgw3O_j3qkLhYYksHvzCNlvGxMaXCJisOCCj31vjXkqfBDslxGhb3tpRSHDkxqZKVk6w2WmzRkClY1vR90P5k-4krFMASqvtuxNzK61EchAckHFRtxI8hdrlQ8HvDoUSJukaAtpjy9saVyrc6yvyF0hKrMr61OJu1jHrl-vH5hYRmrAM8zZDYzKEjfjlo7v67iGQ_lyInwA8h9cFkUDz15_uMo_wLztSvIsyS-A"/>
 				</div>
 				<div class="p-6">
-					<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'prov_fresh_title', 'Fresh Provisions' ) ); ?></h3>
-					<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'prov_fresh_desc', 'Daily supply of fresh fruit, vegetables, dairy, and bakery products sourced from local Egyptian markets. Temperature-controlled delivery ensures peak freshness.' ) ); ?></p>
+					<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'prov_fresh_title', 'Fresh Provisions' ) ); ?></h3>
+					<p class="font-body-md text-body-md text-on-surface-variant mb-4"><?php echo esc_html( bayrak_t( 'prov_fresh_desc', 'Daily supply of fresh fruit, vegetables, dairy, and bakery products sourced from local Egyptian markets. Temperature-controlled delivery ensures peak freshness.' ) ); ?></p>
+					<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Provisions &rarr;</span>
 				</div>
-			</div>
+			</a>
 
 			<!-- Frozen -->
-			<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+			<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>" class="block bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-xl hover:border-primary transition-all duration-300">
 				<div class="h-64 overflow-hidden">
 					<img alt="Frozen maritime provisions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_bwgKXVB3iiVyWMJ_Zip5BNk6c9EVj-PH867MBx7dQyRevJ749d5aekRSkHcNLbqgdsRa4xomcI78ip63vmw-s6JVDZqgtqFFaC5Nh88eFP8uwIZawe-htN8Jc5jTc8Cf6t9-dpdNDRILkhnh37WbQFnfafc6VMRvfYyZ85QC3rmd6QgVhIr3OiEWfwJw-YLAXh8XaYULl8ykE-OT5BN5p97UWwzzPAS7SWKwD40QdB6oLu0YZMSClg"/>
 				</div>
 				<div class="p-6">
-					<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'prov_frozen_title', 'Frozen Provisions' ) ); ?></h3>
-					<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'prov_frozen_desc', 'High-quality meat, poultry, and seafood kept under strict temperature control for safety and longevity. Consistency in food safety guaranteed.' ) ); ?></p>
+					<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'prov_frozen_title', 'Frozen Provisions' ) ); ?></h3>
+					<p class="font-body-md text-body-md text-on-surface-variant mb-4"><?php echo esc_html( bayrak_t( 'prov_frozen_desc', 'High-quality meat, poultry, and seafood kept under strict temperature control for safety and longevity. Consistency in food safety guaranteed.' ) ); ?></p>
+					<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Provisions &rarr;</span>
 				</div>
-			</div>
+			</a>
 
 			<!-- Dry -->
-			<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+			<a href="<?php echo esc_url( home_url( '/step-1?service=' . urlencode( 'Provisions Supply' ) ) ); ?>" class="block bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-xl hover:border-primary transition-all duration-300">
 				<div class="h-64 overflow-hidden">
 					<img alt="Dry maritime provisions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-5UDL595pRt35kNdfUwADLVTtWZ4XTc_aYfvCn4hC0Iimxah3PwSjTxuN-u5ndqL8YzaDAYj6vvjkbWnCOXt8tv23Ad9dxfCotvPzazoAP7782HyhrXDnVl4-pIAnBOIxqTjzTD-Q-BIWobmi3aTnHfxz7fTSECZ7VhZZfx3WaU-i5j_8cO8PFRWXclyCPu5jBO1VvrlzrlVKGzIM-ExWTP1XUgjI45ebLrLTDVtK9fKuN0ooXpJD0w"/>
 				</div>
 				<div class="p-6">
-					<h3 class="font-headline-md text-headline-md text-primary mb-3"><?php echo esc_html( bayrak_t( 'prov_dry_title', 'Dry Provisions' ) ); ?></h3>
-					<p class="font-body-md text-body-md text-on-surface-variant"><?php echo esc_html( bayrak_t( 'prov_dry_desc', 'Wide range of grains, pasta, canned goods, and spices sourced for lasting quality from audited suppliers. Securely packaged for maritime transport.' ) ); ?></p>
+					<h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors"><?php echo esc_html( bayrak_t( 'prov_dry_title', 'Dry Provisions' ) ); ?></h3>
+					<p class="font-body-md text-body-md text-on-surface-variant mb-4"><?php echo esc_html( bayrak_t( 'prov_dry_desc', 'Wide range of grains, pasta, canned goods, and spices sourced for lasting quality from audited suppliers. Securely packaged for maritime transport.' ) ); ?></p>
+					<span class="font-button-text text-button-text text-secondary inline-flex items-center gap-1 group-hover:underline">Request Provisions &rarr;</span>
 				</div>
-			</div>
+			</a>
 		</div>
 	</section>
 

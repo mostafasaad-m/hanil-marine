@@ -31,8 +31,8 @@ get_header();
 	<!-- Auto-Selection Banner (hidden by default) -->
 	<div id="auto-select-banner" class="hidden w-full max-w-3xl mb-8 p-4 bg-secondary-container text-on-secondary rounded-lg shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 transition-all">
 		<div class="flex items-center gap-3">
-			<span class="font-bold text-base md:text-lg">✓ Pre-Selected: <strong id="selected-service-name"></strong></span>
-			<span id="countdown-label" class="text-xs md:text-sm opacity-90">(Advancing to Step 2 in <span id="countdown-timer">7</span>s...)</span>
+			<span class="font-bold text-base md:text-lg">✓ Selected Category: <strong id="selected-service-name"></strong></span>
+			<span id="countdown-label" class="text-xs md:text-sm opacity-90">(Redirecting to Step 2 in <span id="countdown-timer">7</span>s...)</span>
 		</div>
 		<button id="undo-auto-select-btn" onclick="cancelAutoAdvance()" type="button" class="px-4 py-2 bg-on-secondary text-secondary font-bold text-xs rounded hover:bg-surface-container transition-colors shadow shrink-0">
 			Undo / Change Selection
@@ -43,7 +43,7 @@ get_header();
 	<div class="text-center mb-12">
 		<span class="bg-surface-container text-primary-container px-3 py-1 rounded-full font-label-caps text-label-caps mb-3 inline-block"><?php echo esc_html( bayrak_t( 'step_1_badge', 'Step 1 of 4' ) ); ?></span>
 		<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-primary mb-4"><?php echo esc_html( bayrak_t( 'step_1_title', 'Select Primary Service Category' ) ); ?></h1>
-		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"><?php echo esc_html( bayrak_t( 'step_1_sub', 'Choose the primary service your vessel requires. Selecting a service will automatically advance to Step 2.' ) ); ?></p>
+		<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"><?php echo esc_html( bayrak_t( 'step_1_sub', 'Choose the primary service category your vessel requires to start your quotation.' ) ); ?></p>
 	</div>
 
 	<!-- Service Cards Grid -->
@@ -184,8 +184,8 @@ function cancelAutoAdvance() {
 	if (banner) {
 		banner.innerHTML = `
 			<div class="flex items-center gap-2">
-				<span class="font-bold">✓ Category Choice Locked</span>
-				<span class="text-xs opacity-80">(Auto-advance paused. Click another category or press Next.)</span>
+				<span class="font-bold">✓ Category Selection Saved</span>
+				<span class="text-xs opacity-80">(Auto-redirect paused. Select a different category or click Next to continue.)</span>
 			</div>
 		`;
 		banner.classList.remove('bg-secondary-container', 'text-on-secondary');
